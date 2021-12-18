@@ -1,0 +1,14 @@
+name = "Caves & Cliffs Backport"
+filename = "cavesandcliffs-1.16.5-7.1.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3523/829/cavesandcliffs-1.16.5-7.1.4.jar"
+hash-format = "murmur2"
+hash = "1250985965"
+
+[update]
+[update.curseforge]
+file-id = 3523829
+project-id = 417430
+release-channel = "beta"

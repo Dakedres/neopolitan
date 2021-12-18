@@ -1,0 +1,14 @@
+name = "Better Biome Blend"
+filename = "betterbiomeblend-1.16.4-1.2.9-forge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3421/281/betterbiomeblend-1.16.4-1.2.9-forge.jar"
+hash-format = "murmur2"
+hash = "3019499608"
+
+[update]
+[update.curseforge]
+file-id = 3421281
+project-id = 446253
+release-channel = "beta"

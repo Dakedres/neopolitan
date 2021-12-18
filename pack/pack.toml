@@ -1,0 +1,15 @@
+name = "Foxie Farm"
+author = "Dakedres"
+version = "1.0.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "8a2d09cb1fb3d6bed7399b90b1f4d00ed847e4a6a2dc992604089ea480ecfa8a"
+
+[versions]
+forge = "36.1.32"
+minecraft = "1.16.5"
+
+[options]
+acceptable-game-versions = ["1.16.4", "1.16.3"]

@@ -1,0 +1,14 @@
+name = "Spawner Bug Fix"
+filename = "SpawnerFix-1.16.2-1.0.0.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3161/147/SpawnerFix-1.16.2-1.0.0.2.jar"
+hash-format = "murmur2"
+hash = "2673409532"
+
+[update]
+[update.curseforge]
+file-id = 3161147
+project-id = 399022
+release-channel = "beta"

@@ -1,0 +1,11 @@
+{
+  "display": "Here Be Dragons!",
+  "criteria": {
+    "visit_cavern": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "infernalexp:glowstone_cavern"
+      }
+    }
+  }
+}

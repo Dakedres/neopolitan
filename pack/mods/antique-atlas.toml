@@ -1,0 +1,14 @@
+name = "Antique Atlas"
+filename = "antiqueatlas-6.0.1-forge-mc1.16.5.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3398/190/antiqueatlas-6.0.1-forge-mc1.16.5.jar"
+hash-format = "murmur2"
+hash = "3370844914"
+
+[update]
+[update.curseforge]
+file-id = 3398190
+project-id = 227795
+release-channel = "beta"

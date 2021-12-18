@@ -1,0 +1,14 @@
+name = "Masonry Blocks"
+filename = "Masonry_Blocks_1.16.4_1.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3111/614/Masonry_Blocks_1.16.4_1.0.jar"
+hash-format = "murmur2"
+hash = "254545439"
+
+[update]
+[update.curseforge]
+file-id = 3111614
+project-id = 419962
+release-channel = "beta"

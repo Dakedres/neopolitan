@@ -1,0 +1,14 @@
+name = "Chicken's Compat"
+filename = "muchmoremodcompat-na.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3441/734/muchmoremodcompat-na.jar"
+hash-format = "murmur2"
+hash = "3166125915"
+
+[update]
+[update.curseforge]
+file-id = 3441734
+project-id = 513731
+release-channel = "beta"

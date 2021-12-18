@@ -1,0 +1,14 @@
+name = "Ore Tweaker"
+filename = "OreTweaker-1.16.5-2.6.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3520/897/OreTweaker-1.16.5-2.6.0.jar"
+hash-format = "murmur2"
+hash = "1867984625"
+
+[update]
+[update.curseforge]
+file-id = 3520897
+project-id = 242436
+release-channel = "beta"

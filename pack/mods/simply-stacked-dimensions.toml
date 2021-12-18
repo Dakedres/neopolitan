@@ -1,0 +1,14 @@
+name = "Simply Stacked Dimensions"
+filename = "simplystacked-1.16.5-beta-nov0221.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3513/441/simplystacked-1.16.5-beta-nov0221.jar"
+hash-format = "murmur2"
+hash = "4022274071"
+
+[update]
+[update.curseforge]
+file-id = 3513441
+project-id = 523416
+release-channel = "beta"

@@ -1,0 +1,14 @@
+name = "Global GameRules"
+filename = "GlobalGameRules-1.16.5-5.1.0.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3378/657/GlobalGameRules-1.16.5-5.1.0.4.jar"
+hash-format = "murmur2"
+hash = "4071532938"
+
+[update]
+[update.curseforge]
+file-id = 3378657
+project-id = 227657
+release-channel = "beta"

@@ -1,0 +1,14 @@
+name = "Better Fps - Render Distance[Forge/Fabric]"
+filename = "betterfpsdist-1.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3543/461/betterfpsdist-1.1.jar"
+hash-format = "murmur2"
+hash = "2050458151"
+
+[update]
+[update.curseforge]
+file-id = 3543461
+project-id = 551520
+release-channel = "beta"

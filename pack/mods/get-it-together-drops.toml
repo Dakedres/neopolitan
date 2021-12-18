@@ -1,0 +1,14 @@
+name = "Get It Together, Drops!"
+filename = "getittogetherdrops-1.16.4-v1.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3135/966/getittogetherdrops-1.16.4-v1.1.jar"
+hash-format = "murmur2"
+hash = "2616527819"
+
+[update]
+[update.curseforge]
+file-id = 3135966
+project-id = 411045
+release-channel = "beta"

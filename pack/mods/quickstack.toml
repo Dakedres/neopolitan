@@ -1,0 +1,14 @@
+name = "Quickstack"
+filename = "quickstack-4.0.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3275/942/quickstack-4.0.1.jar"
+hash-format = "murmur2"
+hash = "3556696154"
+
+[update]
+[update.curseforge]
+file-id = 3275942
+project-id = 354522
+release-channel = "beta"

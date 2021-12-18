@@ -1,0 +1,14 @@
+name = "Decorative Winter"
+filename = "decorative_winter-0.1.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3151/3/decorative_winter-0.1.2.jar"
+hash-format = "murmur2"
+hash = "3099127556"
+
+[update]
+[update.curseforge]
+file-id = 3151003
+project-id = 430836
+release-channel = "beta"

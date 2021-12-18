@@ -1,0 +1,14 @@
+name = "Krypton Reforged"
+filename = "kryptonreforged-mc1.16.5_v1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3534/475/kryptonreforged-mc1.16.5_v1.0.0.jar"
+hash-format = "murmur2"
+hash = "2385656077"
+
+[update]
+[update.curseforge]
+file-id = 3534475
+project-id = 549394
+release-channel = "beta"

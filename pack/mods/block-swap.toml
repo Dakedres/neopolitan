@@ -1,0 +1,14 @@
+name = "Block Swap"
+filename = "blockswap-1.1.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3296/675/blockswap-1.1.1.jar"
+hash-format = "murmur2"
+hash = "388056398"
+
+[update]
+[update.curseforge]
+file-id = 3296675
+project-id = 468893
+release-channel = "beta"

@@ -1,0 +1,14 @@
+name = "Bundles Plus"
+filename = "bundlesplus-0.2.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3499/485/bundlesplus-0.2.1.jar"
+hash-format = "murmur2"
+hash = "2964285819"
+
+[update]
+[update.curseforge]
+file-id = 3499485
+project-id = 454376
+release-channel = "beta"

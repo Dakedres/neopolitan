@@ -1,0 +1,14 @@
+name = "Pierce Arrow"
+filename = "PierceArrow-1.16.5-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3391/560/PierceArrow-1.16.5-1.0.0.jar"
+hash-format = "murmur2"
+hash = "1486472187"
+
+[update]
+[update.curseforge]
+file-id = 3391560
+project-id = 504616
+release-channel = "beta"

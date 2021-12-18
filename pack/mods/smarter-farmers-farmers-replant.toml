@@ -1,0 +1,14 @@
+name = "Smarter Farmers (farmers replant)"
+filename = "smarterfarmers-1.16.5-1.2.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3482/654/smarterfarmers-1.16.5-1.2.1.jar"
+hash-format = "murmur2"
+hash = "2488183385"
+
+[update]
+[update.curseforge]
+file-id = 3482654
+project-id = 491290
+release-channel = "beta"

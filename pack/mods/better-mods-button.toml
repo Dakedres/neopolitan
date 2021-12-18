@@ -1,0 +1,14 @@
+name = "Better Mods Button [Forge]"
+filename = "BetterModsButton-v1.0.5-1.16.5-Forge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3519/38/BetterModsButton-v1.0.5-1.16.5-Forge.jar"
+hash-format = "murmur2"
+hash = "2035244765"
+
+[update]
+[update.curseforge]
+file-id = 3519038
+project-id = 541584
+release-channel = "beta"

@@ -1,0 +1,14 @@
+name = "Pitch Perfect"
+filename = "pitchperfect-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3137/689/pitchperfect-1.0.2.jar"
+hash-format = "murmur2"
+hash = "570974484"
+
+[update]
+[update.curseforge]
+file-id = 3137689
+project-id = 382436
+release-channel = "beta"

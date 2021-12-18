@@ -1,0 +1,14 @@
+name = "Decorative Blocks modded compat"
+filename = "decorative_blocks_abnormals-1.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3311/520/decorative_blocks_abnormals-1.2.jar"
+hash-format = "murmur2"
+hash = "3407006170"
+
+[update]
+[update.curseforge]
+file-id = 3311520
+project-id = 421760
+release-channel = "beta"

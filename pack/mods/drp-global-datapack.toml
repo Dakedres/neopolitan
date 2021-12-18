@@ -1,0 +1,14 @@
+name = "Global Data- & Resourcepacks"
+filename = "globaldataandresourcepacks-1.16.4-1.7.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3153/569/globaldataandresourcepacks-1.16.4-1.7.4.jar"
+hash-format = "murmur2"
+hash = "3602542589"
+
+[update]
+[update.curseforge]
+file-id = 3153569
+project-id = 317134
+release-channel = "beta"

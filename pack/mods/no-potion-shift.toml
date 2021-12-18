@@ -1,0 +1,14 @@
+name = "No Potion Shift"
+filename = "nopotionshift_1.16.4-1.6.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3312/294/nopotionshift_1.16.4-1.6.1.jar"
+hash-format = "murmur2"
+hash = "1429212129"
+
+[update]
+[update.curseforge]
+file-id = 3312294
+project-id = 243863
+release-channel = "beta"

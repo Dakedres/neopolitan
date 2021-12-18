@@ -1,0 +1,14 @@
+name = "Game Stages"
+filename = "GameStages-Forge-1.16.5-7.3.12.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3480/161/GameStages-Forge-1.16.5-7.3.12.jar"
+hash-format = "murmur2"
+hash = "4159508737"
+
+[update]
+[update.curseforge]
+file-id = 3480161
+project-id = 268655
+release-channel = "beta"

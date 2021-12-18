@@ -1,0 +1,14 @@
+name = "Stacking Dimensional Rifts"
+filename = "DimStack-1.16.5-2.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3339/212/DimStack-1.16.5-2.0.0.jar"
+hash-format = "murmur2"
+hash = "446824016"
+
+[update]
+[update.curseforge]
+file-id = 3339212
+project-id = 350696
+release-channel = "beta"

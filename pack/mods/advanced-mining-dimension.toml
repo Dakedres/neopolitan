@@ -1,0 +1,14 @@
+name = "Advanced Mining Dimension"
+filename = "mining_dimension-1.16.5-1.0.6.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3485/554/mining_dimension-1.16.5-1.0.6.jar"
+hash-format = "murmur2"
+hash = "3545674578"
+
+[update]
+[update.curseforge]
+file-id = 3485554
+project-id = 332640
+release-channel = "beta"

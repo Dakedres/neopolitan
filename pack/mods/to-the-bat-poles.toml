@@ -1,0 +1,14 @@
+name = "\"To the Bat Poles!\""
+filename = "AdPoles-1.16.5-5.0.6.0-build.0177.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3412/146/AdPoles-1.16.5-5.0.6.0-build.0177.jar"
+hash-format = "murmur2"
+hash = "901047021"
+
+[update]
+[update.curseforge]
+file-id = 3412146
+project-id = 272190
+release-channel = "beta"

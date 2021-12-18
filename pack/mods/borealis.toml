@@ -1,0 +1,14 @@
+name = "Borealis"
+filename = "Borealis-1.1.6.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3214/956/Borealis-1.1.6.jar"
+hash-format = "murmur2"
+hash = "4198009278"
+
+[update]
+[update.curseforge]
+file-id = 3214956
+project-id = 443070
+release-channel = "beta"

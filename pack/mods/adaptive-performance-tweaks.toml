@@ -1,0 +1,14 @@
+name = "Adaptive Performance Tweaks (APTweaks)"
+filename = "adaptive_performance_tweaks_1.16.5-1.1.5.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3514/519/adaptive_performance_tweaks_1.16.5-1.1.5.jar"
+hash-format = "murmur2"
+hash = "1802071423"
+
+[update]
+[update.curseforge]
+file-id = 3514519
+project-id = 450269
+release-channel = "beta"

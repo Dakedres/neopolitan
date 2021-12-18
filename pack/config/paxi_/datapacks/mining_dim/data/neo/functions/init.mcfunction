@@ -1,0 +1,3 @@
+gamerule ipDimensionStack true
+portal global connect_ceil mining_dimension:mining minecraft:overworld
+portal global connect_floor minecraft:overworld mining_dimension:mining

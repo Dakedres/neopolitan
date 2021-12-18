@@ -1,0 +1,14 @@
+name = "Seals"
+filename = "seals-1.16.3-2.1.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3301/978/seals-1.16.3-2.1.2.jar"
+hash-format = "murmur2"
+hash = "3725189602"
+
+[update]
+[update.curseforge]
+file-id = 3301978
+project-id = 349206
+release-channel = "beta"

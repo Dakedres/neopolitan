@@ -1,0 +1,14 @@
+name = "KubeJS Borealis"
+filename = "KubeJSBorealis-1.0.8.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3235/431/KubeJSBorealis-1.0.8.jar"
+hash-format = "murmur2"
+hash = "3291006212"
+
+[update]
+[update.curseforge]
+file-id = 3235431
+project-id = 445077
+release-channel = "beta"

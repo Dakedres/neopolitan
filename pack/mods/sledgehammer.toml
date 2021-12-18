@@ -1,0 +1,14 @@
+name = "Sledgehammer"
+filename = "Sledgehammer-1.16.5-2.0.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3361/961/Sledgehammer-1.16.5-2.0.1.jar"
+hash-format = "murmur2"
+hash = "1052128220"
+
+[update]
+[update.curseforge]
+file-id = 3361961
+project-id = 319175
+release-channel = "beta"

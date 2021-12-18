@@ -1,0 +1,18 @@
+{
+  "name": "neopolitan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scriptHandler/watch.js",
+  "scripts": {
+    "watch": "node scriptHandler/watch.js",
+    "serve": "cd pack/ && packwiz serve",
+    "generate": "node scriptHandler/handleGamestages.js"
+  },
+  "author": "Dakedres",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/register": "^7.16.5"
+  }
+}

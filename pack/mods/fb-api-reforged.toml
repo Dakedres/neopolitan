@@ -1,0 +1,13 @@
+name = "Fabric's Biome Api Reforged"
+filename = "FabricBiomeApiReforged-1.0.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com//data/4I6beZti/versions/1.0.5/FabricBiomeApiReforged-1.0.5.jar"
+hash-format = "sha512"
+hash = "838ea803cae5e83cacca8f7a709404df8ba68346280881c7cca2bd1a50a5cd171add6d183a4b1b18602f4801e58c50b56dfe585faeee738d79cb0b6cf1042783"
+
+[update]
+[update.modrinth]
+mod-id = "4I6beZti"
+version = "MnelGISl"
