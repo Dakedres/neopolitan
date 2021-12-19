@@ -26,6 +26,10 @@ function getTag(resourceLocation as string) as List<IItemStack> {
   }
 
   return out;
+}
+
+function getItem(resourceLocation as string) as List<IItemStack> {
+  return [ BracketHandlers.getItem(resourceLocation) ];
 }\n`,
     modStageBlock:`
 for name in modStages {

@@ -1,17 +1,31 @@
-const materialStage = (mod, ...patterns) =>
+const genericStage = (mod, ...patterns) =>
   patterns.reduce((out, pattern) => {
     // Regex to grab the item wrapped in paranthenses
     out[/.*\((\w*?)\).*/.exec(pattern)[1]] = {
-      on: 'discover',
       reveal: [ new RegExp(`${mod}:${pattern}$`) ]
     }
 
     return out
   }, {})
 
+const materialStage = (mod, ...names) =>
+  names.reduce((out, name) => {
+    out[name] = {
+      reveal: new RegExp(`${mod}:(.*_|)${name}.*?$`)
+    }
+
+    return out
+  }, {})
+
+const single = (...items) =>
+  items.reduce((out, reveal) => {
+    out[reveal.split(':')[1]] = { reveal }
+    return out
+  }, {})
+
 const modStages = (...mods) =>
   mods.reduce((out, mod) => {
-    out[mod] = { on: 'discover', reveal: '@' + mod }
+    out[mod] = { reveal: '@' + mod }
     return out
   }, {})
 
@@ -23,7 +37,8 @@ const gamestages =  {
   //   "reveal": "@create"
   // },
   // ...ect
-  ...materialStage('darkerdepths', '(grimestone).*?', '(.*_|)(shale).*?', '(.*_|)(petrified).*?'),
+
+  ...materialStage('darkerdepths', 'limestone', 'grimstone', 'shale', 'petrified'),
   //   The above is equivalent to:
   // shale: {
   //   on: "discover",
@@ -38,6 +53,26 @@ const gamestages =  {
   //   ]
   // }
   // ...ect
+
+  //   Also an option to similar ends
+  // ...genericStage('darkerdepths', '(grimestone).*?', '(.*_|)(shale).*?', '(.*_|)(petrified).*?'),
+  void_worm: {
+    //   'on' isn't even needed if it's discover
+    // on: "discover",
+    or: "alexsmobs:alexsmobs/void_worm_kill",
+    reveal: [
+      '#alexsmobs:void_worm_drops',
+      'alexsmobs:void_worm_beak',
+      'alexsmobs:dimensional_carver'
+    ]
+  },
+  ...single(
+    '#buzzier_bees:candles'
+  ),
+  // This doesn't work I have no idea
+  insect_bottle: {
+    reveal: /buzzier_bees:.*?_bottle$/
+  }
 }
 
 console.log(gamestages)
@@ -75,10 +110,13 @@ console.log(gamestages)
         out = stage
 
     out.name = name
+    out.reveal = filterToTag(out.name, out.reveal)
+    if(!stage.on)
+      stage.on = constants.events.pickup
 
     if(!stage.of) {
       if(stage.on == constants.events.pickup) {
-        out.of = out.reveal = filterToTag(out.name, out.reveal)
+        out.of = out.reveal
       } else {
         throw new Error("Stage missing 'of' descriptor")
       }
@@ -88,12 +126,18 @@ console.log(gamestages)
 
     if(isKube) {
       switch(stage.on) {
-        case constants.events.pickup:
-          data.pickup.push(out)
-          break
-  
         case constants.events.advancement:
           data.advancement.push(out)
+          break
+
+        case constants.events.pickup:
+          data.pickup.push(out)
+
+          if(out.or)
+            data.advancement.push({
+              of: out.or,
+              name
+            })
           break
       }
     } else {

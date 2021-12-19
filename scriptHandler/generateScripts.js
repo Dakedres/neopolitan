@@ -9,15 +9,17 @@ const createZenScript = stages => {
     let ingredients,
         [ , symbol, name ] = /([@#]|)(.+)/.exec(stage.reveal)
 
+    name = JSON.stringify(name)
+
     switch(symbol) {
       case '#':
-        ingredients = `getTag(${JSON.stringify(name)})`; break
+        ingredients = `getTag(${name})`; break
 
       case '@':
-        ingredients = `loadedMods.getMod(${JSON.stringify(name)}).items`; break
+        ingredients = `loadedMods.getMod(${name}).items`; break
 
       default:
-        ingredients = `<items:${name}>`
+        ingredients = `getItem(${name})`
     }
     
     return `${stage.name}: ${ingredients}`

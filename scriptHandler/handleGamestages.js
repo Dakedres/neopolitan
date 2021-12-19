@@ -1,5 +1,6 @@
 const generateScripts = require('./generateScripts'),
-      compile = require('./util/compile')
+      compile = require('./util/compile'),
+      constants = require('./util/constants')
       path = require('path')
 
 const start = location => {
@@ -13,6 +14,6 @@ const start = location => {
 }
 
 if(require.main == module)
-  start()
+  start(constants.gamestagePath)
 else
   module.exports = start

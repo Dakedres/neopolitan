@@ -40,8 +40,6 @@ console.log(global.stageData)
 
   const stageTypes = global.stageData.pickup.reduce(handleStage, { mod: {}, item: [] })
 
-  console.log(stageTypes)
-
   onEvent('player.inventory.changed', event => {
     let item = event.item,
         modStage = stageTypes.mod[item.getMod() + '']
@@ -58,12 +56,22 @@ console.log(global.stageData)
 }
 
 {
-  const advanceStages = global.stageData.advancement
+  const advanceStages = global.stageData.advancement.reduce((map, stage) => {
+    map.set(stage.of, stage)
+    return map
+  }, new Map())
 
-  console.log(advanceStages)
+  console.log(advanceStages.keys().next())
 
   onEvent('player.advancement', event => {
-    
+    let id = event.getAdvancement().id() + ''
+
+    console.log(id)
+
+    if(advanceStages.has(id)) {
+      console.log('match')
+      addGameStage(event, advanceStages.get(id).name)
+    }
   })
 }
 

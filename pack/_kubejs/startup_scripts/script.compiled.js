@@ -41,7 +41,8 @@ var toRemove = ['immersiveengineering:lantern', 'immersiveengineering:electric_l
 /cavesandcliffs:weathered.+$/, /cavesandcliffs:exposed.+$/, /cavesandcliffs:waxed.+$/, 'darkerdepths:silver_ingot', // Obselete, IE
 'darkerdepths:silver_ore', 'pitchperfect:chimes', // Obselete, chimes
 /^\w*:.*?_post$/].concat(_toConsumableArray(materialFrom('infernalexp', 'basalt')));
-var toHide = ['immersiveengineering:storage_copper', // Obselete, create
+var toHide = [/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
+'immersiveengineering:storage_copper', // Obselete, create
 'immersiveengineering:slab_storage_copper', 'immersiveengineering:ingot_copper', 'immersiveengineering:nugget_copper', '#quark:candles'].concat(_toConsumableArray(materialFrom('quark', ['stained_planks', 'marble', 'myalite', 'midori', 'duskbound', 'brimstone', 'elder_prismarine', 'soul_sandstone', 'permafrost', 'biotite', 'voidstone', 'limestone', 'jasper', 'slate', 'granite', // More variants
 'andesite', 'diorite', 'cobblestone_bricks', // WHY SO MANY BRICKS
 'blackstone_bricks', 'dirt_bricks', 'sandy_bricks', 'netherrack_bricks', 'charred_nether_bricks', 'magma_bricks', 'blue_nether_bricks', 'basalt_bricks', 'quilted_wool', 'bonded', 'crate', 'turf', // Obselete, moss

@@ -67,6 +67,7 @@ let toRemove = [
 ]
 
 let toHide = [
+	/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 	'immersiveengineering:storage_copper', // Obselete, create
 	'immersiveengineering:slab_storage_copper',
 	'immersiveengineering:ingot_copper',
