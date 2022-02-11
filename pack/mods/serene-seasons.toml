@@ -1,14 +1,14 @@
 name = "Serene Seasons"
-filename = "SereneSeasons-1.16.5-4.0.1.122-universal.jar"
+filename = "SereneSeasons-1.16.5-4.0.1.123-universal.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3510/900/SereneSeasons-1.16.5-4.0.1.122-universal.jar"
+url = "https://edge.forgecdn.net/files/3598/652/SereneSeasons-1.16.5-4.0.1.123-universal.jar"
 hash-format = "murmur2"
-hash = "1486380146"
+hash = "799059464"
 
 [update]
 [update.curseforge]
-file-id = 3510900
+file-id = 3598652
 project-id = 291874
 release-channel = "beta"

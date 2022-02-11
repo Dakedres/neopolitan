@@ -1,0 +1,2 @@
+kubejs reload startup_scripts
+kubejs reload server_scripts

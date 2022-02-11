@@ -1,0 +1,250 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:music_disc_13"
+    },
+    "title": {
+      "translate": "advancements.all_discs.title"
+    },
+    "description": {
+      "translate": "advancements.all_discs.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "music_disc_daze": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "alexsmobs:music_disc_daze"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_thime": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "alexsmobs:music_disc_thime"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_otherside": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cavesandcliffs:music_disc_otherside"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_flush": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "infernalexp:music_disc_flush"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_soul_spunk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "infernalexp:music_disc_soul_spunk"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_chatter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_chatter"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_clock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_clock"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_crickets": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_crickets"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_drips": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_drips"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_endermosh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_endermosh"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_fire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_fire"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_ocean": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_ocean"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_rain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_rain"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_wind": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quark:music_disc_wind"
+            ]
+          }
+        ]
+      }
+    },
+    "music_disc_kilobyte": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endergetic:music_disc_kilobyte"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "music_disc_daze"
+    ],
+    [
+      "music_disc_thime"
+    ],
+    [
+      "music_disc_otherside"
+    ],
+    [
+      "music_disc_flush"
+    ],
+    [
+      "music_disc_soul_spunk"
+    ],
+    [
+      "music_disc_chatter"
+    ],
+    [
+      "music_disc_clock"
+    ],
+    [
+      "music_disc_crickets"
+    ],
+    [
+      "music_disc_drips"
+    ],
+    [
+      "music_disc_endermosh"
+    ],
+    [
+      "music_disc_fire"
+    ],
+    [
+      "music_disc_ocean"
+    ],
+    [
+      "music_disc_rain"
+    ],
+    [
+      "music_disc_wind"
+    ],
+    [
+      "music_disc_kilobyte"
+    ]
+  ]
+}

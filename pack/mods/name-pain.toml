@@ -1,0 +1,13 @@
+name = "Name Pain"
+filename = "namepain-1.4.0 forge-1.16.x.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3356/725/namepain-1.4.0 forge-1.16.x.jar"
+hash-format = "murmur2"
+hash = "1523019111"
+
+[update]
+[update.curseforge]
+file-id = 3356725
+project-id = 366263

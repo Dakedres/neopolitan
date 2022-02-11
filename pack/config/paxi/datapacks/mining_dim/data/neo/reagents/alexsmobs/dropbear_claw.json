@@ -1,0 +1,12 @@
+{
+  "item": "alexsmobs:dropbear_claw",
+  "enchantments": [
+      {
+          "enchantment": "allurement:reeling",
+          "minimumEnchantmentLevel": 1,
+          "maximumEnchantmentLevel": 2,
+          "probability": 0.7,
+          "reagentCost": 1
+      }
+  ]
+}

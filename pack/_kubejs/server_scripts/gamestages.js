@@ -9,13 +9,41 @@ console.info('Hello, World! (You will see this line every time server resources 
 
 global.modStages = [ "create", "immersiveengineering", "deextinction", "psi", "farsight_spyglasses", "supplementaries", "chimes", "snowrealmagic", "infernalexp", "endergetic", "deadlyendphantoms", "buzzier_bees" ]
 
-const addGameStage = (event, stageName) => {
-  // We need to use execute as gamestages will throw an error since the selector could
-  //  also point to an entity. Wrapping it in execute works tho
-  event.server.runCommandSilent(`execute as ${event.player.id} run gamestage add @s ${stageName}`)
+const onGamestage = (stageName, event) => {
+  console.log(stageName)
 }
 
-console.log(global.stageData)
+const executeAs = (event, command) =>
+  event.server.runCommandSilent(`execute as ${event.player.id} run ${command}`)
+
+const addGameStage = (event, stage) => {
+  // We need to use execute as gamestages will throw an error since the selector could
+  //  also point to an entity. Wrapping it in execute works tho
+  executeAs(event, `gamestage add @s ${stage.name}`)
+  
+  if(!stage.hidden) {
+    let data = [
+      { text: "Your horizons have expanded! " },
+      {
+        text: `Wow \$${stage.name}`,
+        color: "gray"
+      }
+    ]
+
+    // console.log(`title ${event.player.id} actionbar ${JSON.stringify(message)}`)
+    // Fade in/out .75s, stay 4s
+    // executeAs(event, `title @s actionbar ${JSON.stringify(message)}`)
+    console.log(`title @s actionbar ${JSON.stringify(data)}`)
+    executeAs(event, `title @s actionbar [{"text":"Your horizons have expanded! "}, {"text":"\$${stage.name}","color":"gray"}]`)
+  }
+
+}
+
+onEvent('player.chat', function (event) {
+  if(event.message.startsWith('$add') ) {
+    addGameStage(event, { name: 'dolomite' })
+  }
+})
 
 {
   const handleStage = (obj, stage) => {
@@ -42,15 +70,24 @@ console.log(global.stageData)
 
   onEvent('player.inventory.changed', event => {
     let item = event.item,
-        modStage = stageTypes.mod[item.getMod() + '']
+        playerStages = event.getPlayer().getStages(),
+        // Does not work well for items in multiple gamestages
+        itemStage = stageTypes.item.find(stage => !playerStages.has(stage.name) && stage.of.test(item) )
 
-    if(modStage && !event.hasGameStage(modStage) ) {
-      addGameStage(event, modStage)
+    if(itemStage) {
+      addGameStage(event, itemStage)
+      // itemStages.forEach(stage => addGameStage(event, itemStages.name))
     } else {
-      let itemStage = stageTypes.item.find(stage => stage.of.test(item) )
+      let modStage = stageTypes.mod[item.getMod() + '']
 
-      if(itemStage && !event.hasGameStage(itemStage.name) )
-        addGameStage(event, itemStage.name)
+      if(modStage && !event.hasGameStage(modStage) ) {
+        addGameStage(event, modStage)
+      } 
+      // // Need to prioritize other things for the time being 
+      // 
+      // else if(item.id == 'minecraft:enchanted_book') {
+      //   console.log('double h')
+      // }
     }
   })
 }

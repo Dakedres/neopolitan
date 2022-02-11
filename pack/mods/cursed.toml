@@ -1,0 +1,13 @@
+name = "Cursed"
+filename = "Cursed-1.16.5-7.1.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3325/240/Cursed-1.16.5-7.1.3.jar"
+hash-format = "murmur2"
+hash = "3830961367"
+
+[update]
+[update.curseforge]
+file-id = 3325240
+project-id = 347445

@@ -1,4 +1,4 @@
-name = "Not Enough Animations (Forge/Fabric)"
+name = "Not Enough Animations"
 filename = "notenoughanimations-1.2.4.jar"
 side = "both"
 
@@ -11,4 +11,3 @@ hash = "459027245"
 [update.curseforge]
 file-id = 3296039
 project-id = 433760
-release-channel = "beta"

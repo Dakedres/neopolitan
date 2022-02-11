@@ -1,0 +1,14 @@
+name = "Drip Sounds (Forge)"
+filename = "DripSounds-1.16-0.3.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3555/709/DripSounds-1.16-0.3.0.jar"
+hash-format = "murmur2"
+hash = "3505388728"
+
+[update]
+[update.curseforge]
+file-id = 3555709
+project-id = 390986
+release-channel = "beta"

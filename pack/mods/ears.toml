@@ -1,14 +1,14 @@
 name = "Ears (+ Snouts/Muzzles, Tails, Horns, Wings, and More)"
-filename = "ears-forge-1.16-1.4.2.jar"
+filename = "ears-forge-1.16-1.4.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3540/376/ears-forge-1.16-1.4.2.jar"
+url = "https://edge.forgecdn.net/files/3616/893/ears-forge-1.16-1.4.5.jar"
 hash-format = "murmur2"
-hash = "126432372"
+hash = "1323172977"
 
 [update]
 [update.curseforge]
-file-id = 3540376
+file-id = 3616893
 project-id = 412013
 release-channel = "beta"

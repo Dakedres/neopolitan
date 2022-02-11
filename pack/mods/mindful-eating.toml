@@ -1,14 +1,14 @@
 name = "Mindful Eating"
-filename = "mindful-eating-1.16.5-1.0.0.jar"
+filename = "mindful-eating-1.16.5-1.0.1.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3522/251/mindful-eating-1.16.5-1.0.0.jar"
+url = "https://edge.forgecdn.net/files/3581/269/mindful-eating-1.16.5-1.0.1.jar"
 hash-format = "murmur2"
-hash = "3348172611"
+hash = "3021582895"
 
 [update]
 [update.curseforge]
-file-id = 3522251
+file-id = 3581269
 project-id = 476019
 release-channel = "beta"

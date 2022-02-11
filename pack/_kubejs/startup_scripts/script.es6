@@ -16,58 +16,167 @@ const materialFrom = (mod, ...names) =>
 let toRemove = [
 	'immersiveengineering:lantern',
 	'immersiveengineering:electric_lantern',
-	'immersiveengineering:crate', // Obselete, shulker
+	'immersiveengineering:crate', // Obselete, supplementaries sack
 	'immersiveengineering:reinforced_crate',
 	'immersiveengineering:minecart_reinforcedcrate',
 	'immersiveengineering:minecart_woodencrate',
-	'immersiveengineering:toolbox',
-	'immersiveengineering:treated_post', // Promote creative block use
-	'immersiveengineering:steel_post',
-	'immersiveengineering:alu_post',
-	/immersiveengineering:.*?_uranium$/, // Bloat
-	'create:crushed_uranium_ore',
+	'immersiveengineering:toolbox', // Obselete, create
+	// 'immersiveengineering:treated_post', // Promote creative block use
+	// 'immersiveengineering:steel_post',
+	// 'immersiveengineering:alu_post',
 	'immersiveengineering:plate_copper', // Obselete, create
 	'immersiveengineering:plate_iron',
 	'immersiveengineering:plate_gold',
 	/immersiveengineering:conveyor.+$/, // Obselete, create
+	'immersiveengineering:alu_fence',
+	...materialFrom('immersiveengineering', [
+		'post',
+		'wallmount',
+		'constantan', // Replaced with constantan
+		'nickel', // One use other than constantan, replaced with zinc
+		'uranium', // Bloat
+		'slope',
+		'alu_scaffolding'
+	]),
+	...[
+		'ingot',
+		'plate',
+		'sword',
+		'pickaxe',
+		'axe',
+		'shovel',
+		'hoe'
+	].map(n => `immersiveengineering:${n}_steel`),
+	'create:crushed_uranium_ore',
+
 	'decorative_blocks:lattice', // Too specific
 	'decorative_blocks:bar_panel',
 	'decorative_blocks:chain',
 	'decorative_blocks:chandelier',
 	'decorative_blocks:soul_chandelier',
 	'decorative_blocks_abnormals:ender_chandelier',
+	'decorative_winter:festive_chain',
+	'decorative_winter:wreath',
+
 	'muchmoremodcompat:ice_chain',
 	'muchmoremodcompat:gold_chain',
 	'muchmoremodcompat:glow_chandelier',
-	'supplementaries:brass_lantern',
-	'create:handheld_blockzapper', // Promote Psi
-	'create:handheld_worldshaper',
+
 	'#cavesandcliffs:candles', // Obselete
 	'cavesandcliffs:spyglass',
 	'darkerdepths:rope',
-	/enhanced_mushrooms:red_mushroom.+$/, // Bloat
-	/enhanced_mushrooms:brown_mushroom.+$/,
-	/enhanced_mushrooms:stripped_red_mushroom.+$/,
-	/enhanced_mushrooms:stripped_brown_mushroom.+$/,
-	/cavesandcliffs:.*?_boat$/,
-	'endergetic:poised_boat',
+	// /enhanced_mushrooms:red_mushroom.+$/, // Bloat
+	// /enhanced_mushrooms:brown_mushroom.+$/,
+	// /enhanced_mushrooms:stripped_red_mushroom.+$/,
+	// /enhanced_mushrooms:stripped_brown_mushroom.+$/,
+	// /cavesandcliffs:.*?_boat$/,
+	// 'endergetic:poised_boat',
+	'endergetic:ender_torch',
 	'muchmoremodcompat:bamboo_support',
 	'muchmoremodcompat:bamboo_seat',
 	'@curios',
-	'@adpoles',
+	/^\w*:.*?_post$/, // no quark posts
+
+	'cavesandcliffs:copper_ingot',
+	'cavesandcliffs:copper_block',
 	/cavesandcliffs:oxidized.+$/, // Obselete, create
 	/cavesandcliffs:weathered.+$/,
 	/cavesandcliffs:exposed.+$/,
 	/cavesandcliffs:waxed.+$/,
-	'darkerdepths:silver_ingot', // Obselete, IE
-	'darkerdepths:silver_ore',
-	'pitchperfect:chimes', // Obselete, chimes
-	/^\w*:.*?_post$/, // no quark posts
-	...materialFrom('infernalexp', 'basalt') // Obselete, create
+	...materialFrom('cavesandcliffs', 'copper_ore'),
+	
+	...materialFrom('infernalexp', [
+		'basalt_brick', // Obselete, create
+		'pressure_plate', // Why
+		'glowstone_brick', // Too much
+		'dimstone_brick',
+		'dullstone_brick',
+		'smooth_glowstone',
+		'smooth_dimstone',
+		'smooth_dullstone',
+		'soul_sand',
+		'soul_soil'
+	]), 
+	'infernalexp:glowsilk_bow', // Broken?
+
+	...materialFrom('alexsmobs', [
+		'blobfish',
+		'emu',
+		'hawk',
+		'leafcutter',
+		'komodo',
+		'lobster',
+		'hemolymph',
+		'shrimp',
+		'cockroach',
+		'gust',
+		'spiked'
+		// TODO: Make buzzier bees' bears drop their hair, and rename it to fur
+	]),
+	'alexsmobs:warped_muscle',
+	'alexsmobs:hummingbird_feeder',
+	'alexsmobs:maggot',
+	'alexsmobs:animal_dictionary',
+  'alexsmobs:endolocator',
+
+	...materialFrom('wyrmroost', 'geode', 'drake', 'platinum'),
+  "wyrmroost:raw_behemoth_meat",
+  "wyrmroost:raw_common_meat",
+  "wyrmroost:raw_lowtier_meat",
+  "wyrmroost:cooked_behemoth_meat",
+  "wyrmroost:cooked_common_meat",
+  "wyrmroost:cooked_desertwyrm",
+  "wyrmroost:cooked_lowtier_meat",
+	"wyrmroost:coin_dragon",
+	"wyrmroost:desert_wyrm",
+
+	// /^supplementaries:timber_/,
+	// /^supplementaries:stone_/,
+	// /^supplementaries:candelabra_/,
+	'supplementaries:planter',
+	'supplementaries:gold_gate',
+	'supplementaries:flute', // Idk about it when Pitch Perfect already has one
+	'supplementaries:pedestal',
+	...materialFrom('supplementaries', [
+		'tile',
+		'lamp',
+		'blackstone',
+		'candelabra',
+		'sconce'
+	]),
+
+	'chimes:carved_bamboo_chimes',
+	'chimes:iron_chimes',
+
+	...materialFrom('buzzier_bees', [
+		'honeycomb_tile',
+		'honeycomb_brick',
+		'honeycomb_door', // cute but just, why?
+		'honeycomb_trapdoor'
+	]),
+	'buzzier_bees:honey_apple', // Obselete via create
+	
+	'create:handheld_blockzapper', // Promote Psi
+	'create:handheld_worldshaper',
+	...materialFrom('create', [
+		'limestone',
+		'scoria'
+	]),
+	
+	// 'darkerdepths:silver_ingot', // Obselete, IE
+	// 'darkerdepths:silver_ore',
+	...materialFrom('darkerdepths', 'aridrock', 'silver'),
+
+	...materialFrom('psi', 'psimetal'),
+
+	...materialFrom('supplementaries', 'checker', 'daub', 'timber'),
+	'supplementaries:brass_lantern',
+	'supplementaries:cog_block',
 ]
 
 let toHide = [
 	/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
+	/^\w*:.*?_spawn_egg$/,
 	'immersiveengineering:storage_copper', // Obselete, create
 	'immersiveengineering:slab_storage_copper',
 	'immersiveengineering:ingot_copper',
@@ -116,9 +225,21 @@ let toHide = [
 		'lavender_blossom', // Don't like how these are like "shades"
 		'yellow_blossom'
 	]),
-	'quark:gravisand',
-	'quark:elder_sea_lantern'
+	'quark:gravisand', // why
+	'quark:rope',
+	'#quark:shards',
+	'quark:elder_sea_lantern',
+	'quark:matrix_enchanter', // Should just be hidden anyway
+	'endergetic:bolloom_crate',
+
+	'minecraft:enchanted_book', // testing
+
+	'pitchperfect:chimes', // Obselete, chimes
 ]
+
+// let hiddenEnchants = [
+// 	'allurement:reforming'
+// ].map(e => Item.of('minecraft:enchanted_book').enchant('allurement:reforming', 1))
 
 console.log(toHide)
 
@@ -126,8 +247,26 @@ let toClean = [
 	'psi:cad_assembly_ivory_psimetal',
 	'psi:cad_assembly_ebony_psimetal',
 	// cons.ropeBelt,
-	'quark:pipe'
+	'quark:pipe',
+	'#minecraft:instruments',
+	'supplementaries:slingshot',
+	'supplementaries:rope',
+	'create:rope_pulley'
 ]
+
+// // Ore blocks to remove smelting recipes for
+// let oreBlocks = [
+// 	'immersiveengineering:aluminum_ore',
+// 	'immersiveengineering:silver_ore',
+// 	'immersiveengineering:lead_ore',
+// 	'immersiveengineering:nickel_ore',
+// ]
+
+// let smeltingTypes = [
+// 	'minecraft:smelting',
+// 	'minecraft:blasting',
+// 	'immersiveengineering:arc_furnace'
+// ]
 
 const openSet = set => {
 	let out = []
@@ -142,40 +281,19 @@ onEvent('recipes', recipe => {
 	for(let item of toClean.concat(toRemove) ) {
 	  	recipe.remove({ output: item })
 	}
-	
-	let cadPattern = [
-	  'R  ',
-	  'SIS',
-	  '  L'
-	]
-	
-	recipe.shaped('psi:cad_assembly_ivory_psimetal', cadPattern, {
-	  S: 'psi:ivory_substance',
-	  I: '#forge:ingots/psimetal',
-	  R: 'create:refined_radiance',
-  	L: 'minecraft:stripped_birch_log'	  
-	})
-	
-	recipe.shaped('psi:cad_assembly_ebony_psimetal', cadPattern, {
-	  S: 'psi:ebony_substance',
-	  I: '#forge:ingots/psimetal',
-	  R: 'create:refined_radiance',
-    L: 'minecraft:stripped_dark_oak_log' 
-	})
-	
-	// recipe.shaped(cons.ropeBelt, [
-	//   'RR '
-	// ], {
-	//   R: '#supplementaries:ropes'
-	// })
 
-	recipe.shaped('4x quark:pipe', [
-		'P',
-		'G',
-		'P'
-	], {
-		P: '#forge:plates/nickel',
-		G: '#forge:glass'
+	// for(let input of oreBlocks) {
+	// 	smeltingTypes.forEach(type => {
+	// 		recipe.remove({
+	// 			input,
+	// 			type
+	// 		})
+	// 	})
+	// }
+
+	recipe.remove({
+		type: 'minecraft:smelting',
+		input: 'immersiveengineering:ore_silver'
 	})
 })
 
@@ -184,7 +302,7 @@ onEvent('recipes', recipe => {
 // }
 
 onEvent('jei.hide.items', event => {
-	for(let item of toHide.concat(toRemove) ) {
+	for(let item of toHide.concat(toRemove).concat(toHide) ) {
 		event.hide(item)
 	}
 })

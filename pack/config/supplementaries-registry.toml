@@ -63,7 +63,7 @@
 		netherite_door = false
 		candle_holder = false
 		flint_block = false
-		rope = false
+		rope = true
 		flags = true
 		notice_board = true
 		redstone_illuminator = false

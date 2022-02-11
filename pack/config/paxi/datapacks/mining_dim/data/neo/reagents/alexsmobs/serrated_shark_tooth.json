@@ -1,0 +1,19 @@
+{
+  "item": "alexsmobs:serrated_shark_tooth",
+  "enchantments": [
+      {
+          "enchantment": "minecraft:sharpness",
+          "minimumEnchantmentLevel": 2,
+          "maximumEnchantmentLevel": 4,
+          "probability": 0.6,
+          "reagentCost": 1
+      },
+      {
+        "enchantment": "minecraft:smite",
+        "minimumEnchantmentLevel": 2,
+        "maximumEnchantmentLevel": 4,
+        "probability": 0.6,
+        "reagentCost": 1
+    }
+  ]
+}

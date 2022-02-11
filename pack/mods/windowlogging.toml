@@ -1,0 +1,13 @@
+name = "Windowlogging"
+filename = "windowlogging-mc1.16.5_v0.0.5.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3525/771/windowlogging-mc1.16.5_v0.0.5.jar"
+hash-format = "murmur2"
+hash = "2805804022"
+
+[update]
+[update.curseforge]
+file-id = 3525771
+project-id = 408759

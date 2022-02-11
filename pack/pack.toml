@@ -1,11 +1,12 @@
 name = "Foxie Farm"
 author = "Dakedres"
 version = "1.0.0"
+pack-format = "packwiz:1.0.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "8a2d09cb1fb3d6bed7399b90b1f4d00ed847e4a6a2dc992604089ea480ecfa8a"
+hash = "3628652ff482b6f2c49e1e3691726059178857883c54d5456bde984604a033e9"
 
 [versions]
 forge = "36.1.32"
