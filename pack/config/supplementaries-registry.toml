@@ -16,7 +16,7 @@
 		firefly = false
 
 	[initialization.blocks]
-		clock_block = true
+		clock_block = false
 		speaker_block = true
 		sack = true
 		#WIP
@@ -35,7 +35,7 @@
 		jar = true
 		stick = true
 		rope_arrow = true
-		checker_block = true
+		checker_block = false
 		slingshot = true
 		wattle_and_daub = true
 		stone_lamp = true
@@ -49,12 +49,12 @@
 		netherite_trapdoor = false
 		bamboo_spikes_tipped = false
 		fodder = true
-		globe = true
-		sconce = true
+		globe = false
+		sconce = false
 		candelabra = true
-		timber_frame = true
+		timber_frame = false
 		safe = true
-		sconce_lever = true
+		sconce_lever = false
 		#WIP
 		present = false
 		sign_post = true
@@ -75,7 +75,7 @@
 		item_shelf = true
 		turn_table = false
 		faucet = false
-		daub = true
+		daub = false
 		gold_trapdoor = true
 		feather_block = false
 		magma_cream_block = false

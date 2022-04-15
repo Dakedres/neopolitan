@@ -37,7 +37,7 @@
 	Experimental = true
 
 [automation]
-	"Chain Linkage" = false
+	"Chain Linkage" = true
 	"Chains Connect Blocks" = true
 	Chute = true
 	"Color Slime" = false
@@ -48,15 +48,15 @@
 	Gravisand = false
 	"Iron Rod" = true
 	"Jukebox Automation" = true
-	"Metal Buttons" = true
+	"Metal Buttons" = false
 	"Obsidian Plate" = true
 	"Pistons Move Tile Entities" = true
 	"Redstone Circuit" = true
-	"Weather Sensor" = true
+	"Weather Sensor" = false
 
 	[automation.chain_linkage]
 		#Can vehicle-linking chains be used for crafting chain armor?
-		"Crafts Armor" = true
+		"Crafts Armor" = false
 
 	[automation.color_slime]
 		"Change Name" = true
