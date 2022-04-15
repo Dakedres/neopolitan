@@ -1,0 +1,13 @@
+name = "Audio Cassettes"
+filename = "AudioCassettes-1.16.4-1.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3144/957/AudioCassettes-1.16.4-1.1.jar"
+hash-format = "murmur2"
+hash = "3163716009"
+
+[update]
+[update.curseforge]
+file-id = 3144957
+project-id = 402035

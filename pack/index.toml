@@ -1,8 +1,92 @@
 hash-format = "sha256"
 
 [[files]]
+file = "_kubejs.old/README.txt"
+hash = "801703f280e4ff26fb4be02067cb583a79f7618bc0966b11d55b80492fddb56b"
+
+[[files]]
+file = "_kubejs.old/assets/kubejs/textures/block/example_block.png"
+hash = "783d78bd1ee61d3b32273670dff9d82c34cd74c5ae899a10f104f473828d5bbc"
+
+[[files]]
+file = "_kubejs.old/assets/kubejs/textures/item/example_item.png"
+hash = "45a5f56eba6066ad05c70988a32b72c50cfeb6e35857739bd582007011ea002b"
+
+[[files]]
+file = "_kubejs.old/client_scripts/script.js"
+hash = "8d6f3db48cc507f2dc6e23919e21837851738fc849cb83772b4186b03bef391d"
+
+[[files]]
+file = "_kubejs.old/config/client.properties"
+hash = "55ab57126ebec69d1658d6bda1178882d4c08b8e4e61a10b4fc02de110295344"
+
+[[files]]
+file = "_kubejs.old/config/common.properties"
+hash = "e873f6a21c9f36fa682186236bb07eb8a41609085abb71fbb4cda25214c99217"
+
+[[files]]
+file = "_kubejs.old/exported/tags/blocks.txt"
+hash = "37307fd98348304d1ba2df926878061135b223a892521a8e7f7a1c246a60762e"
+
+[[files]]
+file = "_kubejs.old/exported/tags/enchantments.txt"
+hash = "11d5a0fe4e2a0ab97d1fbd5dc41f3d9df8dcb591a6d81baf1c9c0aecc7b946ea"
+
+[[files]]
+file = "_kubejs.old/exported/tags/entity_types.txt"
+hash = "71d520ad342a322e6b6da6a6b726e3d62f7cf7bc8b164ab9cfb369c8e759dbb2"
+
+[[files]]
+file = "_kubejs.old/exported/tags/fluids.txt"
+hash = "a569b60e4ac47169640e6c75398c37c77562a6ec32a329cdd3225b1ddc601a55"
+
+[[files]]
+file = "_kubejs.old/exported/tags/functions.txt"
+hash = "7219502ac290126d78cfcc3f70e4bd6485ca1718c8b3661c9012a9c36d719d25"
+
+[[files]]
+file = "_kubejs.old/exported/tags/items.txt"
+hash = "19246b3e6bc4e8036a5a5804dcea0dba56008bdc3bb78c0ff61535df6c361148"
+
+[[files]]
+file = "_kubejs.old/exported/tags/potions.txt"
+hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
+
+[[files]]
+file = "_kubejs.old/exported/tags/tile_entity_types.txt"
+hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
+
+[[files]]
+file = "_kubejs.old/server_scripts/gamestages.js"
+hash = "9432331505e9edd1576fc77a2a7100711c139b62ea1657c83fc60edfbade0c28"
+
+[[files]]
+file = "_kubejs.old/startup_scripts/custom_content.js"
+hash = "9ba66b948e17512eb58619bd2248cd288a2956fdd564ef58e776ed4593204342"
+
+[[files]]
+file = "_kubejs.old/startup_scripts/gamestages.compiled.js"
+hash = "d66fa3babc3685949eab7682b4941866bbe368e9b2bb9b958e2a82f04c827776"
+
+[[files]]
+file = "_kubejs.old/startup_scripts/gamestages.es6"
+hash = "e5692406f49909b9d5c1005435026de6f29129fd04ee576b32e6e09a2a2a8965"
+
+[[files]]
+file = "_kubejs.old/startup_scripts/script.compiled.js"
+hash = "5094d8acef0a3f790114c0779d1c8e40bd0a1d591d442df601559214dba371e2"
+
+[[files]]
+file = "_kubejs.old/startup_scripts/script.es6"
+hash = "850b7d72d1322f2913e908f4ca2c9a51c1c1183994316fa29adf04edbb431a32"
+
+[[files]]
 file = "_kubejs/README.txt"
 hash = "801703f280e4ff26fb4be02067cb583a79f7618bc0966b11d55b80492fddb56b"
+
+[[files]]
+file = "_kubejs/assets/kubejs/lang/en_us.json"
+hash = "3d08188f29b411178a0338f719d9b1e940f49c2d00798bbc583fd10325f1154a"
 
 [[files]]
 file = "_kubejs/assets/kubejs/textures/block/example_block.png"
@@ -13,8 +97,20 @@ file = "_kubejs/assets/kubejs/textures/item/example_item.png"
 hash = "45a5f56eba6066ad05c70988a32b72c50cfeb6e35857739bd582007011ea002b"
 
 [[files]]
+file = "_kubejs/client_scripts/dymm.js"
+hash = "6fa3bd6e4db006e25ee83ba9170a5ea79171ebe9fbec99694a0929aeb8011b36"
+
+[[files]]
+file = "_kubejs/client_scripts/gamestages.js"
+hash = "002745a1517194ce327379038ec83a4847d4aa903f7f208273dcde1ebaec9687"
+
+[[files]]
 file = "_kubejs/client_scripts/script.js"
 hash = "8d6f3db48cc507f2dc6e23919e21837851738fc849cb83772b4186b03bef391d"
+
+[[files]]
+file = "_kubejs/client_scripts/tooltips.js"
+hash = "c76e3256839e50c29330a86231eac8d9bfdc071a6e1d0bbac9190d215b4fb801"
 
 [[files]]
 file = "_kubejs/config/client.properties"
@@ -58,31 +154,443 @@ hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
 
 [[files]]
 file = "_kubejs/server_scripts/gamestages.js"
-hash = "9432331505e9edd1576fc77a2a7100711c139b62ea1657c83fc60edfbade0c28"
+hash = "df9dc71befe60bc274e4c246c242e567b0517a1f19cddfe7392f05bb2483c193"
 
 [[files]]
-file = "_kubejs/startup_scripts/custom_content.js"
-hash = "9ba66b948e17512eb58619bd2248cd288a2956fdd564ef58e776ed4593204342"
+file = "_kubejs/server_scripts/seasons.compiled.js"
+hash = "4839b9525136d5ba1ed494f11b1e6196f65fc1125192e11f1af4facbffe54c88"
+
+[[files]]
+file = "_kubejs/server_scripts/seasons.es6"
+hash = "3de22f4324db16b6e8a567bdc9ec499ed1da5884a48cf6395df60e42a204d11b"
+
+[[files]]
+file = "_kubejs/startup_scripts/custom_content.compiled.js"
+hash = "9e771d2d48e360fe8ff68a344e24123fa98fd17f863536ab162fef6e51995383"
+
+[[files]]
+file = "_kubejs/startup_scripts/custom_content.es6"
+hash = "b81823c436421b5bd2e2bcf08d0b4755f18d5e3a9eb60f9a5ae9d6d42f5ace2a"
 
 [[files]]
 file = "_kubejs/startup_scripts/gamestages.compiled.js"
-hash = "d66fa3babc3685949eab7682b4941866bbe368e9b2bb9b958e2a82f04c827776"
+hash = "28ff68592882ec087d7fab8ac158c259dfa10838366d1c32eb2ea51c815fa7e4"
 
 [[files]]
 file = "_kubejs/startup_scripts/gamestages.es6"
-hash = "e5692406f49909b9d5c1005435026de6f29129fd04ee576b32e6e09a2a2a8965"
+hash = "766d2c5c71f0c5d4300e04a5713c3911224c88994269de9c8323069db51bc82c"
+
+[[files]]
+file = "_kubejs/startup_scripts/loot.compiled.js"
+hash = "29c7574415f5d6f19c697460e087e881e25b2fd326ed9bba2d42e6621869c04b"
+
+[[files]]
+file = "_kubejs/startup_scripts/loot.es6"
+hash = "ea69d6ab05e2606bab93ef10ba9f307339c91064feed192e939abf7eb3eba25c"
+
+[[files]]
+file = "_kubejs/startup_scripts/recipes.compiled.js"
+hash = "6e6d6ca14d40cc7f304ab6dcac662628577bf409227479cd42dac813554d1525"
+
+[[files]]
+file = "_kubejs/startup_scripts/recipes.es6"
+hash = "924e4158bf159ff6a2e3491d4fa99c7bcf2b608eb83889b19c2d6df8259c2b9b"
 
 [[files]]
 file = "_kubejs/startup_scripts/script.compiled.js"
-hash = "5094d8acef0a3f790114c0779d1c8e40bd0a1d591d442df601559214dba371e2"
+hash = "1a739f78a472d1aebf961ffdff023e9a757ac0ac9871c485e4e5d1a95d381412"
 
 [[files]]
 file = "_kubejs/startup_scripts/script.es6"
-hash = "850b7d72d1322f2913e908f4ca2c9a51c1c1183994316fa29adf04edbb431a32"
+hash = "5d7d4d467637ece3110c127ffcfd5bab4b07ac6304de8b7ee6eb5cabd2e0cac8"
+
+[[files]]
+file = "_kubejs/startup_scripts/tags.compiled.js"
+hash = "73e143eb2b19f47512a758c6f6f0dece77505f417fb5589e43b698c39b819a35"
+
+[[files]]
+file = "_kubejs/startup_scripts/tags.es6"
+hash = "b9711ec4cfe7297aaebd0b5dea3833ccb03e6a82eca875135fce03655f9a216c"
+
+[[files]]
+file = "_scripts.old/gamestages.zs"
+hash = "6d6e2d17d3db09241a3e5d9974fdbd944ec2434274c8e8c418802083b49c67df"
 
 [[files]]
 file = "_scripts/gamestages.zs"
-hash = "6d6e2d17d3db09241a3e5d9974fdbd944ec2434274c8e8c418802083b49c67df"
+hash = "39d97f116d594efaa1fc534d287d457082eeff4f081c011ebb9afc3f973f84b0"
+
+[[files]]
+file = "config/_paxi/datapack_load_order.json"
+hash = "a7143b2a3cf712ac48b5e4c3445c4d1103b3eb92b1bd0822264b1370fb6dd884"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_10.nbt"
+hash = "c3f6c52d0ebd7df3945ea3ef25c6332595d571d76ad367dc8679a24ce70a3fc5"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_2.nbt"
+hash = "b9755ed83303a28e2364a7432b07a7859325a36a6d8f95df00beaf005563efe3"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_3.nbt"
+hash = "f6658eb1803a6ce7180d09d9b5af2e4730c60225844774450992d37662ef4567"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_6.nbt"
+hash = "a588c78380b8d66a1b91975ef2bfc6c4fc31b41d99f31d266853c525e936f881"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_5.nbt"
+hash = "8b1dbaa0180376fc30fb4ee3544f10dfdfcdf544fb25dc1df749d892efce2844"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_6.nbt"
+hash = "bb2fc4987be1a1bffbc5feeada75e68baf1360193f05b456aefeccf0357a0697"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_8.nbt"
+hash = "c19a66653018c6bd0a3bbcf4f27dd0c470063bcf312fdf9e93c3275f6e0fea73"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_0.nbt"
+hash = "b053422f8029a97bfd748dc447aeb9c3af5c435ad93926e09ee41b9c4dee060a"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_1.nbt"
+hash = "82a85cdd76e3d8e956237413da06efc8c8f28d464ef715f9cc328da0e500d279"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_stone_1.nbt"
+hash = "096ee4a1df0ae15a12209ee7fc176d57ac7a06785ec34f81a1d02a0337803e87"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/campfire_prop/campfire_prop_3.nbt"
+hash = "0d3852fbee78483cb171e87afceb26627a389e62c03a2ed02720620c6bd8fab5"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/immersiveengineering/loot_tables/blocks/ore_aluminum.json"
+hash = "5ed31e95f0c6054cfcb8eaa1342f051663bb70519882901e4b2c3d0e32d7e0c9"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/immersiveengineering/loot_tables/blocks/ore_lead.json"
+hash = "cb22b324e570492460379cdd326e886aea17316fedd71f8e3112c2d85db862d3"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/immersiveengineering/loot_tables/blocks/ore_nickel.json"
+hash = "628a3a834f4c8974d55d8614a5216b9bdfddae82c1877074bd33ec91c750a9a4"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/immersiveengineering/loot_tables/blocks/ore_silver.json"
+hash = "de3ca520939f894afdbae5f8bf80398451a69c10a9e23c40d3e25b332182f6e4"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/minecraft/tags/functions/load.json"
+hash = "dab8a4df75aa43dc596f9a94b54460d583a78573da906ea3b3ec9cefa5160834"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/dimension/ancient.json"
+hash = "d9190256a20e99510d64e482a4c09606c7ab05051864aaa3e89124b0c86dd8e8"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/dimension/mining.json"
+hash = "66cb8334db7c17ee8e563843d29aa206df6eb5bc8ba0e02f713aeb8754ba1898"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/dimension_type/mining.json"
+hash = "9b578d4294758b27aea63bb4f9022175654cf7af97615a75e6e1247372068212"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/worldgen/biome_/mining.json"
+hash = "e88d2f9ed9fd0292afbb190c4d3adc1e73c87733b5186c16879e6d42a7fda49a"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/worldgen/configured_surface_builder/mining.json"
+hash = "025773e1a4bb22d52272a6df56ca22a35408c50682241954559c0ad407b7bd07"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/mining_dimension/worldgen/noise_settings/mining.json"
+hash = "62f4e317636b6ab60b43a767eb549c3b3421b6cff0af0155c42b59ed5ddbae8c"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/advancements/all_discs.json"
+hash = "bac3d41bdad048081f52a76c0a8bade71afd22cf25d9566f04498fe5f4dafcf0"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/advancements/all_the_blocks.json"
+hash = "6d132226cb865d768d406ad254ad517ac2f16b7fd614e039b04788e5621fd2f6"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/advancements/glowstone_cavern.json"
+hash = "3e11bb53c50cf66cf09f620e4fe947859ca9f82e208bcee2c935558730c889ca"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/functions/init.mcfunction"
+hash = "81b0a55f2053b643245a2c4aeb14362c132e8deccb86a0e1d91bf550c611e3ad"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/functions/reload_gamestage.mcfunction"
+hash = "4b11d44e4bc96ad15523339207a0186cf53ce71a97b56b3acc1d6f81a52f764a"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/functions/reload_info.mcfunction"
+hash = "e6331a8a07df04b0afc0ac33d16ad452f60caee63f7b5bf40a94eefad61d16f0"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/reagents/alexsmobs/dropbear_claw.json"
+hash = "85fec4b1d36ef805a40c9de66a0bd561ceaf92a9f2d2c60750c47d0cad2a5096"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/reagents/alexsmobs/serrated_shark_tooth.json"
+hash = "e30a0b3111e4e961bf801bc6ab06a3d7eba5cf0734a3e6200b48070e73e9c502"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/reagents/quark/soul_bead.json"
+hash = "8f6cdaed1e354bb079e23d161e8da9cbec60ee0be42271b641e1bf48add5c3d6"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/jar_honey.nbt"
+hash = "ada8652f32a8ae397aae717f94aa7b4fd05a39aa3391d030c71b52a14287ce48"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_0.nbt"
+hash = "c91e71f5021f4beab2cf739cc306a045243919b6c1022efaab38d758881729ae"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_1.nbt"
+hash = "4e70ba77375ff6008bad506e903046d36707c07406d0e58e97b8fcb1c31912bd"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_candle.nbt"
+hash = "a79fcfe80b42f08c1d7aa24cb68825eb3cc27905e14fb5f84b8f0e78e259a80f"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_empty.nbt"
+hash = "8eb66a6a407e7a94cff76a43f9ac08b750e1a2e45d7a3cf827f290efcf73413c"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_sword.nbt"
+hash = "20788715a23632be47db6885a3b8c8973c424b423868d0b15b8f8aa43ac15c9a"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/fancy_statue/statue_3.nbt"
+hash = "e7cc0d32a47b7fa4526e3f3bc8cd2a37c8300dd4ab071a405ab60ede1506b6c6"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_0.nbt"
+hash = "dd8d3322e42a83a633da4241e4f611d0862f3ccbd9cfd50e43f30c34904457bc"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_1.nbt"
+hash = "69609f014ba37cc5f5abdfc48b243a9ab2a852e740fbefc4d7e426bb6943fbbd"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_2.nbt"
+hash = "c084849dca45c5ef6ffd4bbbc86c1cc9011926d134d1efe62d09c312f037bffa"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_3.nbt"
+hash = "709a247e18110853d5e671204e1886da4298f82138335ae86bd061d0deb1338e"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_0.nbt"
+hash = "16c5bb2e13ee59ae7a734469a382137e772bbe229d960031ec1f254fef1ab2c7"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_1.nbt"
+hash = "a001a65c691999220253d10ee0615dfbc15c7b83b79b4c73825ab5ae4e69d216"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_0.nbt"
+hash = "e6437bb084a9f7ce169a6d4bf2afae234970b605c50eefac46e69aea81afbc87"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_1.nbt"
+hash = "b3ec97274a7ed29a20e73ad14579a01b715337c141885c0d050843e9a4198bf9"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/statue_0.nbt"
+hash = "e1c301f7682da59104fbc7f984b5f2716112688f168150cd4fce88c4416eeb85"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/statue_1.nbt"
+hash = "e033d0f8a7dabf656dc8e5a3fd79db5c1bcb649b108b40ebc0d391d418c25550"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/statue_2.nbt"
+hash = "253096f54fa95624abaab16448c0816cbd1d493fba94afb6ebd00116fe1247db"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/structures/loot_decor/statue_3.nbt"
+hash = "e7cc0d32a47b7fa4526e3f3bc8cd2a37c8300dd4ab071a405ab60ede1506b6c6"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/worldgen/biome/lush_caves.json"
+hash = "5a6d21136c5d97375ef9e92929bf3e5b5eafdfe9b87bc5aa393cf28951652dfe"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/neo/worldgen/template_pool/cheap_decor.json"
+hash = "ecb86d0118d1e2cf6e47f2f19085225015c7f4cf3ede152dd75ff14a334c5392"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/simplystacked/config/end_to_overworld.json"
+hash = "ee93125f052c2edc47f19d24babed4ee0e125342e2cbe52fe22bb8c8d24d4e0d"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/simplystacked/config/nether_to_overworld.json"
+hash = "4d50375352a39d5f71fb832e0a6366446dda0ba90cddbe5f98cca1bc60f5460a"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/simplystacked/config/overworld_to_end.json"
+hash = "ae37b3294b6b1c1a18ed61998128dbaa7afbfdaa408d3bcd7121ac65d2f41f39"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/data/simplystacked/config/overworld_to_nether.json"
+hash = "b9f92d103bdc289c35cacac64c9f6191406e7337e086fa90588eb1ca67e5d71c"
+
+[[files]]
+file = "config/_paxi/datapacks/mining_dim/pack.mcmeta"
+hash = "8a753139f3007d2fbd8c0af6316676b351d5c7ca43c976651b005480e2bd7041"
+
+[[files]]
+file = "config/_paxi/resourcepacks/Authentic+Shadows_1.16.2-1.16.4.zip"
+hash = "48d346dd4cd424c03499e82ce424ef1c8b0b63deb92b5a95ad3068fe0b8cc6eb"
+
+[[files]]
+file = "config/_paxi/resourcepacks/BetterSounds+v1.2.zip"
+hash = "e12011665a38c082c9c2e52c3bb10550ebeaf6867b00a6a5705b684c863d73e8"
+
+[[files]]
+file = "config/_paxi/resourcepacks/CraftingTable-Reimagined.zip"
+hash = "8cbdb80b677088cb4ac69279ea4a8a9e6d33596c589b9faa7055a65ade01e73d"
+
+[[files]]
+file = "config/_paxi/resourcepacks/Jappa_Style_Soul_Compass.zip"
+hash = "357683b35abb20a1c277b1b3e2dcce815e324318e4e034688334ea2ffa9dc569"
+
+[[files]]
+file = "config/_paxi/resourcepacks/Peeves+v4.0+-+1.18.zip"
+hash = "c0348aaa86996e370fdd07f21bb3677226f8321e1d612c5eb5f27172dac395ea"
+
+[[files]]
+file = "config/_paxi/resourcepacks/Shield+Corrections+Regular.zip"
+hash = "05ac96728a82d8e8bc6490cdb51834a5f664f9dd15496051308e7d00be0c6f67"
+
+[[files]]
+file = "config/_paxi/resourcepacks/Updated_Engineering_v1.3.zip"
+hash = "164214577e1b3f415667fd797f87fbfc285fca7bf66ddfca7b51f477f76b1df3"
+
+[[files]]
+file = "config/_paxi/resourcepacks/VanillaTweaks_r592244.zip"
+hash = "daf5edba057914cad713555270581ac517e99339a1c5a429e4c7a053ddebeca0"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/minecraft/lang/en_us.json"
+hash = "37ed30fe9e641345c365e5056c48ca1af03d10d8169e26d6a1d1f17db95b89df"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/minecraft/models/item/slime_ball.json"
+hash = "580b141e7bf99715be6340bf217e491224eb472af22fdee991ed19dd202be838"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/minecraft/sounds.json"
+hash = "3c80c196dada307fc56491cbcfb755fcfa5413726e8384c8ceec8a06e552012e"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/deep/fungi.ogg"
+hash = "b0ae1c34bc304b33e1a20edf77ebdd6beb22c5befabb349d4796d7a53547e1d6"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/deep/maybe_illegal/aisatsana.ogg"
+hash = "a1d61c7107b12eb4a238800e0c454e61f4c53fca6dc51be4950ea9a7572beb9a"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/deep/pillows.ogg"
+hash = "cb955dfab3ccf9e6e46d577612e4ebf610259999c395cdd796d58a3d9672cead"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/deep/three_marbles.ogg"
+hash = "a62b8cc92bbf30a0520e5460d2e5efb68078c652331cc969f19e7cd6fae0f480"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/deep/thyme.ogg"
+hash = "f74ad45faf4c68360227b80509a09593e26708cbc4df740c3f743a929c41388e"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/end/alle_umfotzen.ogg"
+hash = "87acdccf565bbf0f0f51c7667d61da78cabd8b3e102d191bbd820337ac92b287"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/end/honig_ums_maul.ogg"
+hash = "2d1864d6c5e47a4c16ea47a839c836c1962d686aaea5d323582ccd233d19eafa"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/its_ok.ogg"
+hash = "dd35f0bbe45b4be990139a40dbe45c66bdc2252df8b7e30451387b5814a79c8c"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/rain/subwoofer_lullaby.ogg"
+hash = "2ff1c1d2fa17482af259d173df2ab30ff5f4f2651df1c2b0329e70cfa911f73e"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/rain/sweden.ogg"
+hash = "577f343114eb48f0d3c3e66d9faa9fac3cf134f14f51ec575f302f9167d9c812"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/sounds/music/game/traveling_by_boat.ogg"
+hash = "55a727bd38f0e761c557203d132507c64155fd89403e073334a2b342c79e9f44"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/textures/item/metal_raw_aluminum.png"
+hash = "aed14a4f0ff021d7ed4c5f1f9a8d344271ff63d1fadba27c1b1d681cb45a5c8a"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/textures/item/metal_raw_lead.png"
+hash = "c001a0df10e3e645ae34f600b30fb4307a322df128d4eec69ca87a4373337b11"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/textures/item/metal_raw_nickel.png"
+hash = "255a6d8edc54c5604222031ac5290ab33296bbb7d94553594575409c4831732b"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/neo/textures/item/metal_raw_silver.png"
+hash = "4683121b561a1feda620a75d4a864fa3f8bacbd54a3f75467a627e6c82eec1ac"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/models/block/basic_workbench.json"
+hash = "f3d1450eb5e629b5221f4cfb7d1e5270d73b5979f4b2aacc9fa2234704d6c091"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_front.png"
+hash = "83fc9de199542fa439022658465d6b3239f78e27081db51c7bb3c70dbc031a1d"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_front.xcf"
+hash = "e597b7587119a230de35ecc53ec3a2fa05b796c2b67446198bb70ecaeda92b56"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_side.png"
+hash = "118670a2033cd325558839c317ec331cdaa516536573ff724bc7650a0208b17c"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_side.xcf"
+hash = "66da3e4dfb9471555e7f2d08ec297a2fef36436fde8770139857c02735ab7307"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_top.png"
+hash = "ad62b8347ddedcc2c7563cd9584a72a313ed26604fc6a870ff534531b9b1c941"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/assets/tetra/textures/blocks/crafting_table_top.xcf"
+hash = "2c47b12f19a5cee4e50ec846a86224a99bf0e0ec34ae68ae1e9a9f653022628b"
+
+[[files]]
+file = "config/_paxi/resourcepacks/neo/pack.mcmeta"
+hash = "f5a4aeaf84fa9fe6e3e6ef410ad136194b91970ee2e7d4bf3653a40f4aab2383"
+
+[[files]]
+file = "config/_paxi/vanillatweaks.txt"
+hash = "d8a402be720544d89843e380becb564d8224825bce1a22d84676ce24148e8291"
 
 [[files]]
 file = "config/_seals.json"
@@ -141,6 +649,26 @@ file = "config/create-common.toml"
 hash = "234cb1d409c3d3456f17c93cf4ce90240665605d811d609ed49d60894b665cf5"
 
 [[files]]
+file = "config/defaultconfigs/deadlyendphantoms-server.toml"
+hash = "007eb414ceb4afa9fa18070a326b6903a0d6efa866fd9d53ec0f71a8947778cd"
+
+[[files]]
+file = "config/defaultconfigs/diet-effects.toml"
+hash = "09f67f21ecae50382ef0ec46bb1cff21eabd66f851e04ae1272bb52cbc0c5b6b"
+
+[[files]]
+file = "config/defaultconfigs/diet-groups.toml"
+hash = "32cf8be0704a7a6e8d8708b8adba99016d9dbeab5e75c829df74fb402d1e4744"
+
+[[files]]
+file = "config/defaultconfigs/ensorcellation-server.toml"
+hash = "1088042ee7939e6f9278158d5899a34d27e1d26494b41ed349255abee78c3f9d"
+
+[[files]]
+file = "config/defaultconfigs/immersiveengineering-server.toml"
+hash = "c8424addc31d6b7de7d01328d2ebfa62e8515e47c44aaaf39a2e4f077de7086a"
+
+[[files]]
 file = "config/diet-client.toml"
 hash = "953b38ea2dad7c3b476b2b5b0e9fad019f30c8ed86c3b0cff0df2f13f9db039e"
 
@@ -193,268 +721,272 @@ file = "config/infernalexp-common.toml"
 hash = "3e73a91b1f1675951a2f522f8910fd7dd20d00bd9b5377a9235db97305fd9732"
 
 [[files]]
+file = "config/moreminecartsconfig.toml"
+hash = "7733c1e7e66e6189d406faee3a34921c6d6131a8a78cd9b9a47fe002c9c48bad"
+
+[[files]]
 file = "config/notenoughanimations.json"
 hash = "6b92bf0a66383ef14b83f458067760b64123a3f2dc7f04236e62ddc5b820b8fd"
 
 [[files]]
-file = "config/paxi_/datapack_load_order.json"
+file = "config/paxi_.old/datapack_load_order.json"
 hash = "a7143b2a3cf712ac48b5e4c3445c4d1103b3eb92b1bd0822264b1370fb6dd884"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_10.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_10.nbt"
 hash = "c3f6c52d0ebd7df3945ea3ef25c6332595d571d76ad367dc8679a24ce70a3fc5"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_2.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_2.nbt"
 hash = "b9755ed83303a28e2364a7432b07a7859325a36a6d8f95df00beaf005563efe3"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_3.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_3.nbt"
 hash = "f6658eb1803a6ce7180d09d9b5af2e4730c60225844774450992d37662ef4567"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_6.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/2x3/2x3_6.nbt"
 hash = "a588c78380b8d66a1b91975ef2bfc6c4fc31b41d99f31d266853c525e936f881"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_5.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_5.nbt"
 hash = "8b1dbaa0180376fc30fb4ee3544f10dfdfcdf544fb25dc1df749d892efce2844"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_6.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_6.nbt"
 hash = "bb2fc4987be1a1bffbc5feeada75e68baf1360193f05b456aefeccf0357a0697"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_8.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/3x3/3x3_8.nbt"
 hash = "c19a66653018c6bd0a3bbcf4f27dd0c470063bcf312fdf9e93c3275f6e0fea73"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_0.nbt"
 hash = "b053422f8029a97bfd748dc447aeb9c3af5c435ad93926e09ee41b9c4dee060a"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_big_1.nbt"
 hash = "82a85cdd76e3d8e956237413da06efc8c8f28d464ef715f9cc328da0e500d279"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_stone_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/bridges/bridge_stone_1.nbt"
 hash = "096ee4a1df0ae15a12209ee7fc176d57ac7a06785ec34f81a1d02a0337803e87"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/campfire_prop/campfire_prop_3.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/betterdungeons/structures/skeleton_dungeon/campfire_prop/campfire_prop_3.nbt"
 hash = "0d3852fbee78483cb171e87afceb26627a389e62c03a2ed02720620c6bd8fab5"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/minecraft/tags/functions/load.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/minecraft/tags/functions/load.json"
 hash = "dab8a4df75aa43dc596f9a94b54460d583a78573da906ea3b3ec9cefa5160834"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/dimension/ancient.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/dimension/ancient.json"
 hash = "d9190256a20e99510d64e482a4c09606c7ab05051864aaa3e89124b0c86dd8e8"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/dimension/mining.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/dimension/mining.json"
 hash = "66cb8334db7c17ee8e563843d29aa206df6eb5bc8ba0e02f713aeb8754ba1898"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/dimension_type/mining.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/dimension_type/mining.json"
 hash = "9b578d4294758b27aea63bb4f9022175654cf7af97615a75e6e1247372068212"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/worldgen/biome_/mining.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/worldgen/biome_/mining.json"
 hash = "e88d2f9ed9fd0292afbb190c4d3adc1e73c87733b5186c16879e6d42a7fda49a"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/worldgen/configured_surface_builder/mining.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/worldgen/configured_surface_builder/mining.json"
 hash = "025773e1a4bb22d52272a6df56ca22a35408c50682241954559c0ad407b7bd07"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/mining_dimension/worldgen/noise_settings/mining.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/mining_dimension/worldgen/noise_settings/mining.json"
 hash = "62f4e317636b6ab60b43a767eb549c3b3421b6cff0af0155c42b59ed5ddbae8c"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/advancements/glowstone_cavern.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/advancements/glowstone_cavern.json"
 hash = "3e11bb53c50cf66cf09f620e4fe947859ca9f82e208bcee2c935558730c889ca"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/functions/init.mcfunction"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/functions/init.mcfunction"
 hash = "3ae54eed9f75d39036098b23be1f22bb6c271c1d00877e67968e8ffc5d9d0fb4"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/jar_honey.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/jar_honey.nbt"
 hash = "ada8652f32a8ae397aae717f94aa7b4fd05a39aa3391d030c71b52a14287ce48"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_0.nbt"
 hash = "c91e71f5021f4beab2cf739cc306a045243919b6c1022efaab38d758881729ae"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_1.nbt"
 hash = "4e70ba77375ff6008bad506e903046d36707c07406d0e58e97b8fcb1c31912bd"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_candle.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_candle.nbt"
 hash = "a79fcfe80b42f08c1d7aa24cb68825eb3cc27905e14fb5f84b8f0e78e259a80f"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_empty.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_empty.nbt"
 hash = "8eb66a6a407e7a94cff76a43f9ac08b750e1a2e45d7a3cf827f290efcf73413c"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_sword.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/cheap_decor/statue_sword.nbt"
 hash = "20788715a23632be47db6885a3b8c8973c424b423868d0b15b8f8aa43ac15c9a"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/fancy_statue/statue_3.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/fancy_statue/statue_3.nbt"
 hash = "e7cc0d32a47b7fa4526e3f3bc8cd2a37c8300dd4ab071a405ab60ede1506b6c6"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_0.nbt"
 hash = "dd8d3322e42a83a633da4241e4f611d0862f3ccbd9cfd50e43f30c34904457bc"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_1.nbt"
 hash = "69609f014ba37cc5f5abdfc48b243a9ab2a852e740fbefc4d7e426bb6943fbbd"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_2.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_2.nbt"
 hash = "c084849dca45c5ef6ffd4bbbc86c1cc9011926d134d1efe62d09c312f037bffa"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_3.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_3.nbt"
 hash = "709a247e18110853d5e671204e1886da4298f82138335ae86bd061d0deb1338e"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_0.nbt"
 hash = "16c5bb2e13ee59ae7a734469a382137e772bbe229d960031ec1f254fef1ab2c7"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/book_double_1.nbt"
 hash = "a001a65c691999220253d10ee0615dfbc15c7b83b79b4c73825ab5ae4e69d216"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_0.nbt"
 hash = "e6437bb084a9f7ce169a6d4bf2afae234970b605c50eefac46e69aea81afbc87"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/rare_statue_1.nbt"
 hash = "b3ec97274a7ed29a20e73ad14579a01b715337c141885c0d050843e9a4198bf9"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/statue_0.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/statue_0.nbt"
 hash = "e1c301f7682da59104fbc7f984b5f2716112688f168150cd4fce88c4416eeb85"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/statue_1.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/statue_1.nbt"
 hash = "e033d0f8a7dabf656dc8e5a3fd79db5c1bcb649b108b40ebc0d391d418c25550"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/statue_2.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/statue_2.nbt"
 hash = "253096f54fa95624abaab16448c0816cbd1d493fba94afb6ebd00116fe1247db"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/structures/loot_decor/statue_3.nbt"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/structures/loot_decor/statue_3.nbt"
 hash = "e7cc0d32a47b7fa4526e3f3bc8cd2a37c8300dd4ab071a405ab60ede1506b6c6"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/worldgen/biome/lush_caves.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/worldgen/biome/lush_caves.json"
 hash = "5a6d21136c5d97375ef9e92929bf3e5b5eafdfe9b87bc5aa393cf28951652dfe"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/neo/worldgen/template_pool/cheap_decor.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/neo/worldgen/template_pool/cheap_decor.json"
 hash = "ecb86d0118d1e2cf6e47f2f19085225015c7f4cf3ede152dd75ff14a334c5392"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/simplystacked/config/end_to_overworld.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/simplystacked/config/end_to_overworld.json"
 hash = "ee93125f052c2edc47f19d24babed4ee0e125342e2cbe52fe22bb8c8d24d4e0d"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/simplystacked/config/nether_to_overworld.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/simplystacked/config/nether_to_overworld.json"
 hash = "4d50375352a39d5f71fb832e0a6366446dda0ba90cddbe5f98cca1bc60f5460a"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/simplystacked/config/overworld_to_end.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/simplystacked/config/overworld_to_end.json"
 hash = "ae37b3294b6b1c1a18ed61998128dbaa7afbfdaa408d3bcd7121ac65d2f41f39"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/data/simplystacked/config/overworld_to_nether.json"
+file = "config/paxi_.old/datapacks/mining_dim/data/simplystacked/config/overworld_to_nether.json"
 hash = "b9f92d103bdc289c35cacac64c9f6191406e7337e086fa90588eb1ca67e5d71c"
 
 [[files]]
-file = "config/paxi_/datapacks/mining_dim/pack.mcmeta"
+file = "config/paxi_.old/datapacks/mining_dim/pack.mcmeta"
 hash = "8a753139f3007d2fbd8c0af6316676b351d5c7ca43c976651b005480e2bd7041"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/minecraft/sounds.json"
+file = "config/paxi_.old/resourcepacks/neo/assets/minecraft/sounds.json"
 hash = "3c80c196dada307fc56491cbcfb755fcfa5413726e8384c8ceec8a06e552012e"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/deep/fungi.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/deep/fungi.ogg"
 hash = "b0ae1c34bc304b33e1a20edf77ebdd6beb22c5befabb349d4796d7a53547e1d6"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/deep/maybe_illegal/aisatsana.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/deep/maybe_illegal/aisatsana.ogg"
 hash = "a1d61c7107b12eb4a238800e0c454e61f4c53fca6dc51be4950ea9a7572beb9a"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/deep/pillows.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/deep/pillows.ogg"
 hash = "cb955dfab3ccf9e6e46d577612e4ebf610259999c395cdd796d58a3d9672cead"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/deep/three_marbles.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/deep/three_marbles.ogg"
 hash = "a62b8cc92bbf30a0520e5460d2e5efb68078c652331cc969f19e7cd6fae0f480"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/deep/thyme.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/deep/thyme.ogg"
 hash = "f74ad45faf4c68360227b80509a09593e26708cbc4df740c3f743a929c41388e"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/end/alle_umfotzen.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/end/alle_umfotzen.ogg"
 hash = "87acdccf565bbf0f0f51c7667d61da78cabd8b3e102d191bbd820337ac92b287"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/end/honig_ums_maul.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/end/honig_ums_maul.ogg"
 hash = "2d1864d6c5e47a4c16ea47a839c836c1962d686aaea5d323582ccd233d19eafa"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/its_ok.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/its_ok.ogg"
 hash = "dd35f0bbe45b4be990139a40dbe45c66bdc2252df8b7e30451387b5814a79c8c"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/rain/subwoofer_lullaby.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/rain/subwoofer_lullaby.ogg"
 hash = "2ff1c1d2fa17482af259d173df2ab30ff5f4f2651df1c2b0329e70cfa911f73e"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/rain/sweden.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/rain/sweden.ogg"
 hash = "577f343114eb48f0d3c3e66d9faa9fac3cf134f14f51ec575f302f9167d9c812"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/sounds/music/game/traveling_by_boat.ogg"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/sounds/music/game/traveling_by_boat.ogg"
 hash = "55a727bd38f0e761c557203d132507c64155fd89403e073334a2b342c79e9f44"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/textures/item/metal_raw_aluminum.png"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/textures/item/metal_raw_aluminum.png"
 hash = "aed14a4f0ff021d7ed4c5f1f9a8d344271ff63d1fadba27c1b1d681cb45a5c8a"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/textures/item/metal_raw_lead.png"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/textures/item/metal_raw_lead.png"
 hash = "c001a0df10e3e645ae34f600b30fb4307a322df128d4eec69ca87a4373337b11"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/textures/item/metal_raw_nickel.png"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/textures/item/metal_raw_nickel.png"
 hash = "255a6d8edc54c5604222031ac5290ab33296bbb7d94553594575409c4831732b"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/assets/neo/textures/item/metal_raw_silver.png"
+file = "config/paxi_.old/resourcepacks/neo/assets/neo/textures/item/metal_raw_silver.png"
 hash = "4683121b561a1feda620a75d4a864fa3f8bacbd54a3f75467a627e6c82eec1ac"
 
 [[files]]
-file = "config/paxi_/resourcepacks/neo/pack.mcmeta"
+file = "config/paxi_.old/resourcepacks/neo/pack.mcmeta"
 hash = "f5a4aeaf84fa9fe6e3e6ef410ad136194b91970ee2e7d4bf3653a40f4aab2383"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "07c0fbb222d5ba611426841985d84dbdcadf071d96f2eb09e203313ba11bb11d"
+hash = "5f6e9c0cd7cc560bfb388b5b5aaff3c5379e4f4d1d4e836c4586e2fd8dfdb914"
 
 [[files]]
 file = "config/sereneseasons/biome_info.json"
@@ -490,11 +1022,11 @@ hash = "b16a6dac9d6c57cf620f8854c23552ac506d1e84a8d53c085f1bb2f045adf998"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "d119227759c1cc86f19535ea9fbacd5b86270bfcc8815c9d9c34d8ccfbd1076d"
+hash = "8b6d726f96fb02100e1b844b1fc0ba8961748a628eb3dfcd72dcfa4acdd7d2b3"
 
 [[files]]
 file = "config/supplementaries-registry.toml"
-hash = "6543ae5b42e13c33d2f606fb8d400a02c83ffe72e16199dc6943a363a79412f5"
+hash = "2d783722efb8754aabfb924e4c51c71c507aa6d82036d0bdeacd7d12be2eaf3d"
 
 [[files]]
 file = "config/theoneprobe-common.toml"
@@ -507,6 +1039,18 @@ hash = "ee8f03cd3585345dcdafd9c09733e0c9f4147620a9320e32ad202a875ee86e3d"
 [[files]]
 file = "config/vtweaks-common.toml"
 hash = "4064e75155fb183d84eb3380a93c595d1542a77e9fb40577aac3ab006cd7d17e"
+
+[[files]]
+file = "defaultconfigs/deadlyendphantoms-server.toml"
+hash = "007eb414ceb4afa9fa18070a326b6903a0d6efa866fd9d53ec0f71a8947778cd"
+
+[[files]]
+file = "defaultconfigs/ensorcellation-server.toml"
+hash = "1088042ee7939e6f9278158d5899a34d27e1d26494b41ed349255abee78c3f9d"
+
+[[files]]
+file = "defaultconfigs/immersiveengineering-server.toml"
+hash = "0464146bbc4eef1f70311a4c0f013dde387fccda74eddef546ee2dfaea6794fe"
 
 [[files]]
 file = "mods/Sound-Physics-1.16.3-1.0.10-1.jar"
@@ -553,6 +1097,11 @@ hash = "84b2f21b93a9610a1bbe417be37ad2353e203b0619df6f2d0b34ccbe2db35eb5"
 metafile = true
 
 [[files]]
+file = "mods/architects-palette.toml"
+hash = "5ebe032453f5944750d71c57362fa9839deaf4044e264ea52edb0389da61b7d2"
+metafile = true
+
+[[files]]
 file = "mods/architectury-forge.toml"
 hash = "53404490634aa1c9532db7e4f8b09b02233e750183270115e9f161573c086498"
 metafile = true
@@ -560,6 +1109,11 @@ metafile = true
 [[files]]
 file = "mods/attributefix.toml"
 hash = "f7170d4f5a319585990a100771af2ad03b98d13ba3427bb60351b262b14626b9"
+metafile = true
+
+[[files]]
+file = "mods/audiocassettes.toml"
+hash = "89fd02b727d9b7885394e84d7675ddec8c8bb86885ce04e7ed32975f273eb6e6"
 metafile = true
 
 [[files]]
@@ -1011,6 +1565,11 @@ hash = "d897fa456661f1f7c59349d461af2a757e80e3c46b79eb28d3de457d3403f7c8"
 metafile = true
 
 [[files]]
+file = "mods/more-minecarts.toml"
+hash = "0f0400e12c9cdc7b85b8b30a18eea491a319072ddd948b239e4550adb1b7a005"
+metafile = true
+
+[[files]]
 file = "mods/mouse-tweaks.toml"
 hash = "104dc0c241070a9ed8b601ad70b125a0cc23ea70ecc30885e3bfe24c4696d218"
 metafile = true
@@ -1268,11 +1827,6 @@ metafile = true
 [[files]]
 file = "mods/waterdripsound.toml"
 hash = "bcad3bf095abfe047d7ca573b74e0aec3365e5962363c79a880c8f8a7f49b54b"
-metafile = true
-
-[[files]]
-file = "mods/windowlogging.toml"
-hash = "ffba1bf6ff76efe4d954bab4ac9204e0f65b70263c0e8e3f5b23fb75fc081131"
 metafile = true
 
 [[files]]
