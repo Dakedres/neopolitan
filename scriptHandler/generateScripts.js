@@ -25,8 +25,13 @@ const createZenScript = stages => {
     return `${stage.name}: ${ingredients}`
   }
 
+  let stageBlock = stages
+    .map(createEntry)
+    .map(e => ' '.repeat(2) + e )
+    .join(',\n')
+
   lines = lines.concat([
-    `val modStages = { ${stages.map(createEntry).join(', ')} } as List<IItemStack>[string];`,
+    `val modStages = {\n${stageBlock}\n} as List<IItemStack>[string];`,
     constants.zenScript.modStageBlock
   ])
 
