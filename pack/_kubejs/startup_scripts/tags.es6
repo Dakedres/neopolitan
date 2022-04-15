@@ -65,9 +65,16 @@ onEvent('item.tags', event => {
   //   'buzzier_bees:sticky_honey_wand',
   // ])
 
+  event.add('forge:plates/nickel', '#forge:ingots/zinc')
+  event.add('forge:dusts/bronze', 'architects_palette:sunmetal_blend')
   equalMetal('constantan', 'brass')
   equalMetal('nickel', 'zinc')
-  event.add('forge:plates/nickel', '#forge:ingots/zinc')
+  equalMetal('electrum', 'bronze')
+
+  ;[
+    'kubejs:crushed_sunmetal',
+    'kubejs:crushed_steel'
+  ].forEach(i => event.add('create:crushed_ores', i) )
 
   // event.add('supplementaries:sign_post', materialFrom('supplementaries', 'sign_post') )
 

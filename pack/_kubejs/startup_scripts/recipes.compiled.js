@@ -1,3 +1,15 @@
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 onEvent('recipes', recipe => {
   var cadPattern = ['R  ', 'SIS', '  L'];
   recipe.shaped('psi:cad_assembly_ivory_psimetal', cadPattern, {
@@ -78,10 +90,108 @@ onEvent('recipes', recipe => {
   //   })
   // }
   // optimalSmelting('silver')
+
+  var proxyStonecutting = (to, from) => {
+    var baseCount = Item.of(to).getCount(),
+        type = "minecraft:stonecutting";
+    recipe.forEachRecipe({
+      type: type
+    }, original => {
+      var input = original.inputItems.get(0);
+      if (!input.test(to)) return;
+      var json = original.json,
+          custom = {
+        type: type,
+        ingredient: [Ingredient.of(from).toJson()],
+        result: json.get('result'),
+        count: json.get('count').getAsInt() * baseCount,
+        // count: baseResult.count * json.get('count').getAsInt(),
+        conditions: json.get('conditions')
+      };
+      recipe.custom(custom);
+    });
+    recipe.stonecutting(to, from);
+  } // proxyStonecutting('3x architects_palette:sunmetal_block', 'alloyed:bronze_ingot')
   // 	 __  __ _                      _     
   //  |  \/  (_)                    | |    
   //  | \  / |_ _ __   ___ _ __ __ _| |___ 
   //  | |\/| | | '_ \ / _ \ '__/ _` | / __|
   //  | |  | | | | | |  __/ | | (_| | \__ \
   //  |_|  |_|_|_| |_|\___|_|  \__,_|_|___/
+  ;
+
+  ['immersiveengineering:arc_furnace', 'immersiveengineering:alloy', 'create:mixing'].forEach(type => {
+    recipe.remove({
+      type: type,
+      output: '#forge:ingots/bronze'
+    });
+  }); // recipe.remove({
+  // 	type: 'create:mixing',
+  // 	output: '#forge:ingots/electrum'
+  // })	
+
+  var toIngredient = exp => Ingredient.of(exp).toJson();
+
+  var manyOf = (string, count) => new Array(count).fill(string);
+
+  var alloyMixing = (results, inp) => {
+    recipe.custom({
+      type: 'create:mixing',
+      ingredients: inp.map(toIngredient),
+      results: results,
+      heatRequirement: 'heated'
+    });
+  };
+
+  var createAlloy = (out, inp, extras) => {
+    // let results = {
+    // 	count: 2,
+    // 	base_ingredient: Item.of(out)
+    // 		.toResultJson()
+    // 		.toString()
+    // 	base_ingredient: toIngredient()
+    // }
+    var results = [Item.of(out).toResultJson()];
+    alloyMixing(results, [inp].concat(_toConsumableArray(extras)));
+    recipe.custom({
+      type: 'immersiveengineering:arc_furnace',
+      input: toIngredient(inp),
+      additives: extras.map(toIngredient),
+      results: results,
+      time: 100,
+      energy: 51200
+    });
+  };
+
+  createAlloy('2x alloyed:bronze_ingot', '#forge:ingots/gold', ['#forge:ingots/zinc', 'create:cinder_flour']);
+  createAlloy('2x kubejs:crushed_sunmetal', 'create:crushed_gold_ore', ['create:crushed_zinc_ore', 'create:cinder_flour']);
+  console.log(Ingredient.of('3x minecraft:stone').toJson());
+  alloyMixing([Item.of('3x kubejs:crushed_steel').toResultJson()], [].concat(_toConsumableArray(manyOf('create:crushed_iron_ore', 3)), [['minecraft:coal', 'minecraft:charcoal']]));
+  recipe.smelting('alloyed:bronze_ingot', 'architects_palette:sunmetal_blend');
+  recipe.shapeless('9x #forge:nuggets/electrum', ['alloyed:bronze_ingot']), recipe.shapeless('alloyed:bronze_ingot', manyOf('#forge:nuggets/electrum', 9)); // 1 ingot -> 3 blocks
+
+  recipe.shapeless('12x architects_palette:sunmetal_block', manyOf('#forge:ingots/electrum', 4)); // No silver
+
+  recipe.replaceInput({
+    id: 'architects_palette:sunmetal_bars'
+  }, 'architects_palette:sunmetal_brick', 'alloyed:bronze_ingot');
+  recipe.custom({
+    "type": "immersiveengineering:blueprint",
+    "inputs": [{
+      "item": "immersiveengineering:empty_casing"
+    }, {
+      "tag": "forge:gunpowder"
+    }, {
+      "count": 2,
+      "base_ingredient": {
+        "tag": "forge:nuggets/lead"
+      }
+    }, {
+      "item": "cavesandcliffs:amethyst_shard"
+    }],
+    "category": "bullet",
+    "result": {
+      "item": "immersiveengineering:silver"
+    }
+  });
 });

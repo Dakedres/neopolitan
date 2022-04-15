@@ -20,6 +20,7 @@ const addGameStage = (event, stage) => {
   // We need to use execute as gamestages will throw an error since the selector could
   //  also point to an entity. Wrapping it in execute works tho
   executeAs(event, `gamestage add @s ${stage.name}`)
+  console.log(stage)
   
   if(!stage.hidden) {
     let data = [
@@ -60,6 +61,7 @@ onEvent('player.chat', function (event) {
     obj.item.push({
       // 'of': Ingredient.matchAny(stage.of),
       'of': Ingredient.of(stage.of),
+      hidden: stage.hidden,
       name: stage.name
     })
 

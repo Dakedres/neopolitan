@@ -17,8 +17,8 @@ var addOre = (idName, displayName, tag) => {
 
 addOre('aluminum', 'bauxite', 'forge:ores/aluminum');
 addOre('lead', 'Lead', 'forge:ores/lead'); // addOre('nickel', 'Nickel', 'forge:ores/nickel')
+// addOre('silver', 'Silver', 'forge:ores/silver')
 
-addOre('silver', 'Silver', 'forge:ores/silver');
 onEvent('item.registry', event => {
   var _iterator = _createForOfIteratorHelper(ores),
       _step;
@@ -36,6 +36,14 @@ onEvent('item.registry', event => {
   } finally {
     _iterator.f();
   }
+
+  var createCrushed = (idName, displayName) => {
+    var id = 'crushed_' + idName;
+    event.create(id).displayName("Crushed ".concat(displayName)).texture("neo:item/".concat(id));
+  };
+
+  createCrushed('sunmetal', 'Sunmetal');
+  createCrushed('steel', 'Steel');
 });
 onEvent('item.tags', event => {
   var _iterator2 = _createForOfIteratorHelper(ores),

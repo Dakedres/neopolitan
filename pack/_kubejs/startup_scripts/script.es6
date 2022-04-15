@@ -13,7 +13,19 @@ console.info('Hello, World! (You will only see this line once in console, during
 const materialFrom = (mod, ...names) =>
 	(typeof names[0] == 'object' ? names[0] : names).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`) )
 
+let ieForms = [
+	'ingot',
+	'plate',
+	'dust',
+	'sheetmetal',
+	'slab_sheetmetal',
+	'storage',
+	'slab_storage'
+]
+
 let toRemove = [
+	'kubejs:dummy_fluid_item', // why
+
 	'immersiveengineering:lantern',
 	'immersiveengineering:electric_lantern',
 	'immersiveengineering:crate', // Obselete, supplementaries sack
@@ -35,8 +47,10 @@ let toRemove = [
 		'constantan', // Replaced with constantan
 		'nickel', // One use other than constantan, replaced with zinc
 		'uranium', // Bloat
+		// 'silver', // Bloat, replaced
 		'slope',
-		'alu_scaffolding'
+		'alu_scaffolding', // Doesn't fit
+		'metal_ladder'
 	]),
 	...[
 		'ingot',
@@ -45,9 +59,18 @@ let toRemove = [
 		'pickaxe',
 		'axe',
 		'shovel',
-		'hoe'
+		'hoe',
+		'storage'
 	].map(n => `immersiveengineering:${n}_steel`),
+	// Replaced with sunmetal/bronze
+	...ieForms.map(n => `immersiveengineering:${n}_electrum`),
+	...[
+		'nugget',
+		'ore',
+		...ieForms
+	].map(n => `immersiveengineering:${n}_silver`),
 	'create:crushed_uranium_ore',
+	'create:crushed_silver_ore',
 
 	'decorative_blocks:lattice', // Too specific
 	'decorative_blocks:bar_panel',
@@ -118,6 +141,7 @@ let toRemove = [
 	'alexsmobs:maggot',
 	'alexsmobs:animal_dictionary',
   'alexsmobs:endolocator',
+	'alexsmobs:animal_dictionary',
 
 	...materialFrom('wyrmroost', 'geode', 'drake', 'platinum'),
   "wyrmroost:raw_behemoth_meat",
@@ -160,8 +184,11 @@ let toRemove = [
 	'create:handheld_worldshaper',
 	...materialFrom('create', [
 		'limestone',
-		'scoria'
+		'scoria',
+		'layered',
+		'overgrown' // Obselete, moss, ect
 	]),
+	/create:fancy_.*?_bricks/,
 	
 	// 'darkerdepths:silver_ingot', // Obselete, IE
 	// 'darkerdepths:silver_ore',
@@ -172,6 +199,8 @@ let toRemove = [
 	...materialFrom('supplementaries', 'checker', 'daub', 'timber'),
 	'supplementaries:brass_lantern',
 	'supplementaries:cog_block',
+
+	'@enchantwithmob'
 ]
 
 let toHide = [
@@ -198,7 +227,7 @@ let toHide = [
 		'soul_sandstone',
 		'permafrost',
 		'biotite',
-		'voidstone',
+		'basalt', // (Voidstone)
 		'limestone',
 		'jasper',
 		'slate',
@@ -227,6 +256,7 @@ let toHide = [
 	]),
 	'quark:gravisand', // why
 	'quark:rope',
+	'quark:weather_sensor',
 	'#quark:shards',
 	'quark:elder_sea_lantern',
 	'quark:matrix_enchanter', // Should just be hidden anyway
@@ -235,6 +265,8 @@ let toHide = [
 	'minecraft:enchanted_book', // testing
 
 	'pitchperfect:chimes', // Obselete, chimes
+
+	'architects_palette:sunmetal_brick'
 ]
 
 // let hiddenEnchants = [
@@ -251,7 +283,12 @@ let toClean = [
 	'#minecraft:instruments',
 	'supplementaries:slingshot',
 	'supplementaries:rope',
-	'create:rope_pulley'
+	'create:rope_pulley',
+	'immersiveengineering:silver', // Amethyst Cartridge now
+	// Sunmetal stuff. Why did I ever choose to do it this way
+	{ id: 'immersiveengineering:crafting/ingot_electrum_to_nugget_electrum' },
+	'#forge:nuggets/electrum',
+	'architects_palette:sunmetal_block'
 ]
 
 // // Ore blocks to remove smelting recipes for
@@ -301,8 +338,22 @@ onEvent('recipes', recipe => {
 // 	toHide.push('@' + mod)
 // }
 
+onEvent('item.tags', tags => {
+	const process = (a, v) => {
+		return a.concat(Ingredient.of(v).getItemIds().toArray() )
+	}
+
+	tags.add('kubejs:disabled', toRemove.reduce(process, []) )
+})
+
 onEvent('jei.hide.items', event => {
-	for(let item of toHide.concat(toRemove).concat(toHide) ) {
+	// for(let item of toHide.concat(toRemove).concat(toHide) ) {
+	// 	event.hide(item)
+	// }
+
+	for(let item of toHide ) {
 		event.hide(item)
 	}
+
+	event.hide('#kubejs:disabled')
 })

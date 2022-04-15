@@ -1,3 +1,8 @@
+let isKube = this.global
+const Item = isKube ? Item : { of: id => id.split(' ').pop() }
+
+// Util functions
+
 const genericStage = (mod, ...patterns) =>
   patterns.reduce((out, pattern) => {
     // Regex to grab the item wrapped in paranthenses
@@ -22,20 +27,37 @@ const materialStage = (mod, ...names) =>
     return out
   }, {})
 
-const single = (...items) =>
+const singleStage = (...items) =>
   dynArray(items).reduce((out, reveal) => {
     out[reveal.split(':')[1]] = { reveal }
     return out
   }, {})
 
 const singleFrom = (mod, ...items) =>
-  single(dynArray(items).map(i => mod + ':' + i) )
+  singleStage(dynArray(items).map(i => mod + ':' + i) )
 
 const modStages = (...mods) =>
   dynArray(mods).reduce((out, mod) => {
     out[mod] = { reveal: '@' + mod }
     return out
   }, {})
+
+const mapStages = (stages, mapper) => {
+  let out = {}
+
+  for(let key in stages) {
+    out[key] = mapper(stages[key])
+  }
+
+  return out
+}
+
+const singleTrade = (weight = 1, cost = 1, uses) => item => ({
+  weight,
+  cost,
+  uses,
+  sell: Item.of(item),
+})
 
 // const forMods = (processor, mods, ...args) =>
 //   mods.reduce((out, mod) => {
@@ -51,6 +73,8 @@ const modStages = (...mods) =>
 //       }
 //     }
 //   }, {})
+
+// Gamestages
 
 const gamestages =  {
   ...modStages('create', 'pitchperfect'),
@@ -79,10 +103,12 @@ const gamestages =  {
 
   //   Also an option to similar ends
   // ...genericStage('darkerdepths', '(grimestone).*?', '(.*_|)(shale).*?', '(.*_|)(petrified).*?'),
-  
-  // This doesn't work I have no idea
+
   insect_bottle: {
-    reveal: /buzzier_bees:.*?_bottle$/
+    reveal: /buzzier_bees:.*?_bottle$/,
+    trades: [
+      singleTrade(2)('buzzier_bees:silverfish_bottle')
+    ]
   },
                                             
 //   ______            _                 _   _             
@@ -130,7 +156,7 @@ const gamestages =  {
 
   // Endergetic
   ...materialStage('endergetic', 'boof', 'corrock'),
-  ...single('endergetic:acidian_lantern'),
+  ...singleStage('endergetic:acidian_lantern'),
   puffbug: {
     reveal: [
       'endergetic:puffbug_hive',
@@ -160,40 +186,64 @@ const gamestages =  {
   // Special recipes
   slingshot: {
     reveal: [
-      'quark:ravager_hide',
-      'supplementaries:slingshot'
-    ]
+      'quark:ravager_hide'
+    ],
+    revealTrades: singleTrade(2, 24)('supplementaries:slingshot')
   },
 
   hemp: {
     reveal: [
-      'immersiveengineering:seed', // hemp seed
       'immersiveengineering:hemp_fiber',
       'immersiveengineering:wirecoil_structure_rope',
       'supplementaries:rope',
       'supplementaries:rope_arrow',
       'tetra:modular_toolbelt'
+    ],
+    revealTrades: [
+      {
+        cost: 1, 
+        sell: Item.of('8x immersiveengineering:seed'), // hemp seed
+        weight: 5,
+        uses: 2
+      }
+    ]
+  },
+
+  amethyst: {
+    of: [
+      ...materialFrom('cavesandcliffs', 'amethyst')
+    ],
+    reveal: [
+      'supplementaries:amethyst_arrow',
+      'immersiveengineering:silver',
+      'chimes:amethyst_chimes'
     ]
   },
 
   // Discs
-  ...single(...[
-    "alexsmobs:music_disc_daze",
-    "alexsmobs:music_disc_thime",
-    "cavesandcliffs:music_disc_otherside",
-    "infernalexp:music_disc_flush",
-    "infernalexp:music_disc_soul_spunk",
-    "quark:music_disc_chatter",
-    "quark:music_disc_clock",
-    "quark:music_disc_crickets",
-    "quark:music_disc_drips",
-    "quark:music_disc_endermosh",
-    "quark:music_disc_fire",
-    "quark:music_disc_ocean",
-    "quark:music_disc_rain",
-    "quark:music_disc_wind",
-    "endergetic:music_disc_kilobyte"
-  ]),
+  ...mapStages(
+    singleStage(
+      "alexsmobs:music_disc_daze",
+      "alexsmobs:music_disc_thime",
+      "cavesandcliffs:music_disc_otherside",
+      "infernalexp:music_disc_flush",
+      "infernalexp:music_disc_soul_spunk",
+      "quark:music_disc_chatter",
+      "quark:music_disc_clock",
+      "quark:music_disc_crickets",
+      "quark:music_disc_drips",
+      "quark:music_disc_endermosh",
+      "quark:music_disc_fire",
+      "quark:music_disc_ocean",
+      "quark:music_disc_rain",
+      "quark:music_disc_wind",
+      "endergetic:music_disc_kilobyte"
+    ),
+    stage => {
+      stage.hidden = true
+      return stage
+    }
+  ),
 
 //   _____                           _   _             
 //  |  __ \                         | | (_)            
@@ -232,6 +282,47 @@ const gamestages =  {
     ]
   },
 
+  sunmetal: {
+    reveal: [
+      '#forge:ores/electrum',
+      '#forge:ingots/electrum',
+      '#forge:nuggets/electrum',
+      '#forge:plates/electrum',
+      '#forge:dusts/electrum',
+      ...materialFrom('alloyed', 'bronze'),
+      ...materialFrom('architects_palette', 'sunmetal'),
+      ...materialFrom('immersiveengineering', 'electrum'),
+      'immersiveengineering:coil_mv',
+      'moreminecarts:lightspeed_cross_rail'
+    ],
+    revealTrades: [
+      {
+        cost: 1,
+        sell: '3x kubejs:crushed_sunmetal',
+        weight: 2,
+        uses: 5
+      },
+      {
+        cost: 4,
+        sell: '12x moreminecarts:lightspeed_rail',
+        weight: 2,
+        uses: 2
+      }
+    ]
+  },
+
+  brass: {
+    reveal: [
+      '#forge:ores/brass',
+      '#forge:ingots/brass',
+      '#forge:nuggets/brass',
+      '#forge:plates/brass',
+      '#forge:dusts/brass',
+      ...materialFrom('create', 'brass')
+    ],
+    trades: singleTrade(3, 2, 2)('3x create:brass_ingot')
+  },
+
   // Stones
   ...materialStage('create', 'gabbro', 'dolomite'),
   ...materialStage('darkerdepths', 'grimestone', 'limestone'),
@@ -254,9 +345,18 @@ const gamestages =  {
   candles: {
     of: [
       'minecraft:honeycomb',
-      'quark:tallow'
+      'quark:tallow',
+      '#buzzier_bees:candles'
     ],
-    reveal: '#buzzier_bees:candles'
+    reveal: '#buzzier_bees:candles',
+    trades: [
+      ...[
+        'buzzier_bees:lily_of_the_valley_scented_candle',
+        'buzzier_bees:buttercup_scented_candle',
+        'buzzier_bees:pink_clover_scented_candle',
+      ].map(singleTrade() ),
+      singleTrade(2, 1, 5)('2x buzzier_bees:candle')
+    ]
   },
 
 //   _______          _     
@@ -268,20 +368,86 @@ const gamestages =  {
 // 
   sweets: {
     reveal: [
-      'buzzier_bees:honey_apple',
       'buzzier_bees:honey_bread',
-      'buzzier_bees:glazed_porkchop',
       'create:honeyed_apple',
-      'minecraft:honey_bottle',
+      'minecraft:honey_bottle'
+    ],
+    revealTrades: [
       'buzzier_bees:sticky_honey_wand',
-      'supplementaries:candy'
+      'supplementaries:candy',
+      'buzzier_bees:glazed_porkchop',
+      'create:honeyed_apple'
+    ].map(singleTrade(1, 1, 8) )
+  },
+
+  jar: {
+    revealTrades: [
+      'supplementaries:jar',
+      'supplementaries:jar_tinted'
+    ].map(singleTrade(2, 2) )
+  },
+
+  cage: {
+    revealTrades: [
+      // he sell monkey
+      {
+        cost: 19,
+        item: Item.of('supplementaries:cage', '{BlockEntityTag:{MobHolder:{EntityData:{Brain:{memories:{}},HurtByTimestamp:0,ForgeData:{specialai:{door_breaking:0b,elite_ai:{},depacify:0b,fiddling:0b,griefing:0b,aggressive:0b,dodge_arrows:0.0d,avoid_explosions:1.4d,rider:0b,call_for_help:1b},challenger_mob_checked:1b},Sitting:0b,Attributes:[{Base:0.0d,Name:"minecraft:generic.knockback_resistance"},{Base:1.0d,Name:"forge:swim_speed"},{Base:16.0d,Modifiers:[{Operation:1,UUID:[I;1227436563,-514177694,-1821864105,-708036451],Amount:0.060202893994683176d,Name:"Random spawn bonus"}],Name:"minecraft:generic.follow_range"},{Base:0.4000000059604645d,Name:"minecraft:generic.movement_speed"},{Base:0.08d,Name:"forge:entity_gravity"}],Invulnerable:0b,FallFlying:0b,ForcedAge:0,PortalCooldown:0,AbsorptionAmount:0.0f,FallDistance:0.0f,InLove:0,CanUpdate:1b,DeathTime:0s,ForcedToSit:0b,BoundingBox:[0.17500001192092896d,0.0626d,0.17500001192092896d,0.824999988079071d,0.8126d,0.824999988079071d],ForgeCaps:{"structure_gel:gel_entity":{portal:"structure_gel:empty"},"enchantwithmob:mob_enchant":{FromOwner:0b,StoredMobEnchants:[]},"citadel:extended_entity_data_citadel":{}},HandDropChances:[0.085f,0.085f],PersistenceRequired:1b,id:"alexsmobs:capuchin_monkey",Age:0,Motion:[0.0d,-0.1552320045166016d,0.0d],HasDart:0b,Health:10.0f,MonkeySitting:0b,KubeJSPersistentData:{},LeftHanded:0b,Air:300s,OnGround:1b,CitadelData:{},Rotation:[0.0f,0.0f],HandItems:[{},{}],ArmorDropChances:[0.085f,0.085f,0.085f,0.085f],Pos:[0.5d,0.0626d,0.5d],fireType:"fire",Command:0,Fire:0s,ArmorItems:[{},{},{},{}],CanPickUpLoot:0b,HurtTime:0s},Scale:0.9615385f,UUID:[I;752439093,-924955118,-1956870487,1647143017],Name:"Capuchin Monkey"}}}'),
+        weight: 1
+      }
     ]
-  }
+  },
+
+
 }
 
-{
-  let isKube = this.global
+// Trade handling
 
+const ensureArray = i =>
+  Array.isArray(i) ? i : [ i ]
+
+{
+  let allTrades = {},
+      currTrades
+
+  const convertTrades = (trades, content) => {
+    if(trades) {
+      let newTrades = ensureArray(trades)
+      currTrades = currTrades ? currTrades.concat(newTrades) : newTrades
+
+      let out = newTrades.map(
+        ({ sell }) => typeof sell === 'object' ? sell.getId() : sell
+      )
+
+      return content ? out.concat(ensureArray(content) ) : out
+    } else
+      return content
+  }
+
+  for(let name in gamestages) {
+    let stage = gamestages[name]
+
+    currTrades = stage.trades
+  
+    stage.reveal = convertTrades(stage.revealTrades, stage.reveal)
+    stage.of = convertTrades(stage.ofTrades, stage.of)
+
+    console.log('THE:' + name)
+    console.log(stage.revealTrades)
+
+    if(currTrades)
+      allTrades[name] = currTrades
+
+    gamestages[name] = stage
+  }
+
+  if(isKube)
+    this.global.gamestageTrades = allTrades
+}
+
+// Gamestage handling
+
+{
   if(!isKube) {
     module.exports = []
   }
@@ -300,7 +466,7 @@ const gamestages =  {
     if(typeof content == 'object') {
       let name = 'gamestages:' + stageName
 
-      tags[name] = Array.isArray(content) ? content : [ content ]
+      tags[name] = ensureArray(content)
       return '#' + name
     } else {
       return content
@@ -342,6 +508,7 @@ const gamestages =  {
           if(out.or)
             data.advancement.push({
               of: out.or,
+              hidden: out.hidden,
               name
             })
           break
