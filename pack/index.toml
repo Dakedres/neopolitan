@@ -1,6 +1,138 @@
 hash-format = "sha256"
 
 [[files]]
+file = "_kubejs.2.old/README.txt"
+hash = "801703f280e4ff26fb4be02067cb583a79f7618bc0966b11d55b80492fddb56b"
+
+[[files]]
+file = "_kubejs.2.old/assets/kubejs/lang/en_us.json"
+hash = "3d08188f29b411178a0338f719d9b1e940f49c2d00798bbc583fd10325f1154a"
+
+[[files]]
+file = "_kubejs.2.old/assets/kubejs/textures/block/example_block.png"
+hash = "783d78bd1ee61d3b32273670dff9d82c34cd74c5ae899a10f104f473828d5bbc"
+
+[[files]]
+file = "_kubejs.2.old/assets/kubejs/textures/item/example_item.png"
+hash = "45a5f56eba6066ad05c70988a32b72c50cfeb6e35857739bd582007011ea002b"
+
+[[files]]
+file = "_kubejs.2.old/client_scripts/dymm.js"
+hash = "6fa3bd6e4db006e25ee83ba9170a5ea79171ebe9fbec99694a0929aeb8011b36"
+
+[[files]]
+file = "_kubejs.2.old/client_scripts/gamestages.js"
+hash = "002745a1517194ce327379038ec83a4847d4aa903f7f208273dcde1ebaec9687"
+
+[[files]]
+file = "_kubejs.2.old/client_scripts/script.js"
+hash = "8d6f3db48cc507f2dc6e23919e21837851738fc849cb83772b4186b03bef391d"
+
+[[files]]
+file = "_kubejs.2.old/client_scripts/tooltips.js"
+hash = "c76e3256839e50c29330a86231eac8d9bfdc071a6e1d0bbac9190d215b4fb801"
+
+[[files]]
+file = "_kubejs.2.old/config/client.properties"
+hash = "55ab57126ebec69d1658d6bda1178882d4c08b8e4e61a10b4fc02de110295344"
+
+[[files]]
+file = "_kubejs.2.old/config/common.properties"
+hash = "e873f6a21c9f36fa682186236bb07eb8a41609085abb71fbb4cda25214c99217"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/blocks.txt"
+hash = "37307fd98348304d1ba2df926878061135b223a892521a8e7f7a1c246a60762e"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/enchantments.txt"
+hash = "11d5a0fe4e2a0ab97d1fbd5dc41f3d9df8dcb591a6d81baf1c9c0aecc7b946ea"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/entity_types.txt"
+hash = "71d520ad342a322e6b6da6a6b726e3d62f7cf7bc8b164ab9cfb369c8e759dbb2"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/fluids.txt"
+hash = "a569b60e4ac47169640e6c75398c37c77562a6ec32a329cdd3225b1ddc601a55"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/functions.txt"
+hash = "7219502ac290126d78cfcc3f70e4bd6485ca1718c8b3661c9012a9c36d719d25"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/items.txt"
+hash = "19246b3e6bc4e8036a5a5804dcea0dba56008bdc3bb78c0ff61535df6c361148"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/potions.txt"
+hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
+
+[[files]]
+file = "_kubejs.2.old/exported/tags/tile_entity_types.txt"
+hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
+
+[[files]]
+file = "_kubejs.2.old/server_scripts/gamestages.js"
+hash = "df9dc71befe60bc274e4c246c242e567b0517a1f19cddfe7392f05bb2483c193"
+
+[[files]]
+file = "_kubejs.2.old/server_scripts/seasons.compiled.js"
+hash = "4839b9525136d5ba1ed494f11b1e6196f65fc1125192e11f1af4facbffe54c88"
+
+[[files]]
+file = "_kubejs.2.old/server_scripts/seasons.es6"
+hash = "3de22f4324db16b6e8a567bdc9ec499ed1da5884a48cf6395df60e42a204d11b"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/custom_content.compiled.js"
+hash = "9e771d2d48e360fe8ff68a344e24123fa98fd17f863536ab162fef6e51995383"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/custom_content.es6"
+hash = "b81823c436421b5bd2e2bcf08d0b4755f18d5e3a9eb60f9a5ae9d6d42f5ace2a"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/gamestages.compiled.js"
+hash = "28ff68592882ec087d7fab8ac158c259dfa10838366d1c32eb2ea51c815fa7e4"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/gamestages.es6"
+hash = "766d2c5c71f0c5d4300e04a5713c3911224c88994269de9c8323069db51bc82c"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/loot.compiled.js"
+hash = "29c7574415f5d6f19c697460e087e881e25b2fd326ed9bba2d42e6621869c04b"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/loot.es6"
+hash = "ea69d6ab05e2606bab93ef10ba9f307339c91064feed192e939abf7eb3eba25c"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/recipes.compiled.js"
+hash = "6e6d6ca14d40cc7f304ab6dcac662628577bf409227479cd42dac813554d1525"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/recipes.es6"
+hash = "924e4158bf159ff6a2e3491d4fa99c7bcf2b608eb83889b19c2d6df8259c2b9b"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/script.compiled.js"
+hash = "1a739f78a472d1aebf961ffdff023e9a757ac0ac9871c485e4e5d1a95d381412"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/script.es6"
+hash = "5d7d4d467637ece3110c127ffcfd5bab4b07ac6304de8b7ee6eb5cabd2e0cac8"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/tags.compiled.js"
+hash = "73e143eb2b19f47512a758c6f6f0dece77505f417fb5589e43b698c39b819a35"
+
+[[files]]
+file = "_kubejs.2.old/startup_scripts/tags.es6"
+hash = "b9711ec4cfe7297aaebd0b5dea3833ccb03e6a82eca875135fce03655f9a216c"
+
+[[files]]
 file = "_kubejs.old/README.txt"
 hash = "801703f280e4ff26fb4be02067cb583a79f7618bc0966b11d55b80492fddb56b"
 
@@ -85,6 +217,18 @@ file = "_kubejs/README.txt"
 hash = "801703f280e4ff26fb4be02067cb583a79f7618bc0966b11d55b80492fddb56b"
 
 [[files]]
+file = "_kubejs/_disabled/test.js"
+hash = "58fc160a4752beb6b8fefc5ff8bd497162894a79982149f78b0f387c8eaf1fe2"
+
+[[files]]
+file = "_kubejs/_disabled/wanderer_salvage.compiled.js"
+hash = "1a931585f761daf52944e674f902056be3c613d583b0f245cc9b36faa8fceca4"
+
+[[files]]
+file = "_kubejs/_disabled/wanderer_salvage.es6"
+hash = "50b96908ddd1c86dca9b6de9f8a43d8ab9c4c810fbcf7fbf1f9a37773a394a65"
+
+[[files]]
 file = "_kubejs/assets/kubejs/lang/en_us.json"
 hash = "3d08188f29b411178a0338f719d9b1e940f49c2d00798bbc583fd10325f1154a"
 
@@ -154,7 +298,7 @@ hash = "2cf98b8a4876660845193c22014bf2de3cdd184e77170e384af69c37da8d06de"
 
 [[files]]
 file = "_kubejs/server_scripts/gamestages.js"
-hash = "df9dc71befe60bc274e4c246c242e567b0517a1f19cddfe7392f05bb2483c193"
+hash = "77934a76b92fb74d1936f1e13ded3cf23dbd8995c52857816074991ef4ebf9a4"
 
 [[files]]
 file = "_kubejs/server_scripts/seasons.compiled.js"
@@ -165,20 +309,32 @@ file = "_kubejs/server_scripts/seasons.es6"
 hash = "3de22f4324db16b6e8a567bdc9ec499ed1da5884a48cf6395df60e42a204d11b"
 
 [[files]]
+file = "_kubejs/server_scripts/stacked.js"
+hash = "0b8ded70690e27973766bceaf84d55e94f3bc16628773365f2f930cf856dfc08"
+
+[[files]]
+file = "_kubejs/server_scripts/trades.compiled.js"
+hash = "1b86d9c5bd5dccd284c3670b52b43bddbdb20b736d3b61598d5541d423788619"
+
+[[files]]
+file = "_kubejs/server_scripts/trades.es6"
+hash = "5853868ce307b80be3344a0e22f424190d7478695ce039a7095cc8e839c7b758"
+
+[[files]]
 file = "_kubejs/startup_scripts/custom_content.compiled.js"
-hash = "9e771d2d48e360fe8ff68a344e24123fa98fd17f863536ab162fef6e51995383"
+hash = "efbc4eb757ea0cef1a52f8467fa5397e160285cce75ac67254680c4b47fd2f3b"
 
 [[files]]
 file = "_kubejs/startup_scripts/custom_content.es6"
-hash = "b81823c436421b5bd2e2bcf08d0b4755f18d5e3a9eb60f9a5ae9d6d42f5ace2a"
+hash = "7e7cd37df849ed50c38dfeed87bfdf3b07d7777ef1fdf0f04753674b58e51584"
 
 [[files]]
 file = "_kubejs/startup_scripts/gamestages.compiled.js"
-hash = "28ff68592882ec087d7fab8ac158c259dfa10838366d1c32eb2ea51c815fa7e4"
+hash = "329b79928e3b01f2589706a4fdc583a87d30761a455bc316791a93d89062b3ca"
 
 [[files]]
 file = "_kubejs/startup_scripts/gamestages.es6"
-hash = "766d2c5c71f0c5d4300e04a5713c3911224c88994269de9c8323069db51bc82c"
+hash = "ec98810eed26f6e883e8f695353a7bb676f68a3b53953c83fb0e3c809d3672c9"
 
 [[files]]
 file = "_kubejs/startup_scripts/loot.compiled.js"
@@ -189,28 +345,36 @@ file = "_kubejs/startup_scripts/loot.es6"
 hash = "ea69d6ab05e2606bab93ef10ba9f307339c91064feed192e939abf7eb3eba25c"
 
 [[files]]
+file = "_kubejs/startup_scripts/nbt.es6.disabled"
+hash = "3f36a6d0157e3ac092908dc1d0a191513fdddcd8ffa9ee170acb38cecea2cddd"
+
+[[files]]
 file = "_kubejs/startup_scripts/recipes.compiled.js"
-hash = "6e6d6ca14d40cc7f304ab6dcac662628577bf409227479cd42dac813554d1525"
+hash = "0a6a2cbd91bf736902a2dc6b981ee13e15fd9926873bc5957dcfdf647d6c4311"
 
 [[files]]
 file = "_kubejs/startup_scripts/recipes.es6"
-hash = "924e4158bf159ff6a2e3491d4fa99c7bcf2b608eb83889b19c2d6df8259c2b9b"
+hash = "d45c33de21c92922d495a8c8b6d171cab99bf81e54a700d6b9436d1abf6d9bc2"
 
 [[files]]
 file = "_kubejs/startup_scripts/script.compiled.js"
-hash = "1a739f78a472d1aebf961ffdff023e9a757ac0ac9871c485e4e5d1a95d381412"
+hash = "3434b8e4bae07e652d9ff3b41535b467fdf6d15b64ff4d839594dca9421b8338"
 
 [[files]]
 file = "_kubejs/startup_scripts/script.es6"
-hash = "5d7d4d467637ece3110c127ffcfd5bab4b07ac6304de8b7ee6eb5cabd2e0cac8"
+hash = "c0f76bed25a795083bb0182d5d9e4e2a0b141f82ad32efc5dba53a10cad0f892"
 
 [[files]]
 file = "_kubejs/startup_scripts/tags.compiled.js"
-hash = "73e143eb2b19f47512a758c6f6f0dece77505f417fb5589e43b698c39b819a35"
+hash = "41610cc06ddebb9fdb3ef8ea256e788c80354d7f02badaaf569703098b5d696c"
 
 [[files]]
 file = "_kubejs/startup_scripts/tags.es6"
-hash = "b9711ec4cfe7297aaebd0b5dea3833ccb03e6a82eca875135fce03655f9a216c"
+hash = "52dbedbf12857d68e02f29cd01df1dfae4c2699e6702781191a56efa231ecdc3"
+
+[[files]]
+file = "_scripts.2.old/gamestages.zs"
+hash = "39d97f116d594efaa1fc534d287d457082eeff4f081c011ebb9afc3f973f84b0"
 
 [[files]]
 file = "_scripts.old/gamestages.zs"
@@ -218,7 +382,7 @@ hash = "6d6e2d17d3db09241a3e5d9974fdbd944ec2434274c8e8c418802083b49c67df"
 
 [[files]]
 file = "_scripts/gamestages.zs"
-hash = "39d97f116d594efaa1fc534d287d457082eeff4f081c011ebb9afc3f973f84b0"
+hash = "5a8564af4e3c7058fd7307af6545f022b5ca0cff2354d2a6a3570c202399ffcf"
 
 [[files]]
 file = "config/_paxi/datapack_load_order.json"

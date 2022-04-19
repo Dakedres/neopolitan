@@ -1,4 +1,4 @@
-name = "Foxie Farm"
+name = "Neopolitan"
 author = "Dakedres"
 version = "1.0.0"
 pack-format = "packwiz:1.0.0"
@@ -6,10 +6,10 @@ pack-format = "packwiz:1.0.0"
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "194f21329a48e6ded460d2bd657414f9a9b5dc39bad0de6d58a2b7b91f08e22b"
+hash = "fe41bd3ab2b05ab0b924bfa741944cb41d9e45bb8c7e0cc8f9425c74c4b00675"
 
 [versions]
-forge = "36.1.32"
+forge = "36.2.20"
 minecraft = "1.16.5"
 
 [options]
