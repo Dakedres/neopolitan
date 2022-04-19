@@ -3,12 +3,11 @@ filename = "DripSounds-1.16-0.3.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3555/709/DripSounds-1.16-0.3.0.jar"
-hash-format = "murmur2"
-hash = "3505388728"
+url = "https://cdn.modrinth.com/data/XOhqdyTf/versions/1.16-0.3.0/DripSounds-1.16-0.3.0.jar"
+hash-format = "sha512"
+hash = "1d8c55700e762c143976f7151f7a055be94aa40bf42385479a89978cd6295dd358563023c123008ab3f22f0d0f9072b09cb7c45f885d76f85b1f9da256e3a885"
 
 [update]
-[update.curseforge]
-file-id = 3555709
-project-id = 390986
-release-channel = "beta"
+[update.modrinth]
+mod-id = "XOhqdyTf"
+version = "k1mV0Ujm"

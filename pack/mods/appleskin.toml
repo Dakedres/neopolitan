@@ -1,14 +1,13 @@
 name = "AppleSkin"
-filename = "appleskin-forge-mc1.16.x-2.3.0.jar"
+filename = "appleskin-forge-mc1.16.x-2.4.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3626/709/appleskin-forge-mc1.16.x-2.3.0.jar"
-hash-format = "murmur2"
-hash = "3697852152"
+url = "https://cdn.modrinth.com/data/EsAfCjCV/versions/forge-mc1.16.x-2.4.0/appleskin-forge-mc1.16.x-2.4.0.jar"
+hash-format = "sha512"
+hash = "e94a3e14d70d8b0714046339d916cf69f72a88ef1ab0d9800b29e57322303df1b2392d42ad89033242cfe54460973310232f17d1eb1c0cc8e1c353b32fe6bb01"
 
 [update]
-[update.curseforge]
-file-id = 3626709
-project-id = 248787
-release-channel = "beta"
+[update.modrinth]
+mod-id = "EsAfCjCV"
+version = "u6qqzTJC"

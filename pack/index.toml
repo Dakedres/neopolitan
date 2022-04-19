@@ -1257,7 +1257,7 @@ metafile = true
 
 [[files]]
 file = "mods/appleskin.toml"
-hash = "84b2f21b93a9610a1bbe417be37ad2353e203b0619df6f2d0b34ccbe2db35eb5"
+hash = "004125c3fa8a604e83d40c0acab707b57429a83fa7e78620ca055d08208b4343"
 metafile = true
 
 [[files]]
@@ -1322,7 +1322,7 @@ metafile = true
 
 [[files]]
 file = "mods/betterf3.toml"
-hash = "a4e6c3bfb4431f96a1c866c7079607f2323b94af5192bce8c17b790ed6ef04c6"
+hash = "0b4d7f815d630f0078d2a952e536273f8170aa3b79ed1914ab55dce1c5cd89b6"
 metafile = true
 
 [[files]]
@@ -1521,7 +1521,7 @@ metafile = true
 
 [[files]]
 file = "mods/ears.toml"
-hash = "337061a8b38b5dd289a681700159ceda154bcf2a9648fda52fc230ba477c1926"
+hash = "95957b3b5469ddfbe67b6c1962bf183fc3da97a3939d8d9e50ddf2c9907b0368"
 metafile = true
 
 [[files]]
@@ -1552,11 +1552,6 @@ metafile = true
 [[files]]
 file = "mods/entityculling.toml"
 hash = "5062be43c095c03f4961a7effd04bf1141a1bbeafa55232440e6eb023d3a53cf"
-metafile = true
-
-[[files]]
-file = "mods/expandability.toml"
-hash = "a65013f8be06bd0913735f26f2edf911c1bce024590bde959a0fec6fc78bf87b"
 metafile = true
 
 [[files]]
@@ -1617,11 +1612,6 @@ metafile = true
 [[files]]
 file = "mods/get-it-together-drops.toml"
 hash = "b436c930bf727aa37c24e3f0419e91bbdec8e0cb383729b3857dd918740afdfe"
-metafile = true
-
-[[files]]
-file = "mods/global-gamerules.toml"
-hash = "bd5472219f55cd087ad3a756d22ffff7063e744a111d1714321288dbb214627c"
 metafile = true
 
 [[files]]
@@ -1735,7 +1725,7 @@ metafile = true
 
 [[files]]
 file = "mods/mouse-tweaks.toml"
-hash = "104dc0c241070a9ed8b601ad70b125a0cc23ea70ecc30885e3bfe24c4696d218"
+hash = "c3b9dadd4044bd0cc92f11cb6fc4b2510a6439deb827d2db043e52cbe75303d1"
 metafile = true
 
 [[files]]
@@ -1765,7 +1755,7 @@ metafile = true
 
 [[files]]
 file = "mods/notenoughcrashes.toml"
-hash = "76ecb4df2cc2f42e7fba51d7eeefda2c8b62f8e6b05bb8f551f9d26dc20e2f0d"
+hash = "aaa3564cc78dde6d28c5d8881a29030e39159c6b5150c9f216266cb5113312e0"
 metafile = true
 
 [[files]]
@@ -1854,8 +1844,8 @@ hash = "b05f5f14942db7e9f23fcd79b950ed259480b9be2970d34b1a250414a51ef252"
 metafile = true
 
 [[files]]
-file = "mods/randompatches-forge.toml"
-hash = "dfae2a4bdab1d3b4878e52bccfdaf48c0a84428b8d27dd1aaabfc7c79eaeea14"
+file = "mods/randompatches.toml"
+hash = "1f995b09e0fbdd5002dc2f7accbf34dab23c4caa6eff881dd33f17c11beeb5b0"
 metafile = true
 
 [[files]]
@@ -1954,11 +1944,6 @@ hash = "5eb2df8a3a82c90cab7991581812d1853da610398d9d4fcf7f39dfea0f207922"
 metafile = true
 
 [[files]]
-file = "mods/terraformed-api-reforged.toml"
-hash = "b30fbe8b35ef2bcde9c507a92e170434c4b42fe6f3ef385511983661730e2284"
-metafile = true
-
-[[files]]
 file = "mods/tetra.toml"
 hash = "0fced40fc24879888f6678a37603f5f5fbc2b13782b3b29759411ead2974491e"
 metafile = true
@@ -1990,7 +1975,7 @@ metafile = true
 
 [[files]]
 file = "mods/waterdripsound.toml"
-hash = "bcad3bf095abfe047d7ca573b74e0aec3365e5962363c79a880c8f8a7f49b54b"
+hash = "030d2b15cff914dc95418f1f16afb15139caf70ff82484a2131d7aef37f45484"
 metafile = true
 
 [[files]]
