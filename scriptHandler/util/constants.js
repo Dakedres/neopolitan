@@ -58,5 +58,18 @@ for name in modStages {
         ]
       ]
     })
+  },
+
+  releaseEndpoint: repo =>
+    `https://api.github.com/repos/${repo}/releases`,
+
+  packwizBootstrap: {
+    repo: 'packwiz/packwiz-installer-bootstrap',
+    filename: 'packwiz-installer-bootstrap.jar'
+  },
+  githubOptions: {
+    headers: {
+      'Accept': "application/vnd.github.v3+json"
+    }
   }
 }
