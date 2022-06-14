@@ -1,0 +1,17 @@
+name = "Distant Horizons"
+filename = "DistantHorizons-1.6.3a-1.16.5.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/uCdwusMi/versions/1.6.3a-1.16.5/DistantHorizons-1.6.3a-1.16.5.jar"
+hash-format = "sha1"
+hash = "32ae2e6bb202a9400e00bebaa21c9ba4553168bb"
+
+[update]
+[update.modrinth]
+mod-id = "uCdwusMi"
+version = "Pn7d9p7i"
+
+[option]
+optional = true
+description = "Render distant lands at far less performance impact than you'd expect. Will still cost some FPS."
