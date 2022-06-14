@@ -1,14 +1,14 @@
 name = "Goblin Traders"
-filename = "goblintraders-1.6.0-1.16.3.jar"
+filename = "goblintraders-1.7.3-1.16.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3343/460/goblintraders-1.6.0-1.16.3.jar"
-hash-format = "murmur2"
-hash = "1646254279"
+hash-format = "sha1"
+hash = "a49c74fbf81a0a9c993860bc5ab3f19e0ab368c1"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3343460
+file-id = 3781324
 project-id = 363703
 release-channel = "beta"

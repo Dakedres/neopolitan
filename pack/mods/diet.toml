@@ -1,14 +1,14 @@
 name = "Diet (Forge)"
-filename = "diet-forge-1.16.5-1.0.2.2.jar"
+filename = "diet-forge-1.16.5-1.0.4.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3642/893/diet-forge-1.16.5-1.0.2.2.jar"
-hash-format = "murmur2"
-hash = "2454911565"
+hash-format = "sha1"
+hash = "59decb3011cc54fae867f52025960d626be50642"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3642893
+file-id = 3758888
 project-id = 443570
 release-channel = "beta"

@@ -1,0 +1,13 @@
+name = "YUNG's Bridges (Forge)"
+filename = "YungsBridges-Forge-1.16.4-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/3494/974/YungsBridges-Forge-1.16.4-1.0.1.jar"
+hash-format = "murmur2"
+hash = "2549383494"
+
+[update]
+[update.curseforge]
+file-id = 3494974
+project-id = 536660

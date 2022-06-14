@@ -1,14 +1,14 @@
 name = "iChunUtil"
-filename = "iChunUtil-1.16.5-10.5.1.jar"
+filename = "iChunUtil-1.16.5-10.6.1.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3548/417/iChunUtil-1.16.5-10.5.1.jar"
-hash-format = "murmur2"
-hash = "2269053490"
+hash-format = "sha1"
+hash = "52abe1bed292dbd1a0a820994f3e6fcd86f0c1e6"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3548417
+file-id = 3803605
 project-id = 229060
 release-channel = "beta"

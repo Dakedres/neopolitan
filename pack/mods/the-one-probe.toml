@@ -1,14 +1,14 @@
 name = "The One Probe"
-filename = "theoneprobe-1.16-3.1.4.jar"
+filename = "theoneprobe-1.16-3.1.7.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3319/255/theoneprobe-1.16-3.1.4.jar"
-hash-format = "murmur2"
-hash = "650328085"
+hash-format = "sha1"
+hash = "11e9286ec3e11a23dddcb76866a4fa3b77f30406"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3319255
+file-id = 3752096
 project-id = 245211
 release-channel = "beta"

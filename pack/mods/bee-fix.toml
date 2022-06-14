@@ -1,13 +1,13 @@
 name = "Bee Fix"
-filename = "BeeFix-1.16.2-1.0.0.3.jar"
+filename = "BeeFix-1.16.2-1.0.0.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3639/745/BeeFix-1.16.2-1.0.0.3.jar"
-hash-format = "murmur2"
-hash = "490447369"
+hash-format = "sha1"
+hash = "00c9acb9f79d052178292c4062bd1a70ad3f1226"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3639745
+file-id = 3695734
 project-id = 547989

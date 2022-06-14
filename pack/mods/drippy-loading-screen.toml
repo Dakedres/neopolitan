@@ -1,14 +1,14 @@
 name = "Drippy Loading Screen [Forge]"
-filename = "drippyloadingscreen_forge_1.5.1_MC_1.16.2-1.16.5.jar"
+filename = "drippyloadingscreen_forge_1.6.3_MC_1.16.2-1.16.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3630/868/drippyloadingscreen_forge_1.5.1_MC_1.16.2-1.16.5.jar"
-hash-format = "murmur2"
-hash = "3814004107"
+hash-format = "sha1"
+hash = "99d8776e6ebb2c5ef1cdf754898dcf25386c6355"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3630868
+file-id = 3813773
 project-id = 511770
 release-channel = "beta"

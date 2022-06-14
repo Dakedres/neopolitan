@@ -1,14 +1,14 @@
 name = "Magical Psi: Redux"
-filename = "magipsi-1.16.5-2.0.0.1.jar"
+filename = "magipsi-1.16.5-2.0.1.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3388/248/magipsi-1.16.5-2.0.0.1.jar"
-hash-format = "murmur2"
-hash = "486211551"
+hash-format = "sha1"
+hash = "393bcfc6ae4e16033f0b3ed876655df6008d4132"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3388248
+file-id = 3692857
 project-id = 396405
 release-channel = "beta"
