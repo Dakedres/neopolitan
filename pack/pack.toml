@@ -1,12 +1,12 @@
 name = "Neopolitan"
 author = "Dakedres"
 version = "1.0.0"
-pack-format = "packwiz:1.0.0"
+pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "3e00f65a30757bd90ca0b9910cc9b783437a484c9b5a1841c801bbc3ae76979c"
+hash = "8fa6f673debf47fb505d68a5c27c220ee2099f0cc1c410c277aa70183118aadf"
 
 [versions]
 forge = "36.2.20"
