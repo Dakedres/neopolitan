@@ -182,7 +182,15 @@ let toRemove = [
 	
 	'create:handheld_blockzapper', // Promote Psi
 	'create:handheld_worldshaper',
+	'create:redstone_link', // Use beams or something
+	'create:linked_controller',
+	'create:cuckoo_clock', // Both bloat, emphasize more redstone
+	'create:clockwork_bearing',
+	'create:sequenced_gearshift', // Prioritize more big brain
+	// 'create:rotation_speed_controller', // Ditto but this might cause issues idk
 	...materialFrom('create', [
+		'creative',
+		'chassis', // Promote slime
 		'limestone',
 		'scoria',
 		'layered',
@@ -199,6 +207,8 @@ let toRemove = [
 	...materialFrom('supplementaries', 'checker', 'daub', 'timber'),
 	'supplementaries:brass_lantern',
 	'supplementaries:cog_block',
+
+	'pitchperfect:chimes', // Obselete, chimes
 
 	'@enchantwithmob'
 ]
@@ -264,9 +274,9 @@ let toHide = [
 
 	'minecraft:enchanted_book', // testing
 
-	'pitchperfect:chimes', // Obselete, chimes
+	'psi:cad_assembly_creative',
 
-	'architects_palette:sunmetal_brick'
+	'architects_palette:sunmetal_brick',
 ]
 
 // let hiddenEnchants = [

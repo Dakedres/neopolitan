@@ -63,8 +63,12 @@ var toRemove = ['kubejs:dummy_fluid_item', // why
 'supplementaries:pedestal'], _toConsumableArray(materialFrom('supplementaries', ['tile', 'lamp', 'blackstone', 'candelabra', 'sconce'])), ['chimes:carved_bamboo_chimes', 'chimes:iron_chimes'], _toConsumableArray(materialFrom('buzzier_bees', ['honeycomb_tile', 'honeycomb_brick', 'honeycomb_door', // cute but just, why?
 'honeycomb_trapdoor'])), ['buzzier_bees:honey_apple', // Obselete via create
 'create:handheld_blockzapper', // Promote Psi
-'create:handheld_worldshaper'], _toConsumableArray(materialFrom('create', ['limestone', 'scoria', 'layered', 'overgrown' // Obselete, moss, ect
-])), [/create:fancy_.*?_bricks/], _toConsumableArray(materialFrom('darkerdepths', 'aridrock', 'silver')), _toConsumableArray(materialFrom('psi', 'psimetal')), _toConsumableArray(materialFrom('supplementaries', 'checker', 'daub', 'timber')), ['supplementaries:brass_lantern', 'supplementaries:cog_block', '@enchantwithmob']);
+'create:handheld_worldshaper', 'create:redstone_link', // Use beams or something
+'create:linked_controller', 'create:cuckoo_clock', // Both bloat, emphasize more redstone
+'create:clockwork_bearing', 'create:sequenced_gearshift'], _toConsumableArray(materialFrom('create', ['creative', 'chassis', // Promote slime
+'limestone', 'scoria', 'layered', 'overgrown' // Obselete, moss, ect
+])), [/create:fancy_.*?_bricks/], _toConsumableArray(materialFrom('darkerdepths', 'aridrock', 'silver')), _toConsumableArray(materialFrom('psi', 'psimetal')), _toConsumableArray(materialFrom('supplementaries', 'checker', 'daub', 'timber')), ['supplementaries:brass_lantern', 'supplementaries:cog_block', 'pitchperfect:chimes', // Obselete, chimes
+'@enchantwithmob']);
 var toHide = [/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 /^\w*:.*?_spawn_egg$/, 'immersiveengineering:storage_copper', // Obselete, create
 'immersiveengineering:slab_storage_copper', 'immersiveengineering:ingot_copper', 'immersiveengineering:nugget_copper', '#quark:candles'].concat(_toConsumableArray(materialFrom('quark', ['stained_planks', 'marble', 'myalite', 'midori', 'duskbound', 'brimstone', 'elder_prismarine', 'soul_sandstone', 'permafrost', 'biotite', 'basalt', // (Voidstone)
@@ -78,8 +82,7 @@ var toHide = [/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 'yellow_blossom'])), ['quark:gravisand', // why
 'quark:rope', 'quark:weather_sensor', '#quark:shards', 'quark:elder_sea_lantern', 'quark:matrix_enchanter', // Should just be hidden anyway
 'endergetic:bolloom_crate', 'minecraft:enchanted_book', // testing
-'pitchperfect:chimes', // Obselete, chimes
-'architects_palette:sunmetal_brick']); // let hiddenEnchants = [
+'psi:cad_assembly_creative', 'architects_palette:sunmetal_brick']); // let hiddenEnchants = [
 // 	'allurement:reforming'
 // ].map(e => Item.of('minecraft:enchanted_book').enchant('allurement:reforming', 1))
 

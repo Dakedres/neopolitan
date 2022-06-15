@@ -43,6 +43,7 @@ val modStages = {
   bollom: getTag("gamestages:bollom"),
   slingshot: getTag("gamestages:slingshot"),
   hemp: getTag("gamestages:hemp"),
+  amethyst: getTag("gamestages:amethyst"),
   music_disc_daze: getItem("alexsmobs:music_disc_daze"),
   music_disc_thime: getItem("alexsmobs:music_disc_thime"),
   music_disc_otherside: getItem("cavesandcliffs:music_disc_otherside"),
@@ -75,7 +76,8 @@ val modStages = {
   honey_pot: getTag("gamestages:honey_pot"),
   candles: getTag("buzzier_bees:candles"),
   sweets: getTag("gamestages:sweets"),
-  jar: getTag("gamestages:jar")
+  jar: getTag("gamestages:jar"),
+  cage: getTag("gamestages:cage")
 } as List<IItemStack>[string];
 
 for name in modStages {

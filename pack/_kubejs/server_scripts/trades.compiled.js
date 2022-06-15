@@ -23,11 +23,12 @@ var singleTrade = function singleTrade() {
 };
 
 var gamestageTrades = _objectSpread({
-  tetra: [singleTrade()('tetra:basic_workbench')]
+  tetra: [singleTrade()('tetra:basic_workbench')],
+  red_mushroom: singleTrade(4)('quark:mushroom_chest'),
+  brown_mushroom: singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest')
 }, this.global.gamestageTrades);
 
 var genericTrades = [singleTrade()('buzzier_bees:insect_bottle')];
-console.log(gamestageTrades);
 
 var _loop = function _loop(stage) {
   var table = [];
@@ -64,10 +65,13 @@ var distanceBetween = (v1, v2) => {
 var getPos = entity => [entity.getX(), entity.getY(), entity.getZ()];
 
 var handleTrader = (event, wandering) => {
+  var _nbt$Offers;
+
   var entity = event.getEntity(),
       nbt = entity.getFullNBT(),
-      recipes = nbt.Offers.Recipes;
+      recipes = (_nbt$Offers = nbt.Offers) === null || _nbt$Offers === void 0 ? void 0 : _nbt$Offers.Recipes;
   console.log(recipes.class);
+  if (!recipes) return;
   recipes.toArray().forEach((v, i) => {
     if (blacklist.test(v.sell.id)) {
       recipes.remove(i); // console.log(i)

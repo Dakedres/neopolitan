@@ -9,6 +9,10 @@ let gamestageTrades = {
   tetra: [
     singleTrade()('tetra:basic_workbench')
   ],
+
+  red_mushroom: singleTrade(4)('quark:mushroom_chest'),
+  brown_mushroom: singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest'),
+  
   // mushroom chest add red mushroom gamestage and provide here
   ...this.global.gamestageTrades
 }
@@ -16,8 +20,6 @@ let gamestageTrades = {
 const genericTrades = [
   singleTrade()('buzzier_bees:insect_bottle')
 ]
-
-console.log(gamestageTrades)
 
 for(let stage in gamestageTrades) {
   let table = []
@@ -66,9 +68,12 @@ const getPos = entity => ([
 const handleTrader = (event, wandering) => {
   let entity = event.getEntity(),
       nbt = entity.getFullNBT(),
-      recipes = nbt.Offers.Recipes
+      recipes = nbt.Offers?.Recipes
 
   console.log(recipes.class)
+
+  if(!recipes)
+    return
 
   recipes
     .toArray()
