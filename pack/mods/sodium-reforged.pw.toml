@@ -1,0 +1,13 @@
+name = "Magnesium"
+filename = "magnesium-1.6-pupil.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bf90630716879c4473d2012f9ca9bdd77ab17d56"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3528352
+project-id = 532724
