@@ -70,9 +70,9 @@
           "biome": "darkerdepths:glowshroom_caves",
           "parameters": {
             "altitude": 0,
-            "temperature": -0.2,
-            "humidity": 0.2,
-            "weirdness": 0,
+            "temperature": 0,
+            "humidity": 0,
+            "weirdness": 0.8,
             "offset": 0
           }
         },

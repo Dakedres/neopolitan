@@ -1,0 +1,12 @@
+{
+  "advancements.alloyed.bronze_instruments.description": "Craft a Sunmetal instrument. Time to get composing!",
+  "alloyed.ponder.bronze_bell_decoration.header": "The Sunmetal Bell",
+  "alloyed.ponder.bronze_bell_decoration.text_1": "The Sunmetal Bell is a decorative block made from bronze.",
+  "alloyed.ponder.bronze_bell_instrument.header": "Making Music with the Sunmetal Bell",
+  "alloyed.ponder.bronze_bell_instrument.text_1": "Noteblocks placed above a Sunmetal Bell will play a special bell sound.",
+  
+  "block.alloyed.bronze_bell": "Sunmetal Bell",
+  "block.alloyed.bronze_block": "Block of Sunmetal",
+  "item.alloyed.bronze_ingot": "Sunmetal Ingot",
+  "item.alloyed.bronze_sheet": "Sunmetal Sheet"
+}

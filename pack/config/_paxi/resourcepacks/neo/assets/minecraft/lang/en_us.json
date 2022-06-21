@@ -54,28 +54,5 @@
 
   "seal.fun": "I Like Fun",
   "seal.hedonist": "Hedonist",
-  "seal.sad": "I'm Sad, So Very, Very, Sad",
-
-  "block.decorative_blocks.crimson_seat": "Crimson Bench",
-  "block.decorative_blocks.warped_seat": "Warped Bench",
-  "block.decorative_blocks.acacia_seat": "Acacia Bench",
-  "block.decorative_blocks.birch_seat": "Birch Bench",
-  "block.decorative_blocks.dark_oak_seat": "Dark Oak Bench",
-  "block.decorative_blocks.jungle_seat": "Jungle Bench",
-  "block.decorative_blocks.oak_seat": "Oak Bench",
-  "block.decorative_blocks.spruce_seat": "Spruce Bench",
-  "block.decorative_blocks_abnormals.brown_mushroom_seat": "Brown Mushroom Bench",
-  "block.decorative_blocks_abnormals.cherry_seat": "Cherry Bench",
-  "block.decorative_blocks_abnormals.cypress_seat": "Cypress Bench",
-  "block.decorative_blocks_abnormals.driftwood_seat": "Driftwood Bench",
-  "block.decorative_blocks_abnormals.jacaranda_seat": "Jacaranda Bench",
-  "block.decorative_blocks_abnormals.maple_seat": "Maple Bench",
-  "block.decorative_blocks_abnormals.morado_seat": "Morado Bench",
-  "block.decorative_blocks_abnormals.poise_seat": "Poise Bench",
-  "block.decorative_blocks_abnormals.red_mushroom_seat": "Red Mushroom Bench",
-  "block.decorative_blocks_abnormals.redbud_seat": "Redbud Bench",
-  "block.decorative_blocks_abnormals.river_seat": "River Bench",
-  "block.decorative_blocks_abnormals.rosewood_seat": "Rosewood Bench",
-  "block.decorative_blocks_abnormals.willow_seat": "Willow Bench",
-  "block.decorative_blocks_abnormals.yucca_seat": "Yucca Bench"
+  "seal.sad": "I'm Sad, So Very, Very, Sad"
 }
