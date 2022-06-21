@@ -1,14 +1,14 @@
 name = "TipTheScales"
-filename = "TipTheScales-1.16.5-3.0.0.15.jar"
+filename = "TipTheScales-forge-1.18.2-5.0.6.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3348/548/TipTheScales-1.16.5-3.0.0.15.jar"
-hash-format = "murmur2"
-hash = "3352585251"
+hash-format = "sha1"
+hash = "08948879262f3d15e0f4104153a6240d7e638f88"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3348548
+file-id = 3757606
 project-id = 282313
 release-channel = "beta"

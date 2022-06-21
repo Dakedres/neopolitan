@@ -1,14 +1,14 @@
 name = "Dynamic Music"
-filename = "dynmus-1.3.1.jar"
+filename = "dynmus-1.4.1-hotfix.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3392/990/dynmus-1.3.1.jar"
-hash-format = "murmur2"
-hash = "94172245"
+hash-format = "sha1"
+hash = "83609ffcd79af392544f3b9c010e114cebee3834"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3392990
+file-id = 3633534
 project-id = 430824
 release-channel = "beta"

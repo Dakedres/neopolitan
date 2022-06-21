@@ -1,14 +1,14 @@
-name = "Sneaky Magic"
-filename = "SneakyMagic-v1.3.2-1.16.5.jar"
+name = "Sneaky Curses [Forge]"
+filename = "SneakyCurses-v3.0.0-1.18.2-Forge.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3238/487/SneakyMagic-v1.3.2-1.16.5.jar"
-hash-format = "murmur2"
-hash = "1558169286"
+hash-format = "sha1"
+hash = "45ef4ab5e20795cc78a6843eac74b71b26e828ba"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3238487
+file-id = 3693738
 project-id = 322733
 release-channel = "beta"

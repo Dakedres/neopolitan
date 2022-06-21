@@ -1,14 +1,14 @@
 name = "Customizable Elytra"
-filename = "customizableelytra-1.16.4-1.6.1.jar"
+filename = "customizableelytra-1.18.2-1.6.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3541/14/customizableelytra-1.16.4-1.6.1.jar"
-hash-format = "murmur2"
-hash = "3641829952"
+hash-format = "sha1"
+hash = "2cb2b0362360a293ebf4a1f5cef93ffcac8a5334"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3541014
+file-id = 3728574
 project-id = 440047
 release-channel = "beta"

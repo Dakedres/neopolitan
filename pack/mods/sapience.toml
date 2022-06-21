@@ -1,14 +1,14 @@
 name = "Sapience"
-filename = "sapience-1.16.5-1.1.2.jar"
+filename = "sapience-1.18.2-1.0.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3383/394/sapience-1.16.5-1.1.2.jar"
-hash-format = "murmur2"
-hash = "3738261065"
+hash-format = "sha1"
+hash = "d7f60c985d73688cb0cd946b4efca6384c2a4c0a"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3383394
+file-id = 3797655
 project-id = 426097
 release-channel = "beta"

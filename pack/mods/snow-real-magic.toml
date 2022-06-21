@@ -1,14 +1,14 @@
 name = "Snow! Real Magic! ⛄ (Forge)"
-filename = "SnowRealMagic-1.16.4-2.9.0.jar"
+filename = "SnowRealMagic-1.18.2-forge-4.1.0.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3592/119/SnowRealMagic-1.16.4-2.9.0.jar"
-hash-format = "murmur2"
-hash = "3992289913"
+hash-format = "sha1"
+hash = "1b6062fd7560a15f5c40e7464b5f217cc974658a"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3592119
+file-id = 3804954
 project-id = 308663
 release-channel = "beta"

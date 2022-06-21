@@ -1,14 +1,14 @@
 name = "Bedspreads (Forge)"
-filename = "bedspreads-forge-1.16.5-5.1.0.3.jar"
+filename = "bedspreads-forge-1.18.1-5.1.0.5.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3474/528/bedspreads-forge-1.16.5-5.1.0.3.jar"
-hash-format = "murmur2"
-hash = "2830793371"
+hash-format = "sha1"
+hash = "8509e4c3e8063bf31875ae195b2c90f4ae60366f"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3474528
+file-id = 3625032
 project-id = 308653
 release-channel = "beta"

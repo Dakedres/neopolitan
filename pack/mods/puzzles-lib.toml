@@ -1,14 +1,14 @@
 name = "Puzzles Lib [Forge]"
-filename = "PuzzlesLib-v1.0.15-1.16.5-Forge.jar"
+filename = "PuzzlesLib-v3.3.5-1.18.2-Forge.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3517/499/PuzzlesLib-v1.0.15-1.16.5-Forge.jar"
-hash-format = "murmur2"
-hash = "1334416175"
+hash-format = "sha1"
+hash = "e9a2d9bbaa1d272b958f4db6923b57887da69033"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3517499
+file-id = 3804332
 project-id = 495476
 release-channel = "beta"

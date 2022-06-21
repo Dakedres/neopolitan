@@ -1,14 +1,14 @@
 name = "Game Stages"
-filename = "GameStages-Forge-1.16.5-7.3.14.jar"
+filename = "GameStages-Forge-1.18.2-8.0.2.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1c6dbf069a8e75b6684d5cd59399389153a24364"
+hash = "b0aef8cf65113734f7c9c661f8caf9d80e410892"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3773528
+file-id = 3797378
 project-id = 268655
 release-channel = "beta"

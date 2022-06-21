@@ -1,13 +1,13 @@
 name = "No Recipe Book Reborn"
-filename = "norecipebookreborn-1.0.1.jar"
+filename = "norecipebookreborn-1.0.3.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/3541/681/norecipebookreborn-1.0.1.jar"
-hash-format = "murmur2"
-hash = "3828498754"
+hash-format = "sha1"
+hash = "00fc62bae54435eae055557ca9c02fe89180625f"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3541681
+file-id = 3555919
 project-id = 551314

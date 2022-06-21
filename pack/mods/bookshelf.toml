@@ -1,14 +1,14 @@
 name = "Bookshelf"
-filename = "Bookshelf-Forge-1.16.5-10.4.32.jar"
+filename = "Bookshelf-Forge-1.18.2-13.2.21.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "5f8e38a01a2385f58db33423468d1dc77869975a"
+hash = "1dd33cc4e6096606456deb37c03c827e22afa6e3"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3732239
+file-id = 3832270
 project-id = 228525
 release-channel = "beta"
