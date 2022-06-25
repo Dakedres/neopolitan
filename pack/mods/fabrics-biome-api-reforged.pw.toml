@@ -1,0 +1,13 @@
+name = "Fabric's Biome Api Reforged"
+filename = "FabricBiomeApiReforged-2.0.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "fd042d26ba42bd638f14ab1eb3e9490570889c61"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3825682
+project-id = 522833
