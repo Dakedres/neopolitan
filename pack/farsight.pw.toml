@@ -1,0 +1,13 @@
+name = "Farsight"
+filename = "Farsight-1.2.1.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "67948f56eeb7d0790db2ab0b8d5a6eedadefc8ef"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3638841
+project-id = 572895

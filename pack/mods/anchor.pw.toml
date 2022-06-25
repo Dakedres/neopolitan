@@ -1,0 +1,13 @@
+name = "Anchor"
+filename = "anchor-forge-1.0.1+1.16.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e960037580fc0e6186b3fea31fcf7bd183e46f5e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3662626
+project-id = 564073
