@@ -17,9 +17,12 @@ if(!fs.watch) {
 //     delete item
 // })
 
+const shouldCompile = filename =>
+  constants.compile.targetExt.includes(path.parse(filename).ext)
+
 const handleWatcher = async (watcher, location) => {
   for await (const { eventType, filename } of watcher) {
-    if(constants.compile.targetExt.includes(path.parse(filename).ext) ) {
+    if(shouldCompile(filename) ) {
       switch(eventType) {
         // case 'rename': {
         //   const compiledFile = path.join(location, constants.compile.suffix(path.parse(filename).name) )
@@ -33,9 +36,9 @@ const handleWatcher = async (watcher, location) => {
         case 'change': {
           let filePath = path.join(location, filename)
 
-          if(filePath == constants.gamestagePath)
-            handleGamestages(filePath)
-          else
+          // if(filePath == constants.gamestagePath)
+          //   handleGamestages(filePath)
+          // else
             compile(filePath)
         }
       }
@@ -43,16 +46,30 @@ const handleWatcher = async (watcher, location) => {
   }
 }
 
+const forceRecompile = async location => {
+  let files = await fs.readdir(location, { withFileTypes: true }) 
+
+  for(let file of files) {
+    if(file.isFile() && shouldCompile(file.name) )
+      compile(path.join(location, file.name) )
+  }
+}
+
 const start = files => {
+  // compile(path.join(constants.kube.path, 'startup_scripts/script.es6') )
+
   for(let file of files) {
     if(!file.isDirectory())
       continue
 
-    let location = path.join(constants.kubePath, file.name),
+    let location = path.join(constants.kube.path, file.name),
         watcher = fs.watch(location)
 
     handleWatcher(watcher, location)
+
+    if(process.argv[3] == 'force-recompile' )
+      forceRecompile(location)
   }
 }
 
-fs.readdir(constants.kubePath, { withFileTypes: true }).then(start)
+fs.readdir(constants.kube.path, { withFileTypes: true }).then(start)

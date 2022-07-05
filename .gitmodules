@@ -1,0 +1,3 @@
+[submodule "lib/babel-rhino"]
+	path = lib/babel-rhino
+	url = https://github.com/Dakedres/babel-rhino

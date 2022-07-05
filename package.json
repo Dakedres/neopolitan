@@ -6,17 +6,44 @@
   "scripts": {
     "watch": "node scriptHandler/watch.js",
     "serve": "cd pack/ && packwiz serve",
-    "generate": "node scriptHandler/handleGamestages.js"
+    "generate": "node scriptHandler/handleGamestages.js",
+    "generate:helpers": "node scriptHandler/createBabelHelpers.js"
   },
   "author": "Dakedres",
   "license": "ISC",
   "dependencies": {
+    "@babel/compat-data": "^7.18.6",
     "@babel/core": "^7.16.5",
+    "@babel/plugin-external-helpers": "^7.18.6",
     "@babel/preset-env": "^7.16.5",
     "@babel/register": "^7.16.5",
     "adm-zip": "^0.5.9",
+    "babel-plugin-proposal-object-rest-spread-rhino": "file:lib/babel-rhino/packages/babel-plugin-proposal-object-rest-spread",
     "core-js": "^3.20.3",
     "jszip": "^3.9.1",
     "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-block-scoped-functions": "^7.16.7",
+    "@babel/plugin-transform-block-scoping": "^7.18.4",
+    "@babel/plugin-transform-classes": "^7.18.4",
+    "@babel/plugin-transform-computed-properties": "^7.17.12",
+    "@babel/plugin-transform-destructuring": "^7.18.0",
+    "@babel/plugin-transform-duplicate-keys": "^7.17.12",
+    "@babel/plugin-transform-for-of": "^7.18.1",
+    "@babel/plugin-transform-function-name": "^7.16.7",
+    "@babel/plugin-transform-literals": "^7.17.12",
+    "@babel/plugin-transform-new-target": "^7.18.5",
+    "@babel/plugin-transform-object-super": "^7.16.7",
+    "@babel/plugin-transform-regenerator": "^7.18.0",
+    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/plugin-transform-shorthand-properties": "^7.16.7",
+    "@babel/plugin-transform-spread": "^7.17.12",
+    "@babel/plugin-transform-sticky-regex": "^7.16.7",
+    "@babel/plugin-transform-template-literals": "^7.18.2",
+    "@babel/plugin-transform-typeof-symbol": "^7.17.12",
+    "@babel/plugin-transform-unicode-escapes": "^7.16.7",
+    "@babel/plugin-transform-unicode-regex": "^7.16.7",
+    "babel-plugin-transform-parameters-rhino": "file:lib/babel-rhino/packages/babel-plugin-transform-parameters-rhino"
   }
 }

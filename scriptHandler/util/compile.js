@@ -1,3 +1,5 @@
+const createScript = require('./createScript')
+
 const babel = require('@babel/core'),
       fs = require('fs/promises'),
       path = require('path'),
@@ -11,7 +13,7 @@ const formatError = str =>
   )
     
 
-const compile = async location => {
+const compile = async (location, firstOfScope) => {
   let at = path.parse(location),
       writeTo = path.join(at.dir, constants.suffix(at.name) ),
       code = await fs.readFile(location, constants.fileOptions),
@@ -32,8 +34,17 @@ const compile = async location => {
     await fs.writeFile(writeTo, `throw new Error(${formatError(error.toString() )})`)
     console.warn('Wrote error to file')
   } else {
+    const sections = [
+      constants.header(firstOfScope ? 1 : 0),
+    ]
+
+    if(firstOfScope)
+      sections.push(constants.importHelpers)
+
+    sections.push(out.code)
+
     elapsed = Date.now() - elapsed
-    await fs.writeFile(writeTo, out.code, constants.fileOptions)
+    await createScript(writeTo, sections)
 
     console.log(`Compiled "${at.base}"! Took ~${elapsed}ms`)
   }

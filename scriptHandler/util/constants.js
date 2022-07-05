@@ -1,14 +1,67 @@
-const path = require('path')
+const path = require('path'),
+      getPlugins = require('./getPlugins')
 
 const pathArg = process.argv[2]
       targetDir = pathArg ?
         (pathArg[0] == '/' ? pathArg : path.join(process.cwd(), pathArg) ) :
         path.join(__dirname, '../../pack'),
-      kubePath = path.join(targetDir, 'kubejs/')
+      kubePath = path.join(targetDir, 'kubejs/'),
+      plugins = getPlugins([
+        'es5',
+        'es2015Parameter',
+        'es2015',
+        'es2018'
+      ], [
+        // ES2015
+        // "transform-template-literals",
+        "transform-literals",
+        // "transform-function-name",
+        // "transform-arrow-functions",
+        "transform-block-scoped-functions",
+        "transform-classes",
+        "transform-object-super",
+        "transform-shorthand-properties",
+        "transform-duplicate-keys",
+        "transform-computed-properties",
+        // "transform-for-of",
+        "transform-sticky-regex",
+        "transform-unicode-escapes",
+        "transform-unicode-regex",
+        "transform-spread",
+        "transform-destructuring",
+        "transform-block-scoping",
+        // "transform-typeof-symbol",
+        "transform-new-target",
+        "transform-regenerator",
+
+        // ES2018
+        'proposal-async-generator-functions',
+        'transform-dotall-regex',
+        'proposal-unicode-property-regex',
+        'transform-named-capturing-groups-regex',
+
+        "external-helpers"
+      ])
+      .concat([
+        "transform-parameters-rhino",
+        [
+          'proposal-object-rest-spread-rhino',
+          {
+            useBuiltIns: true
+          }
+        ],
+      ])
+
+console.log(plugins)
 
 module.exports = {
   targetDir,
-  kubePath,
+  kube: {
+    path: kubePath,
+    startup: 'startup_scripts',
+    server: 'server_scripts',
+    client: 'client_scripts'
+  },
   gamestagePath: path.join(kubePath, 'startup_scripts/gamestages.es6'),
   zenScript: {
     path: path.join(targetDir, 'scripts/gamestages.zs'),
@@ -40,24 +93,54 @@ for name in modStages {
   }
 }\n`
   },
+ 
   compile: {
     targetExt: [ '.es', '.es6' ],
     suffix: filename => `${filename}.compiled.js`,
     fileOptions: { encoding: 'utf-8' },
     babelOptions: filename => ({
       filename,
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            targets: {
-              rhino: "1.7.13"
-            },
-            modules: false
-          }
-        ]
-      ]
-    })
+      // "presets": [
+      //   [
+      //     "@babel/preset-env",
+      //     {
+      //       targets: {
+      //         rhino: "1.7.13"
+      //       },
+      //       modules: false
+      //     }
+      //   ]
+      // ]
+      plugins: plugins
+
+    }),
+    header: priority => `
+// priority: ${priority}
+
+/*
+  The following script has been compiled with Babel, if you wish to make any edits, clone https://github.com/dakedres/neopolitan-mc and
+    follow the instructions provided in the "Script compilation" section of the readme.
+*/
+    `
+  },
+
+  babelHelpers: {
+    filename: 'babelHelpers.js',
+    allowList: [
+      'toConsumableArray',
+      'arrayWithoutHoles',
+      'iterableToArray',
+      'unsupportedIterableToArray',
+      'nonIterableSpread',
+      'defineProperty',
+      // 'arrayLikeToArray'
+    ],
+    header: `
+// priority: 1
+    `,
+    import: `
+var babelHelpers = global.babelHelpers
+    `
   },
 
   releaseEndpoint: repo =>
