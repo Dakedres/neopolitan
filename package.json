@@ -4,6 +4,7 @@
   "description": "",
   "main": "scriptHandler/watch.js",
   "scripts": {
+    "init": "chmod +x ./init.sh && ./init.sh",
     "watch": "node scriptHandler/watch.js",
     "serve": "cd pack/ && packwiz serve",
     "generate": "node scriptHandler/handleGamestages.js",
@@ -18,7 +19,6 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/register": "^7.16.5",
     "adm-zip": "^0.5.9",
-    "babel-plugin-proposal-object-rest-spread-rhino": "file:lib/babel-rhino/packages/babel-plugin-proposal-object-rest-spread",
     "core-js": "^3.20.3",
     "jszip": "^3.9.1",
     "node-fetch": "^3.2.3"
@@ -44,6 +44,7 @@
     "@babel/plugin-transform-typeof-symbol": "^7.17.12",
     "@babel/plugin-transform-unicode-escapes": "^7.16.7",
     "@babel/plugin-transform-unicode-regex": "^7.16.7",
-    "babel-plugin-transform-parameters-rhino": "file:lib/babel-rhino/packages/babel-plugin-transform-parameters-rhino"
+    "babel-plugin-transform-parameters-rhino": "file:lib/babel-rhino/packages/babel-plugin-transform-parameters-rhino",
+    "babel-plugin-proposal-object-rest-spread-rhino": "file:lib/babel-rhino/packages/babel-plugin-proposal-object-rest-spread-rhino"
   }
 }
