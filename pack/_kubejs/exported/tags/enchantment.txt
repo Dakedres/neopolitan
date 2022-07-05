@@ -1,0 +1,12 @@
+To refresh this file, delete it and run /reload command again! Last updated: Jun 25, 2022, 10:43:32 PM
+
+#tetra:exclusions/blunt_weapon
+- minecraft:sharpness
+
+#tetra:additions/throwable
+- minecraft:loyalty
+- minecraft:channeling
+
+#tetra:exclusions/pointy_weapon
+- minecraft:loyalty
+- minecraft:channeling

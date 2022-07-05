@@ -1,0 +1,13 @@
+To refresh this file, delete it and run /reload command again! Last updated: Jun 28, 2021 5:36:49 PM
+
+#minecraft:lava
+- minecraft:lava
+- minecraft:flowing_lava
+
+#minecraft:water
+- minecraft:water
+- minecraft:flowing_water
+
+#forge:milk
+- minecraft:milk?
+- minecraft:flowing_milk?
