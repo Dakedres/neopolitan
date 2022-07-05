@@ -19,3 +19,4 @@ cf mindful-eating
 cf cat-jammies
 cf console-hud
 cf chickens-compat
+cf performant
