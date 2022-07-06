@@ -133,6 +133,8 @@ for name in modStages {
       'unsupportedIterableToArray',
       'nonIterableSpread',
       'defineProperty',
+      'createClass',
+      'classCallCheck'
       // 'arrayLikeToArray'
     ],
     header: `
