@@ -1,13 +1,19 @@
 {
+  "music.menu": {
+    "sounds": [
+      {
+        "name": "neo:music/game/end/alle_umfotzen",
+        "volume": 0.5,
+        "stream": true
+      }
+    ]
+  },
   "music.game": {
     "category": "music",
     "sounds": [
       {
-        "name": "neo:music/game/its_ok",
-        "stream": true
-      },
-      {
         "name": "neo:music/game/travelling_by_boat",
+        "volume": 0.4,
         "stream": true
       }
     ]
@@ -17,33 +23,215 @@
     "sounds": [
       {
         "name": "neo:music/game/end/alle_umfotzen",
+        "volume": 0.5,
         "stream": true
       },
       {
         "name": "neo:music/game/end/honig_ums_maul",
+        "volume": 0.5,
         "stream": true
       }
     ]
   },
-  "music.game.deep": {
+  "music.overworld.dripstone_caves": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/an_ordinary_day",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal1",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal4",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance1",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance2",
+        "stream": true
+      },
+      {
+        "name": "music.three_marbles",
+        "type": "event"
+      },
+      {
+        "name": "neo:music/game/mittagsruhe",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      },
+      {
+        "name": "neo:music/game/deep/pillows",
+        "volume": 0.4,
+        "stream": true,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.lush_caves": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "neo:music/game/deep/thyme",
+        "volume": 0.4,
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "neo:music/game/deep/fungi",
+        "volume": 0.4,
+        "stream": true,
+        "weight": 4
+      },
+      {
+        "name": "neo:music/game/mittagsruhe",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.grove": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/calm1",
+        "stream": true
+      },
+      {
+        "name": "music/game/calm2",
+        "stream": true
+      },
+      {
+        "name": "music/game/calm3",
+        "stream": true
+      },
+      {
+        "name": "music/game/comforting_memories",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/nuance1",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano3",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.jagged_peaks": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/floating_dream",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/hal1",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal2",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance1",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano1",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano3",
+        "stream": true
+      },
+      {
+        "name": "music/game/stand_tall",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
+  "music.overworld.stony_peaks": {
+    "category": "music",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/hal1",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal2",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal3",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal4",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano1",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano3",
+        "stream": true
+      },
+      {
+        "name": "music/game/stand_tall",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
+  "music.three_marbles": {
     "category": "music",
     "sounds": [
       {
         "name": "neo:music/game/deep/three_marbles",
-        "stream": true
-      },
-      {
-        "name": "neo:music/game/deep/thyme",
-        "stream": true
-      },
-      {
-        "name": "neo:music/game/deep/fungi",
-        "stream": true
-      },
-      {
-        "name": "neo:music/game/deep/pillows",
+        "volume": 0.4,
         "stream": true
       }
+    ],
+    "subtitle": "subtitle.music.three_marbles"
+  },
+  "template": {
+    "category": "music",
+    "sounds": [
+   
     ]
   }
 }

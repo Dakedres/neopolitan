@@ -1,0 +1,22 @@
+{
+  "music.nether.glowstone_canyon": {
+    "sounds": [
+      {
+        "name": "neo:music/game/nether/pinnacle",
+        "stream": true,
+        "volume": 0.5,
+        "weight": 4
+      }
+    ]
+  },
+  "music.nether.nether_wastes": {
+    "sounds": [
+      {
+        "name": "neo:music/game/nether/pinnacle",
+        "stream": true,
+        "volume": 0.5,
+        "weight": 4
+      }
+    ]
+  }
+}
