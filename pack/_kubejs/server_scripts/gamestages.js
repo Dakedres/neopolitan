@@ -3,7 +3,7 @@ onEvent('player.inventory.changed', event => {
 })
 
 onEvent('player.chat', (event) => {
-  let command = '!gs'
+  let command = '!gs '
 
   // Check if message equals creeper, ignoring case
   if(event.message.startsWith(command) ) {

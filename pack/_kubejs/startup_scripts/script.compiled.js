@@ -13,22 +13,61 @@ console.info('Hello, World! (You will only see this line once in console, during
 // 	ropeBelt: Item.of('tetra:modular_toolbelt', {"toolbelt/belt_material":"belt/rope","toolbelt/belt":"toolbelt/belt","toolbelt/slot1":"toolbelt/strap_slot1","toolbelt/strap_slot1_material":"strap1/leather"})
 // }
 
-var materialFrom = (mod, names) => (typeof names[0] == 'object' ? names : [names]).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`));
+var dynArray = items => typeof items[0] == 'object' ? items[0] : items;
+
+var materialFrom = function (mod) {
+  var _len = Array.from(arguments).length,
+      names = new Array(_len > 1 ? _len - 1 : 0);
+
+  for (var _key = 1; _key < _len; _key++) {
+    names[_key - 1] = arguments[_key];
+  }
+
+  return dynArray(names).map(name => new RegExp(`${mod}:(.*[\/_]|)${name}.*?$`));
+};
+
+var itemFrom = function (mod) {
+  var _len2 = Array.from(arguments).length,
+      names = new Array(_len2 > 1 ? _len2 - 1 : 0);
+
+  for (var _key2 = 1; _key2 < _len2; _key2++) {
+    names[_key2 - 1] = arguments[_key2];
+  }
+
+  return dynArray(names).map(name => mod + ':' + name);
+};
+
+var forMods = function (mods, func) {
+  var out = [];
+  var _len3 = Array.from(arguments).length,
+      args = new Array(_len3 > 2 ? _len3 - 2 : 0);
+
+  for (var _key3 = 2; _key3 < _len3; _key3++) {
+    args[_key3 - 2] = arguments[_key3];
+  }
+
+  for (var mod of mods) {
+    out = out.concat(func.apply(void 0, [mod].concat(args)));
+  }
+
+  return out;
+};
 
 var toRemove = ['kubejs:dummy_fluid_item', // why
 // 'create:crushed_uranium_ore',
 // 'create:crushed_silver_ore',
 'decorative_blocks:lattice', // Too specific
-'decorative_blocks:bar_panel', 'decorative_blocks:chain', 'decorative_blocks:chandelier', 'decorative_blocks:soul_chandelier', 'decorative_blocks_abnormals:ender_chandelier', 'decorative_winter:festive_chain', 'decorative_winter:wreath', 'muchmoremodcompat:ice_chain', 'muchmoremodcompat:gold_chain', 'muchmoremodcompat:glow_chandelier', '#cavesandcliffs:candles', // Obselete
-'cavesandcliffs:spyglass', 'darkerdepths:rope', // /enhanced_mushrooms:red_mushroom.+$/, // Bloat
+'decorative_blocks:bar_panel', 'decorative_blocks:chain', 'decorative_blocks:chandelier', 'decorative_blocks:soul_chandelier', 'decorative_blocks_abnormals:ender_chandelier', 'decorative_winter:festive_chain', 'decorative_winter:wreath', 'muchmoremodcompat:ice_chain', 'muchmoremodcompat:gold_chain', 'muchmoremodcompat:glow_chandelier', 'darkerdepths:rope', // /enhanced_mushrooms:red_mushroom.+$/, // Bloat
 // /enhanced_mushrooms:brown_mushroom.+$/,
 // /enhanced_mushrooms:stripped_red_mushroom.+$/,
 // /enhanced_mushrooms:stripped_brown_mushroom.+$/,
-// /cavesandcliffs:.*?_boat$/,
 // 'endergetic:poised_boat',
 'endergetic:ender_torch', 'muchmoremodcompat:bamboo_support', 'muchmoremodcompat:bamboo_seat', // '@curios',
-/^\w*:.*?_post$/].concat(babelHelpers.toConsumableArray(materialFrom('alexsmobs', ['blobfish', 'emu', 'hawk', 'leafcutter', 'komodo', 'lobster', 'hemolymph', 'shrimp', 'cockroach', 'gust', 'spiked' // TODO: Make buzzier bees' bears drop their hair, and rename it to fur
-])), ['alexsmobs:warped_muscle', 'alexsmobs:hummingbird_feeder', 'alexsmobs:maggot', 'alexsmobs:animal_dictionary', 'alexsmobs:endolocator', 'alexsmobs:animal_dictionary', // ...materialFrom('wyrmroost', 'geode', 'drake', 'platinum'),
+/^\w*:.*?_post$/].concat(babelHelpers.toConsumableArray(materialFrom('alexsmobs', ['blobfish', 'emu', 'hawk', 'leafcutter', 'komodo', 'lobster', 'hemolymph', 'shrimp', 'cockroach', 'gust', 'spiked', 'fish_oil', 'flutter', 'froststalker', 'terrapin', 'frilled_shark', 'mungal', 'roadrunner' // TODO: Make buzzier bees' bears drop their hair, and rename it to fur
+])), ['alexsmobs:serrated_shark_tooth', 'alexsmobs:straddleboard', // Makes obselete more creative gameplay
+'alexsmobs:flying_fish_boots', // Maybe as an enchantment
+'alexsmobs:warped_muscle', 'alexsmobs:hemolymph_blaster', 'alexsmobs:blood_sprayer', 'alexsmobs:hummingbird_feeder', 'alexsmobs:maggot', 'alexsmobs:animal_dictionary', 'alexsmobs:endolocator', 'alexsmobs:animal_dictionary', 'alexsmobs:void_worm_effigy', // Just kinda bloaty
+'alexsmobs:pocket_sand', 'alexsmobs:warped_mixture', // ...materialFrom('wyrmroost', 'geode', 'drake', 'platinum'),
 // "wyrmroost:raw_behemoth_meat",
 // "wyrmroost:raw_common_meat",
 // "wyrmroost:raw_lowtier_meat",
@@ -42,18 +81,19 @@ var toRemove = ['kubejs:dummy_fluid_item', // why
 // /^supplementaries:stone_/,
 // /^supplementaries:candelabra_/,
 'supplementaries:planter', 'supplementaries:gold_gate', 'supplementaries:flute', // Idk about it when Pitch Perfect already has one
-'supplementaries:pedestal', 'supplementaries:brass_lantern', 'supplementaries:cog_block'], babelHelpers.toConsumableArray(materialFrom('supplementaries', ['tile', 'checker', 'daub', 'timber', 'lamp', 'blackstone', 'candelabra', 'sconce'])), ['chimes:carved_bamboo_chimes', 'chimes:iron_chimes', // ...materialFrom('buzzier_bees', [
-// 	'honeycomb_tile',
-// 	'honeycomb_brick',
-// 	'honeycomb_door', // cute but just, why?
-// 	'honeycomb_trapdoor'
-// ]),
-// 'buzzier_bees:honey_apple', // Obselete via create
-'create:handheld_blockzapper', // Promote Psi
+'supplementaries:pedestal', 'supplementaries:brass_lantern', 'supplementaries:cog_block', 'supplementaries:candy'], babelHelpers.toConsumableArray(materialFrom('supplementaries', ['tile', 'checker', 'daub', 'timber', 'lamp', 'blackstone', 'candelabra', 'sconce'])), babelHelpers.toConsumableArray(materialFrom('naturalist', 'venison')), babelHelpers.toConsumableArray(itemFrom('naturalist', ['chrysalis', 'antler'])), ['chimes:carved_bamboo_chimes', 'chimes:iron_chimes', 'create:handheld_blockzapper', // Promote Psi
 'create:handheld_worldshaper', 'create:redstone_link', // Use beams or something
 'create:linked_controller', 'create:cuckoo_clock', // Both bloat, emphasize more redstone
 'create:clockwork_bearing', 'create:sequenced_gearshift'], babelHelpers.toConsumableArray(materialFrom('create', ['creative', 'limestone', 'scoria', 'layered', 'overgrown' // Obselete, moss, ect
-])), [/create:fancy_.*?_bricks/ // ...materialFrom('psi', 'psimetal'),
+])), [/create:fancy_.*?_bricks/ // ...materialFrom('ecologics', 'azalea'),
+// ...forMods([
+// 	'immersive_weathering',
+// 	'supplementaries',
+// 	'everycomp'
+// ], materialFrom, [
+// 	'ecologics'
+// ])
+// ...materialFrom('psi', 'psimetal'),
 // 'pitchperfect:chimes', // Obselete, chimes
 // '@enchantwithmob'
 ]);
@@ -104,7 +144,7 @@ var toHide = [/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 // 'quark:matrix_enchanter', // Should just be hidden anyway
 // 'endergetic:bolloom_crate',
 'minecraft:enchanted_book', // testing
-'architects_palette:sunmetal_brick']; // let hiddenEnchants = [
+'architects_palette:sunmetal_brick', 'alexsmobs:novelty_hat']; // let hiddenEnchants = [
 // 	'allurement:reforming'
 // ].map(e => Item.of('minecraft:enchanted_book').enchant('allurement:reforming', 1))
 
@@ -116,7 +156,7 @@ var toClean = [// 'psi:cad_assembly_ivory_psimetal',
 // Sunmetal stuff. Why did I ever choose to do it this way
 // { id: 'immersiveengineering:crafting/ingot_electrum_to_nugget_electrum' },
 // '#forge:nuggets/electrum',
-'architects_palette:sunmetal_block']; // // Ore blocks to remove smelting recipes for
+'architects_palette:sunmetal_block', 'alexsmobs:maraca']; // // Ore blocks to remove smelting recipes for
 // let oreBlocks = [
 // 	'immersiveengineering:aluminum_ore',
 // 	'immersiveengineering:silver_ore',
@@ -152,12 +192,11 @@ onEvent('recipes', recipe => {
   // 		})
   // 	})
   // }
+  // recipe.remove({
+  // 	type: 'minecraft:smelting',
+  // 	input: 'immersiveengineering:ore_silver'
+  // })
 
-
-  recipe.remove({
-    type: 'minecraft:smelting',
-    input: 'immersiveengineering:ore_silver'
-  });
 }); // for(let mod of global.modStages) {
 // 	toHide.push('@' + mod)
 // }

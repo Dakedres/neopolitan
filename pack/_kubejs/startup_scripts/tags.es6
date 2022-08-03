@@ -1,7 +1,7 @@
 const materialFrom = (mod, names) =>
 	(typeof names[0] == 'object' ? names : [ names ]).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`) )
 
-const hemp = 'immersiveengineering:seed'
+// const hemp = 'immersiveengineering:seed'
 
 const blossomSaplings = [
   'quark:blue_blossom_sapling',
@@ -49,7 +49,7 @@ onEvent('item.tags', event => {
     event.add([ mod, name ].join(':'), materialFrom(mod, name) )
   })
 
-  event.add(seasons.autumn, hemp)
+  // event.add(seasons.autumn, hemp)
 
   blossomSaplings.forEach(item => {
     event.add(seasons.spring, item)
@@ -58,6 +58,7 @@ onEvent('item.tags', event => {
 
   event.add('instruments', instruments)
   event.add('quark:vertical_slab', /^.*?:.*?_vertical_slab$/)
+  event.add('#alexsmobs:bald_eagle_tameables', 'alexsmobs:flying_fish')
   // event.add('alexsmobs:grizzly_foodstuffs', [
   //   'buzzier_bees:honey_apple',
   //   'buzzier_bees:glazed_porkchop',

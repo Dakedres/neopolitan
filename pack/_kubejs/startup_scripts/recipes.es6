@@ -1,23 +1,23 @@
 onEvent('recipes', recipe => {
-  let cadPattern = [
-	  'R  ',
-	  'SIS',
-	  '  L'
-	]
+  // let cadPattern = [
+	//   'R  ',
+	//   'SIS',
+	//   '  L'
+	// ]
 	
-	recipe.shaped('psi:cad_assembly_ivory_psimetal', cadPattern, {
-	  S: 'psi:ivory_substance',
-	  I: '#forge:ingots/psimetal',
-	  R: 'create:refined_radiance',
-  	L: 'minecraft:stripped_birch_log'	  
-	})
+	// recipe.shaped('psi:cad_assembly_ivory_psimetal', cadPattern, {
+	//   S: 'psi:ivory_substance',
+	//   I: '#forge:ingots/psimetal',
+	//   R: 'create:refined_radiance',
+  // 	L: 'minecraft:stripped_birch_log'	  
+	// })
 	
-	recipe.shaped('psi:cad_assembly_ebony_psimetal', cadPattern, {
-	  S: 'psi:ebony_substance',
-	  I: '#forge:ingots/psimetal',
-	  R: 'create:refined_radiance',
-    L: 'minecraft:stripped_dark_oak_log' 
-	})
+	// recipe.shaped('psi:cad_assembly_ebony_psimetal', cadPattern, {
+	//   S: 'psi:ebony_substance',
+	//   I: '#forge:ingots/psimetal',
+	//   R: 'create:refined_radiance',
+  //   L: 'minecraft:stripped_dark_oak_log' 
+	// })
 	
 	// recipe.shaped(cons.ropeBelt, [
 	//   'RR '
@@ -44,12 +44,6 @@ onEvent('recipes', recipe => {
 		W: '#minecraft:wooden_slabs',
 		S: '#forge:string',
 		C: '#forge:plates/copper'
-	})
-
-	recipe.shaped('chimes:amethyst_chimes', chimePattern, {
-		W: '#forge:ingots/iron',
-		S: '#forge:string',
-		C: 'cavesandcliffs:amethyst_shard'
 	})
 
 	recipe.shaped(Item.of('supplementaries:slingshot', '{Damage:0}'), [
@@ -82,15 +76,39 @@ onEvent('recipes', recipe => {
 		P: '#forge:plates/iron'
 	})
 
-	// recipe.shaped(Item.of('alexsmobs:shield_of_the_deep', '{Damage:0}'), [
-	// 	'TPT',
-	// 	'PHP',
-	// 	'TPT'
-	// ], {
-	// 	T: 'alexsmobs:shark_tooth',
-	// 	P: 'minecraft:prismarine_bricks',
-	// 	H: 'minecraft:heart_of_the_sea'
-	// })
+	// recipe.remove('quark:rainbow_rune')
+	recipe.shaped('quark:rainbow_rune', [
+		'YGB',
+		'OjI',
+		'RrV'
+	], {
+		R: 'quark:red_corundum',
+		O: 'quark:orange_corundum',
+		Y: 'quark:yellow_corundum',
+		G: 'quark:green_corundum',
+		B: 'quark:blue_corundum',
+		I: 'quark:indigo_corundum',
+		V: 'quark:violet_corundum',
+		r: '#quark:runes',
+		j: 'alexsmobs:rainbow_jelly'
+	})
+
+	{
+		let shield = 'alexsmobs:shield_of_the_deep'
+
+		// recipe.remove(shield)
+		recipe.shaped(Item.of(shield, '{Damage:0}'), [
+			'TTT',
+			'PHP',
+			'BPB'
+		], {
+			T: 'alexsmobs:shark_tooth',
+			B: 'alexsmobs:fish_bones',
+			B: 'alexsmobs:fish_bones',
+			P: 'minecraft:prismarine_bricks',
+			H: 'minecraft:heart_of_the_sea'
+		})
+	}
 
   // Decided against this
   //
@@ -157,16 +175,16 @@ onEvent('recipes', recipe => {
 //  | |  | | | | | |  __/ | | (_| | \__ \
 //  |_|  |_|_|_| |_|\___|_|  \__,_|_|___/
 
-	;[
-		'immersiveengineering:arc_furnace',
-		'immersiveengineering:alloy',
-		'create:mixing'
-	].forEach(type => {
-		recipe.remove({
-			type,
-			output: '#forge:ingots/bronze'
-		})	
-	})
+	// ;[
+	// 	'immersiveengineering:arc_furnace',
+	// 	'immersiveengineering:alloy',
+	// 	'create:mixing'
+	// ].forEach(type => {
+	// 	recipe.remove({
+	// 		type,
+	// 		output: '#forge:ingots/bronze'
+	// 	})	
+	// })
 
 	// recipe.remove({
 	// 	type: 'create:mixing',
@@ -244,29 +262,4 @@ onEvent('recipes', recipe => {
 	recipe.replaceInput({
 		id: 'architects_palette:sunmetal_bars'
 	}, 'architects_palette:sunmetal_brick', 'alloyed:bronze_ingot')
-
-	recipe.custom({
-		"type": "immersiveengineering:blueprint",
-		"inputs": [
-			{
-				"item": "immersiveengineering:empty_casing"
-			},
-			{
-				"tag": "forge:gunpowder"
-			},
-			{
-				"count": 2,
-				"base_ingredient": {
-					"tag": "forge:nuggets/lead"
-				}
-			},
-			{
-				"item": "cavesandcliffs:amethyst_shard"
-			}
-		],
-		"category": "bullet",
-		"result": {
-			"item": "immersiveengineering:silver"
-		}
-	})
 })

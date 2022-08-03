@@ -5,9 +5,9 @@
     follow the instructions provided in the "Script compilation" section of the readme.
 */
 
-var materialFrom = (mod, names) => (typeof names[0] == 'object' ? names : [names]).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`));
+var materialFrom = (mod, names) => (typeof names[0] == 'object' ? names : [names]).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`)); // const hemp = 'immersiveengineering:seed'
 
-var hemp = 'immersiveengineering:seed';
+
 var blossomSaplings = ['quark:blue_blossom_sapling', 'quark:pink_blossom_sapling', 'quark:orange_blossom_sapling', 'quark:red_blossom_sapling'];
 var seasons = {
   spring: 'sereneseasons:summer_crops',
@@ -31,15 +31,16 @@ onEvent('item.tags', event => {
       console.log('TAG ' + name);
       event.add([mod, name].join(':'), materialFrom(mod, name));
     });
-  };
+  }; // event.add(seasons.autumn, hemp)
 
-  event.add(seasons.autumn, hemp);
+
   blossomSaplings.forEach(item => {
     event.add(seasons.spring, item);
     event.add(seasons.summer, item);
   });
   event.add('instruments', instruments);
-  event.add('quark:vertical_slab', /^.*?:.*?_vertical_slab$/); // event.add('alexsmobs:grizzly_foodstuffs', [
+  event.add('quark:vertical_slab', /^.*?:.*?_vertical_slab$/);
+  event.add('#alexsmobs:bald_eagle_tameables', 'alexsmobs:flying_fish'); // event.add('alexsmobs:grizzly_foodstuffs', [
   //   'buzzier_bees:honey_apple',
   //   'buzzier_bees:glazed_porkchop',
   //   'create:honeyed_apple',

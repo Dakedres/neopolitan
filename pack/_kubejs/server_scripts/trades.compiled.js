@@ -19,8 +19,14 @@ var singleTrade = function () {
 
 var gamestageTrades = babelHelpers.objectSpread({
   tetra: [singleTrade()('tetra:basic_workbench')],
-  red_mushroom: singleTrade(4)('quark:mushroom_chest'),
-  brown_mushroom: singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest')
+  red_mushroom: [singleTrade(4)('quark:mushroom_chest')],
+  brown_mushroom: [singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest')],
+  maraca: [{
+    weight: 2,
+    cost: 1,
+    extra: 'alexsmobs:rattlesnake_rattle',
+    sell: 'alexsmobs:maraca'
+  }]
 }, this.global.gamestageTrades);
 var genericTrades = [singleTrade()('buzzier_bees:insect_bottle')];
 
@@ -41,7 +47,6 @@ for (var stage in gamestageTrades) {
   _loop(stage);
 }
 
-console.log(gamestageTrades['hemp'][0]);
 var blacklist = Ingredient.of('#kubejs:disabled');
 
 var getRarity = id => Item.of(id).getItemStack()[getRarityKey](); // Can be replaced with NBT.compoundTag({}) in 1.18
@@ -64,7 +69,6 @@ var handleTrader = (event, wandering) => {
   var entity = event.getEntity(),
       nbt = entity.getFullNBT(),
       recipes = (_nbt$Offers = nbt.Offers) === null || _nbt$Offers === void 0 ? void 0 : _nbt$Offers.Recipes;
-  console.log(recipes.class);
   if (!recipes) return;
   recipes.toArray().forEach((v, i) => {
     if (blacklist.test(v.sell.id)) {
@@ -74,7 +78,7 @@ var handleTrader = (event, wandering) => {
 
   if (wandering) {
     var traderPos = getPos(entity);
-    var players = event.getWorld().getPlayers().filter(p => distanceBetween(traderPos, getPos(p)) < 64).toArray(); // recipes.add(0, constructCompound({
+    var players = event.getLevel().getPlayers().filter(p => distanceBetween(traderPos, getPos(p)) < 64).toArray(); // recipes.add(0, constructCompound({
     //   maxUses: 12,
     //   buyB: {
     //     id: "minecraft:air",
@@ -106,12 +110,15 @@ var handleTrader = (event, wandering) => {
       }
     }
 
-    var tradeCount = Math.floor(Math.random() * 2),
+    var tradeCount = Math.floor(Math.random() * 3),
         diff = recipes.size(),
         attempts = 0,
-        presentedStages = []; // tradeCount = (diff + tradeCount) <= 9 ? (9 - diff) : tradeCount
+        presentedStages = [];
+    tradeCount = diff + tradeCount > 9 ? 9 - diff : tradeCount;
 
     while (tradeCount > 0 && attempts < 5) {
+      var _trade$extra;
+
       var trade = tradeTable[Math.floor(Math.random() * tradeTable.length)];
 
       if (presentedStages.includes(trade.stage)) {
@@ -121,6 +128,7 @@ var handleTrader = (event, wandering) => {
 
       attempts = 0;
       presentedStages.push(trade.stage);
+      console.log(trade.extra);
       var offer = {
         maxUses: trade.uses || 1,
         buy: {
@@ -128,8 +136,8 @@ var handleTrader = (event, wandering) => {
           Count: trade.cost
         },
         buyB: {
-          id: "minecraft:air",
-          Count: 0
+          id: (_trade$extra = trade.extra) !== null && _trade$extra !== void 0 ? _trade$extra : "minecraft:air",
+          Count: trade.extra ? 1 : 0
         },
         sell: trade.sell,
         xp: 1,

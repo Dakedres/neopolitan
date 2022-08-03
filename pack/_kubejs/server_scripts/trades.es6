@@ -10,8 +10,21 @@ let gamestageTrades = {
     singleTrade()('tetra:basic_workbench')
   ],
 
-  red_mushroom: singleTrade(4)('quark:mushroom_chest'),
-  brown_mushroom: singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest'),
+  red_mushroom: [
+    singleTrade(4)('quark:mushroom_chest')
+  ],
+  brown_mushroom: [
+    singleTrade(4)('enhanced_mushrooms:brown_mushroom_chest')
+  ],
+
+  maraca: [
+    {
+      weight: 2,
+      cost: 1,
+      extra: 'alexsmobs:rattlesnake_rattle',
+      sell: 'alexsmobs:maraca'
+    }
+  ],
   
   // mushroom chest add red mushroom gamestage and provide here
   ...this.global.gamestageTrades
@@ -39,8 +52,6 @@ for(let stage in gamestageTrades) {
 
   gamestageTrades[stage] = table
 }
-
-console.log(gamestageTrades['hemp'][0])
 
 let blacklist = Ingredient.of('#kubejs:disabled')
 
@@ -70,8 +81,6 @@ const handleTrader = (event, wandering) => {
       nbt = entity.getFullNBT(),
       recipes = nbt.Offers?.Recipes
 
-  console.log(recipes.class)
-
   if(!recipes)
     return
 
@@ -89,7 +98,7 @@ const handleTrader = (event, wandering) => {
   if(wandering) {
     let traderPos = getPos(entity)
 
-    let players = event.getWorld().getPlayers()
+    let players = event.getLevel().getPlayers()
       .filter(p => distanceBetween(traderPos, getPos(p) ) < 64 )
       .toArray()
 
@@ -126,12 +135,12 @@ const handleTrader = (event, wandering) => {
       }
     }
 
-    let tradeCount = Math.floor(Math.random() * 2),
+    let tradeCount = Math.floor(Math.random() * 3),
         diff = recipes.size(),
         attempts = 0,
         presentedStages = []
 
-    // tradeCount = (diff + tradeCount) <= 9 ? (9 - diff) : tradeCount
+    tradeCount = (diff + tradeCount) > 9 ? (9 - diff) : tradeCount
 
     while(tradeCount > 0 && attempts < 5) {
       let trade = tradeTable[Math.floor(Math.random() * tradeTable.length)]
@@ -144,6 +153,8 @@ const handleTrader = (event, wandering) => {
       attempts = 0
       presentedStages.push(trade.stage)
 
+      console.log(trade.extra)
+
       let offer = {
         maxUses: trade.uses || 1,
         buy: {
@@ -151,8 +162,8 @@ const handleTrader = (event, wandering) => {
           Count: trade.cost
         },
         buyB: {
-          id: "minecraft:air",
-          Count: 0
+          id: trade.extra ?? "minecraft:air",
+          Count: trade.extra ? 1 : 0
         },
         sell: trade.sell,
         xp: 1,

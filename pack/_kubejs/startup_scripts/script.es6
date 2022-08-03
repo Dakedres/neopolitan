@@ -10,8 +10,23 @@ console.info('Hello, World! (You will only see this line once in console, during
 // 	ropeBelt: Item.of('tetra:modular_toolbelt', {"toolbelt/belt_material":"belt/rope","toolbelt/belt":"toolbelt/belt","toolbelt/slot1":"toolbelt/strap_slot1","toolbelt/strap_slot1_material":"strap1/leather"})
 // }
 
-const materialFrom = (mod, names) =>
-	(typeof names[0] == 'object' ? names : [ names ]).map(name => new RegExp(`${mod}:(.*_|)${name}.*?$`) )
+const dynArray = items => typeof items[0] == 'object' ? items[0] : items
+
+const materialFrom = (mod, ...names) =>
+	dynArray(names).map(name => new RegExp(`${mod}:(.*[\/_]|)${name}.*?$`) )
+
+const itemFrom = (mod, ...names) =>
+	dynArray(names).map(name => mod + ':' + name)
+
+const forMods = (mods, func, ...args) => {
+	let out = []
+
+	for(let mod of mods) {
+		out = out.concat(func(mod, ...args) )
+	}
+	
+	return out
+}
 
 let toRemove = [
 	'kubejs:dummy_fluid_item', // why
@@ -32,14 +47,11 @@ let toRemove = [
 	'muchmoremodcompat:gold_chain',
 	'muchmoremodcompat:glow_chandelier',
 
-	'#cavesandcliffs:candles', // Obselete
-	'cavesandcliffs:spyglass',
 	'darkerdepths:rope',
 	// /enhanced_mushrooms:red_mushroom.+$/, // Bloat
 	// /enhanced_mushrooms:brown_mushroom.+$/,
 	// /enhanced_mushrooms:stripped_red_mushroom.+$/,
 	// /enhanced_mushrooms:stripped_brown_mushroom.+$/,
-	// /cavesandcliffs:.*?_boat$/,
 	// 'endergetic:poised_boat',
 	'endergetic:ender_torch',
 	'muchmoremodcompat:bamboo_support',
@@ -72,15 +84,30 @@ let toRemove = [
 		'shrimp',
 		'cockroach',
 		'gust',
-		'spiked'
+		'spiked',
+		'fish_oil',
+		'flutter',
+		'froststalker',
+		'terrapin',
+		'frilled_shark',
+		'mungal',
+		'roadrunner'
 		// TODO: Make buzzier bees' bears drop their hair, and rename it to fur
 	]),
+	'alexsmobs:serrated_shark_tooth',
+	'alexsmobs:straddleboard', // Makes obselete more creative gameplay
+	'alexsmobs:flying_fish_boots', // Maybe as an enchantment
 	'alexsmobs:warped_muscle',
+	'alexsmobs:hemolymph_blaster',
+	'alexsmobs:blood_sprayer',
 	'alexsmobs:hummingbird_feeder',
 	'alexsmobs:maggot',
 	'alexsmobs:animal_dictionary',
   'alexsmobs:endolocator',
 	'alexsmobs:animal_dictionary',
+	'alexsmobs:void_worm_effigy', // Just kinda bloaty
+	'alexsmobs:pocket_sand',
+	'alexsmobs:warped_mixture',
 
 	// ...materialFrom('wyrmroost', 'geode', 'drake', 'platinum'),
   // "wyrmroost:raw_behemoth_meat",
@@ -102,6 +129,7 @@ let toRemove = [
 	'supplementaries:pedestal',
 	'supplementaries:brass_lantern',
 	'supplementaries:cog_block',
+	'supplementaries:candy',
 	...materialFrom('supplementaries', [
 		'tile',
 		'checker',
@@ -113,17 +141,15 @@ let toRemove = [
 		'sconce'
 	]),
 
+	...materialFrom('naturalist', 'venison'),
+	...itemFrom('naturalist', [
+		'chrysalis',
+		'antler'
+	]),
+
 	'chimes:carved_bamboo_chimes',
 	'chimes:iron_chimes',
 
-	// ...materialFrom('buzzier_bees', [
-	// 	'honeycomb_tile',
-	// 	'honeycomb_brick',
-	// 	'honeycomb_door', // cute but just, why?
-	// 	'honeycomb_trapdoor'
-	// ]),
-	// 'buzzier_bees:honey_apple', // Obselete via create
-	
 	'create:handheld_blockzapper', // Promote Psi
 	'create:handheld_worldshaper',
 	'create:redstone_link', // Use beams or something
@@ -140,6 +166,15 @@ let toRemove = [
 		'overgrown' // Obselete, moss, ect
 	]),
 	/create:fancy_.*?_bricks/,
+
+	// ...materialFrom('ecologics', 'azalea'),
+	// ...forMods([
+	// 	'immersive_weathering',
+	// 	'supplementaries',
+	// 	'everycomp'
+	// ], materialFrom, [
+	// 	'ecologics'
+	// ])
 
 	// ...materialFrom('psi', 'psimetal'),
 	// 'pitchperfect:chimes', // Obselete, chimes
@@ -201,6 +236,7 @@ let toHide = [
 	'minecraft:enchanted_book', // testing
 
 	'architects_palette:sunmetal_brick',
+	'alexsmobs:novelty_hat'
 ]
 
 // let hiddenEnchants = [
@@ -222,7 +258,8 @@ let toClean = [
 	// Sunmetal stuff. Why did I ever choose to do it this way
 	// { id: 'immersiveengineering:crafting/ingot_electrum_to_nugget_electrum' },
 	// '#forge:nuggets/electrum',
-	'architects_palette:sunmetal_block'
+	'architects_palette:sunmetal_block',
+	'alexsmobs:maraca'
 ]
 
 // // Ore blocks to remove smelting recipes for
@@ -262,10 +299,10 @@ onEvent('recipes', recipe => {
 	// 	})
 	// }
 
-	recipe.remove({
-		type: 'minecraft:smelting',
-		input: 'immersiveengineering:ore_silver'
-	})
+	// recipe.remove({
+	// 	type: 'minecraft:smelting',
+	// 	input: 'immersiveengineering:ore_silver'
+	// })
 })
 
 // for(let mod of global.modStages) {
