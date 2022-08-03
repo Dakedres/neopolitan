@@ -1,0 +1,7 @@
+# Disabled files
+*.old
+
+# Development temporary
+config/paxi/datapacks
+config/paxi/resourcepacks/neo
+kubejs
