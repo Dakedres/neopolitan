@@ -1,8 +1,9 @@
 # Dependencies
 node_modules/
 
-# Mod-specific
+# Instance-specific
 pack/kubejs/exported
+pack/kubejs/data
 
 # Development
 .env
