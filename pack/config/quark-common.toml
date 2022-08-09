@@ -87,7 +87,7 @@
 	"Gold Bars" = true
 	Grate = true
 	Hedges = true
-	"Leaf Carpet" = true
+	"Leaf Carpet" = false
 	Midori = false
 	"More Brick Types" = true
 	"More Potted Plants" = true

@@ -75,7 +75,7 @@
 		item_shelf = true
 		turn_table = false
 		faucet = false
-		daub = false
+		daub = true
 		gold_trapdoor = true
 		feather_block = false
 		magma_cream_block = false
