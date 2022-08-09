@@ -8,7 +8,9 @@
     "watch": "node scriptHandler/watch.js",
     "serve": "cd pack/ && packwiz serve",
     "generate": "node scriptHandler/handleGamestages.js",
-    "generate:helpers": "node scriptHandler/createBabelHelpers.js"
+    "generate:helpers": "node scriptHandler/createBabelHelpers.js",
+    "init:instance": "node scriptHandler/extra/init.js",
+    "store": "node scriptHandler/extra/store.js"
   },
   "author": "Dakedres",
   "license": "ISC",
@@ -20,6 +22,8 @@
     "@babel/register": "^7.16.5",
     "adm-zip": "^0.5.9",
     "core-js": "^3.20.3",
+    "dotenv": "^16.0.1",
+    "fs-extra": "^10.1.0",
     "jszip": "^3.9.1",
     "node-fetch": "^3.2.3"
   },
@@ -44,7 +48,7 @@
     "@babel/plugin-transform-typeof-symbol": "^7.17.12",
     "@babel/plugin-transform-unicode-escapes": "^7.16.7",
     "@babel/plugin-transform-unicode-regex": "^7.16.7",
-    "babel-plugin-transform-parameters-rhino": "file:lib/babel-rhino/packages/babel-plugin-transform-parameters-rhino",
-    "babel-plugin-proposal-object-rest-spread-rhino": "file:lib/babel-rhino/packages/babel-plugin-proposal-object-rest-spread-rhino"
+    "babel-plugin-proposal-object-rest-spread-rhino": "file:lib/babel-rhino/packages/babel-plugin-proposal-object-rest-spread-rhino",
+    "babel-plugin-transform-parameters-rhino": "file:lib/babel-rhino/packages/babel-plugin-transform-parameters-rhino"
   }
 }

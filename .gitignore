@@ -1,8 +1,10 @@
-# Node
+# Dependencies
 node_modules/
 
-# Temp
-temp/
+# Mod-specific
+pack/kubejs/exported
 
-# Organization
+# Development
+.env
 *.old
+temp/
