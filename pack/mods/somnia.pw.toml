@@ -1,0 +1,13 @@
+name = "Somnia Awoken"
+filename = "Somnia-Awoken-1.18.2-3.0.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0193779559dd50b8117767e1a64b5a4275638ab1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3873850
+project-id = 400796

@@ -1,14 +1,14 @@
 name = "In Control!"
-filename = "incontrol-1.18-6.0.12.jar"
+filename = "incontrol-1.18-6.0.14.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "ddf3c9d9457948351e2b8c8fc283dacabe165c81"
+hash = "a645233bc06d35def781917bd0b7966bc0119489"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3846587
+file-id = 3906997
 project-id = 257356
 release-channel = "beta"
