@@ -2,15 +2,15 @@
   "name": "neopolitan",
   "version": "1.0.0",
   "description": "",
-  "main": "scriptHandler/watch.js",
+  "main": "scripts/watch.js",
   "scripts": {
     "init": "chmod +x ./init.sh && ./init.sh",
-    "watch": "node scriptHandler/watch.js",
+    "watch": "node scripts/watch.js",
     "serve": "cd pack/ && packwiz serve",
-    "generate": "node scriptHandler/handleGamestages.js",
-    "generate:helpers": "node scriptHandler/createBabelHelpers.js",
-    "init:instance": "node scriptHandler/extra/init.js",
-    "store": "node scriptHandler/extra/store.js"
+    "generate": "node scripts/handleGamestages.js",
+    "generate:helpers": "node scripts/createBabelHelpers.js",
+    "init:instance": "node scripts/extra/init.js",
+    "store": "node scripts/extra/store.js"
   },
   "author": "Dakedres",
   "license": "AGPL-3.0-or-later",
