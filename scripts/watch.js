@@ -67,7 +67,7 @@ const start = files => {
 
     handleWatcher(watcher, location)
 
-    if(process.argv.find(item => item == '--force-recompile') )
+    if(process.argv.find(item => constants.forceRecompileExpressions.includes(item) ) )
       forceRecompile(location)
   }
 }

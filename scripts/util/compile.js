@@ -13,13 +13,25 @@ const formatError = str =>
   )
     
 
-const compile = async (location, firstOfScope) => {
+const compile = async (location) => {
   let at = path.parse(location),
       writeTo = path.join(at.dir, constants.suffix(at.name) ),
-      code = await fs.readFile(location, constants.fileOptions),
-      elapsed = Date.now(),
+      lines = (await fs.readFile(location, constants.fileOptions) )
+        .trim()
+        .split('\n'),
       error,
-      out = await babel.transformAsync(code, constants.babelOptions(at.filename) )
+      elapsed = Date.now(),
+      // Look for a priority comment and get the priority value if applicable
+      priority = constants.priorityRegex.exec(lines[0].trim() )?.[1]
+
+  if(priority === undefined) {
+    priority = 0
+  } else {
+    // Remove priority comment so we can add our own later
+    lines.splice(0, 1)
+  }
+
+  let out = await babel.transformAsync(lines.join('\n'), constants.babelOptions(at.filename) )
         .catch(err => {
           error = err
         })
@@ -27,19 +39,12 @@ const compile = async (location, firstOfScope) => {
   if(error) {
     console.error(`Could not compile "${at.base}":\n `, error)
   
-    // if(canAccess(writeTo) ) {
-
-    // }
-    // await fs.readFile(writeTo)
     await fs.writeFile(writeTo, `throw new Error(${formatError(error.toString() )})`)
     console.warn('Wrote error to file')
   } else {
     const sections = [
-      constants.header(firstOfScope ? 1 : 0),
+      constants.header(priority),
     ]
-
-    if(firstOfScope)
-      sections.push(constants.importHelpers)
 
     sections.push(out.code)
 

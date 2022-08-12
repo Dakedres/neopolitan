@@ -64,6 +64,10 @@ module.exports = {
     server: 'server_scripts',
     client: 'client_scripts'
   },
+  forceRecompileExpressions: [
+    '--force-recompile',
+    '-r'
+  ],
   gamestagePath: path.join(kubePath, 'startup_scripts/gamestages.es6'),
   zenScript: {
     path: path.join(targetDir, 'scripts/gamestages.zs'),
@@ -100,6 +104,7 @@ for name in modStages {
     targetExt: [ '.es', '.es6' ],
     suffix: filename => `${filename}.compiled.js`,
     fileOptions: { encoding: 'utf-8' },
+    priorityRegex: /^\/\/\s*priority:\s*(\d+)$/,
     babelOptions: filename => ({
       filename,
       // "presets": [
@@ -140,7 +145,7 @@ for name in modStages {
       // 'arrayLikeToArray'
     ],
     header: `
-// priority: 1
+// priority: 255
     `,
     import: `
 var babelHelpers = global.babelHelpers
