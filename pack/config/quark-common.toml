@@ -83,7 +83,7 @@
 	"Celebratory Lamps" = true
 	"Compressed Blocks" = false
 	"Duskbound Blocks" = false
-	"Framed Glass" = true
+	"Framed Glass" = false
 	"Gold Bars" = true
 	Grate = true
 	Hedges = true
@@ -148,15 +148,15 @@
 		#This also comes with a utility recipe for Red Nether Bricks
 		"Enable Blue Nether Bricks" = false
 		#This also includes Red Sandstone Bricks and Soul Sandstone Bricks
-		"Enable Sandstone Bricks" = true
+		"Enable Sandstone Bricks" = false
 		#This also includes Mossy Cobblestone Bricks
-		"Enable Cobblestone Bricks" = true
+		"Enable Cobblestone Bricks" = false
 		#Requires Cobblestone Bricks to be enabled
-		"Enable Blackstone Bricks" = true
+		"Enable Blackstone Bricks" = false
 		#Requires Cobblestone Bricks to be enabled
-		"Enable Dirt Bricks" = true
+		"Enable Dirt Bricks" = false
 		#Requires Cobblestone Bricks to be enabled
-		"Enable Netherrack Bricks" = true
+		"Enable Netherrack Bricks" = false
 
 	[building.more_stone_variants]
 		"Enable Bricks" = true
@@ -658,7 +658,7 @@
 
 		[world.big_stone_clusters.myalite]
 			"Generate In Air" = true
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 100
 			#Allowed values: [-64,320]

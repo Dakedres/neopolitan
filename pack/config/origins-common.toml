@@ -19,7 +19,7 @@
 		"origins:arthropod" = true
 
 	[origins."origins:human"]
-		enabled = true
+		enabled = false
 
 	[origins."origins:blazeborn"]
 		enabled = false
