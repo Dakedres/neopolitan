@@ -1,0 +1,36 @@
+{
+  "type": "origins:prevent_death",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:heal",
+        "amount": 1
+      },
+      {
+        "type": "origins:revoke_power",
+        "power": "neo:second_chance",
+        "source": "apoli:command"
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:block.amethyst_cluster.break",
+        "volume": 16.0
+      },
+      {
+        "type": "origins:if_else",
+        "condition": {
+          "type": "origins:advancement",
+          "advancement": "neo:second_chance"
+        },
+        "if_action": {
+          "type": "origins:nothing"
+        },
+        "else_action": {
+          "type": "origins:execute_command",
+          "command": "advancement grant @s only neo:second_chance"
+        }
+      }
+    ]
+  }
+}

@@ -1,5 +1,20 @@
 {
-  "display": "Here Be Dragons!",
+  "parent": "minecraft:nether/root",
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.nether.glowstone_canyon.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "infernalexp:dimstone"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.nether.glowstone_canyon.title"
+    }
+  },
   "criteria": {
     "visit_cavern": {
       "trigger": "minecraft:location",

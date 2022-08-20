@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.story.second_chance.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:red_bed"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.story.second_chance.title"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "dummy": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
