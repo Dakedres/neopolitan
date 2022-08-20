@@ -1,3 +1,5 @@
+{
+  
 const instrumentTables = {
   minecraft: [
     "abandoned_mineshaft",
@@ -63,3 +65,5 @@ onEvent('chest.loot_tables', event => {
     })
   }
 })
+
+}

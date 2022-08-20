@@ -1,3 +1,5 @@
+{
+
 let ores = []
 
 const addOre = (idName, displayName, tag) => {  
@@ -37,3 +39,5 @@ onEvent('item.tags', event => {
     event.add(tag, id)
   }
 })
+
+}

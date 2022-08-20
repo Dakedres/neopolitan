@@ -1,9 +1,11 @@
 # Dependencies
 node_modules/
 
-# Instance-specific
+# KubeJS
 pack/kubejs/exported
 pack/kubejs/data
+*.compiled.js
+babelHelpers.js
 
 # Development
 .env

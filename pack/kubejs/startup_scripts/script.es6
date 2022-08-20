@@ -1,32 +1,6 @@
+{
+
 // priority: 0
-
-// Todo: Hide entire artifacts mod
-// Reomve The One Probe
-// Add immersive petroleum
-
-console.info('Hello, World! (You will only see this line once in console, during startup)')
-
-// let cons = {
-// 	ropeBelt: Item.of('tetra:modular_toolbelt', {"toolbelt/belt_material":"belt/rope","toolbelt/belt":"toolbelt/belt","toolbelt/slot1":"toolbelt/strap_slot1","toolbelt/strap_slot1_material":"strap1/leather"})
-// }
-
-const dynArray = items => typeof items[0] == 'object' ? items[0] : items
-
-const materialFrom = (mod, ...names) =>
-	dynArray(names).map(name => new RegExp(`${mod}:(.*[\/_]|)${name}.*?$`) )
-
-const itemFrom = (mod, ...names) =>
-	dynArray(names).map(name => mod + ':' + name)
-
-const forMods = (mods, func, ...args) => {
-	let out = []
-
-	for(let mod of mods) {
-		out = out.concat(func(mod, ...args) )
-	}
-	
-	return out
-}
 
 let toRemove = [
 	'kubejs:dummy_fluid_item', // why
@@ -59,19 +33,19 @@ let toRemove = [
 	// '@curios',
 	/^\w*:.*?_post$/, // no quark posts
 	
-	// ...materialFrom('infernalexp', [
-	// 	'basalt_brick', // Obselete, create
-	// 	'pressure_plate', // Why
-	// 	'glowstone_brick', // Too much
-	// 	'dimstone_brick',
-	// 	'dullstone_brick',
-	// 	'smooth_glowstone',
-	// 	'smooth_dimstone',
-	// 	'smooth_dullstone',
-	// 	'soul_sand',
-	// 	'soul_soil'
-	// ]), 
-	// 'infernalexp:glowsilk_bow', // Broken?
+	...materialFrom('infernalexp', [
+		'basalt_brick', // Obselete, create
+		'pressure_plate', // Why
+		'glowstone_brick', // Too much
+		'dimstone_brick',
+		'dullstone_brick',
+		'smooth_glowstone',
+		'smooth_dimstone',
+		'smooth_dullstone',
+		'soul_sand',
+		'soul_soil'
+	]), 
+	'infernalexp:glowsilk_bow', // Broken?
 
 	...materialFrom('alexsmobs', [
 		'blobfish',
@@ -91,8 +65,9 @@ let toRemove = [
 		'terrapin',
 		'frilled_shark',
 		'mungal',
-		'roadrunner'
-		// TODO: Make buzzier bees' bears drop their hair, and rename it to fur
+		'roadrunner',
+		'straddlite'
+		// TODO: Make naturalist bears drop their hair, and rename it to fur
 	]),
 	'alexsmobs:serrated_shark_tooth',
 	'alexsmobs:straddleboard', // Makes obselete more creative gameplay
@@ -138,7 +113,8 @@ let toRemove = [
 		'lamp',
 		'blackstone',
 		'candelabra',
-		'sconce'
+		'sconce',
+		'ash'
 	]),
 
 	...materialFrom('naturalist', 'venison'),
@@ -157,13 +133,22 @@ let toRemove = [
 	'create:cuckoo_clock', // Both bloat, emphasize more redstone
 	'create:clockwork_bearing',
 	'create:sequenced_gearshift', // Prioritize more big brain
-	// 'create:rotation_speed_controller', // Ditto but this might cause issues idk
+	// 'create:rotation_speed_controller', // Ditto but this might cause issues idk\
+	// TODO: Make sure removed stuff generates properly
 	...materialFrom('create', [
-		'creative',
+		'zinc', // Replaced with lead
+		'tuff', // Architect's palette got us
+		'calcite',
 		'limestone',
-		'scoria',
+		'diorite',
+		'andesite',
+		'granite',
+		'deepslate',
+		'scorcia',
+		'copper_tile',
+		// 'scoria',
 		'layered',
-		'overgrown' // Obselete, moss, ect
+		'creative'
 	]),
 	/create:fancy_.*?_bricks/,
 
@@ -179,10 +164,16 @@ let toRemove = [
 	// ...materialFrom('psi', 'psimetal'),
 	// 'pitchperfect:chimes', // Obselete, chimes
 
-	// '@enchantwithmob'
+	// '@enchantwithmob',
+
+	'berry_good:music_disc_fox',
+
+	'oreganized:music_disc_pillaged',
+	'oreganized:electrum_nugget', // Bloaty
+	'oreganized:netherite_nugget'
 ]
 
-let toHide = [
+global.toHide = [
 	/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 	/^\w*:.*?_spawn_egg$/,
 
@@ -235,15 +226,16 @@ let toHide = [
 
 	'minecraft:enchanted_book', // testing
 
-	'architects_palette:sunmetal_brick',
-	'alexsmobs:novelty_hat'
+	'alexsmobs:novelty_hat',
+
+	'supplementaries:pancake_disc',
+
+	'#kubejs:disabled'
 ]
 
 // let hiddenEnchants = [
 // 	'allurement:reforming'
 // ].map(e => Item.of('minecraft:enchanted_book').enchant('allurement:reforming', 1))
-
-console.log(toHide)
 
 let toClean = [
 	// 'psi:cad_assembly_ivory_psimetal',
@@ -258,7 +250,6 @@ let toClean = [
 	// Sunmetal stuff. Why did I ever choose to do it this way
 	// { id: 'immersiveengineering:crafting/ingot_electrum_to_nugget_electrum' },
 	// '#forge:nuggets/electrum',
-	'architects_palette:sunmetal_block',
 	'alexsmobs:maraca'
 ]
 
@@ -276,14 +267,14 @@ let toClean = [
 // 	'immersiveengineering:arc_furnace'
 // ]
 
-const openSet = set => {
-	let out = []
+// const openSet = set => {
+// 	let out = []
 	
-	for(let i = 0; i < set.length; i++)
-		out.push(set[i])
+// 	for(let i = 0; i < set.length; i++)
+// 		out.push(set[i])
 	
-	return out
-}
+// 	return out
+// }
 
 onEvent('recipes', recipe => {
 	for(let item of toClean.concat(toRemove) ) {
@@ -305,26 +296,12 @@ onEvent('recipes', recipe => {
 	// })
 })
 
-// for(let mod of global.modStages) {
-// 	toHide.push('@' + mod)
-// }
-
 onEvent('item.tags', tags => {
-	const process = (a, v) => {
-		return a.concat(Ingredient.of(v).getItemIds().toArray() )
-	}
-
-	tags.add('kubejs:disabled', toRemove.reduce(process, []) )
+	tags.add('kubejs:disabled', getItemIds(toRemove) )
 })
 
-onEvent('jei.hide.items', event => {
-	// for(let item of toHide.concat(toRemove).concat(toHide) ) {
-	// 	event.hide(item)
-	// }
-
-	for(let item of toHide ) {
-		event.hide(item)
-	}
-
-	event.hide('#kubejs:disabled')
+onEvent('recipes', recipe => {
+	// recipe.remove('#kubejs:disabled')
 })
+
+}

@@ -1,50 +1,35 @@
 onEvent('recipes', recipe => {
-  // let cadPattern = [
-	//   'R  ',
-	//   'SIS',
-	//   '  L'
-	// ]
-	
-	// recipe.shaped('psi:cad_assembly_ivory_psimetal', cadPattern, {
-	//   S: 'psi:ivory_substance',
-	//   I: '#forge:ingots/psimetal',
-	//   R: 'create:refined_radiance',
-  // 	L: 'minecraft:stripped_birch_log'	  
-	// })
-	
-	// recipe.shaped('psi:cad_assembly_ebony_psimetal', cadPattern, {
-	//   S: 'psi:ebony_substance',
-	//   I: '#forge:ingots/psimetal',
-	//   R: 'create:refined_radiance',
-  //   L: 'minecraft:stripped_dark_oak_log' 
-	// })
-	
+	const removeAll = query =>
+		getItemIds(query).forEach(id => recipe.remove(id) )
+
 	// recipe.shaped(cons.ropeBelt, [
 	//   'RR '
 	// ], {
 	//   R: '#supplementaries:ropes'
 	// })
 
+	// removeAll('#kubejs:disabled')
+
 	recipe.shaped('6x quark:pipe', [
 		'P',
 		'G',
 		'P'
 	], {
-		P: '#forge:plates/steel',
+		P: '#forge:ingots/lead',
 		G: '#forge:glass'
 	})
 
-	const chimePattern = [
-		'W',
-		'S',
-		'C'
-	]
+	// const chimePattern = [
+	// 	'W',
+	// 	'S',
+	// 	'C'
+	// ]
 
-	recipe.shaped('chimes:copper_chimes', chimePattern, {
-		W: '#minecraft:wooden_slabs',
-		S: '#forge:string',
-		C: '#forge:plates/copper'
-	})
+	// recipe.shaped('chimes:copper_chimes', chimePattern, {
+	// 	W: '#minecraft:wooden_slabs',
+	// 	S: '#forge:string',
+	// 	C: '#forge:plates/copper'
+	// })
 
 	recipe.shaped(Item.of('supplementaries:slingshot', '{Damage:0}'), [
 		'SHS',
@@ -110,31 +95,11 @@ onEvent('recipes', recipe => {
 		})
 	}
 
-  // Decided against this
-  //
-  // const optimalSmelting = (type) => {
-  //   recipe.custom({
-  //     type: 'immersiveengineering:arc_furnace',
-  //     results: {
-  //       count: 2,
-  //       "base_ingredient": {
-  //         tag: `forge:ingots/${type}`
-  //       }
-  //     },
-  //     input: {
-  //       tag: `create:crushed_${type}_ore`
-  //     },
-  //     additives: [
-  //       // {
-  //       //   tag: `forge:nuggets/${type}`
-  //       // }
-  //     ],
-  //     time: 100,
-  //     energy: 204800
-  //   })
-  // }
-
-  // optimalSmelting('silver')
+	recipe.shaped('supplementaries:doormat', [
+		'FF'
+	], {
+		F: 'alexsmobs:bear_fur'
+	})
 
 	const proxyStonecutting = (to, from) => {
 		let baseCount = Item.of(to).getCount(),
@@ -166,31 +131,6 @@ onEvent('recipes', recipe => {
 		recipe.stonecutting(to, from)
 	}
 
-	// proxyStonecutting('3x architects_palette:sunmetal_block', 'alloyed:bronze_ingot')
-
-// 	 __  __ _                      _     
-//  |  \/  (_)                    | |    
-//  | \  / |_ _ __   ___ _ __ __ _| |___ 
-//  | |\/| | | '_ \ / _ \ '__/ _` | / __|
-//  | |  | | | | | |  __/ | | (_| | \__ \
-//  |_|  |_|_|_| |_|\___|_|  \__,_|_|___/
-
-	// ;[
-	// 	'immersiveengineering:arc_furnace',
-	// 	'immersiveengineering:alloy',
-	// 	'create:mixing'
-	// ].forEach(type => {
-	// 	recipe.remove({
-	// 		type,
-	// 		output: '#forge:ingots/bronze'
-	// 	})	
-	// })
-
-	// recipe.remove({
-	// 	type: 'create:mixing',
-	// 	output: '#forge:ingots/electrum'
-	// })	
-
 	const toIngredient = exp =>
 		Ingredient.of(exp).toJson()
 
@@ -207,59 +147,57 @@ onEvent('recipes', recipe => {
 	}
 
 	const createAlloy = (out, inp, extras) => {
-		// let results = {
-		// 	count: 2,
-		// 	base_ingredient: Item.of(out)
-		// 		.toResultJson()
-		// 		.toString()
-		// 	base_ingredient: toIngredient()
-		// }
-
 		let results = [
 			Item.of(out).toResultJson()
 		]
 
 		alloyMixing(results, [ inp, ...extras ])
-
-		recipe.custom({
-			type: 'immersiveengineering:arc_furnace',
-			input: toIngredient(inp),
-			additives: extras.map(toIngredient),
-			results,
-			time: 100,
-  		energy: 51200
-		})
 	}
 
-	createAlloy('2x alloyed:bronze_ingot', '#forge:ingots/gold', [
-		'#forge:ingots/zinc',
-		'create:cinder_flour'
+	// removeAll([
+	// 	'oreganized:electrum_ingot'
+	// ])
+
+	createAlloy('architects_palette:nether_brass_ingot', 'minecraft:copper_ingot', [
+		'immersive_weathering:vitrified_sand'
 	])
+	
 
-	createAlloy('2x kubejs:crushed_sunmetal', 'create:crushed_gold_ore', [
-		'create:crushed_zinc_ore',
-		'create:cinder_flour'
-	])
+	recipe.shapeless('oreganized:electrum_ingot', [ '4x minecraft:netherite_scrap', '4x architects_palette:nether_brass_ingot' ])
 
-	console.log(Ingredient.of('3x minecraft:stone').toJson())
+	recipe.shaped('8x architects_palette:nether_brass_block', [
+		'II',
+		'II'
+	], {
+		I: 'architects_palette:nether_brass_ingot'
+	})
+})
 
-	alloyMixing(
-		[ Item.of('3x kubejs:crushed_steel').toResultJson() ],
-		[
-			...manyOf('create:crushed_iron_ore', 3),
-			[ 'minecraft:coal', 'minecraft:charcoal' ]
-		]
-	)
+onEvent('recipes.compostables', event => {
+	let compostables = {
+		'immersive_weathering:weeds': 1 
+	}
 
-	recipe.smelting('alloyed:bronze_ingot', 'architects_palette:sunmetal_blend')
-	recipe.shapeless('9x #forge:nuggets/electrum', [ 'alloyed:bronze_ingot' ]),
-	recipe.shapeless('alloyed:bronze_ingot', manyOf('#forge:nuggets/electrum', 9) )
-	// 1 ingot -> 3 blocks
-	recipe.shapeless('12x architects_palette:sunmetal_block', manyOf('#forge:ingots/electrum', 4) )
+	for(let id in compostables) {
+		event.add(id, compostables[id])
+	}
+})
 
-	// No silver
+onEvent('item.tags', tags => {
+	let equalMetal = (left, right) => [
+		[ `forge:nuggets/${left}`, `#forge:nuggets/${right}` ],
+		[ `forge:ingots/${left}`, `#forge:ingots/${right}` ],
+		[ `forge:plates/${left}`, `#forge:plates/${right}` ]
+	].map(a => tags.add(...a))
 
-	recipe.replaceInput({
-		id: 'architects_palette:sunmetal_bars'
-	}, 'architects_palette:sunmetal_brick', 'alloyed:bronze_ingot')
+	equalMetal('zinc', 'lead')
+
+	;[
+		'forge:ash',
+		'forge:dusts',
+		'forge:dusts/ash',
+		'supplementaries:hourglass_dusts'
+	].forEach(tag => {
+		tags.add(tag, 'immersive_weathering:soot')
+	})
 })

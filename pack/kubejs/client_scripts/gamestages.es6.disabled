@@ -41,7 +41,10 @@ const getItemStacks = stage => {
 
 	console.log(stacks)
 
-	return stacks.length > 0 ? stacks.map(stack => stack.getItemStack() ) : []
+	return stacks.length > 0 ? stacks
+		.filter(stack => Ingredient.of('#kubejs:disabled').test(stack) )
+		.map(stack => stack.getItemStack() )
+		: []
 }
 
 let localStagesArray,

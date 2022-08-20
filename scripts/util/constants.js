@@ -141,7 +141,9 @@ for name in modStages {
       'nonIterableSpread',
       'defineProperty',
       'createClass',
-      'classCallCheck'
+      'classCallCheck',
+      'slicedToArray',
+      'arrayWithHoles'
       // 'arrayLikeToArray'
     ],
     header: `
