@@ -1,8 +1,7 @@
 const fs = require('fs/promises'),
       path = require('path')
 
-const handleGamestages = require('./handleGamestages'),
-      constants = require('./util/constants'),
+const constants = require('./util/constants'),
       compile = require('./util/compile')
 
 if(!fs.watch) {
@@ -24,22 +23,10 @@ const handleWatcher = async (watcher, location) => {
   for await (const { eventType, filename } of watcher) {
     if(shouldCompile(filename) ) {
       switch(eventType) {
-        // case 'rename': {
-        //   const compiledFile = path.join(location, constants.compile.suffix(path.parse(filename).name) )
-
-        //   try {
-        //     await fs.access(compiledFile)
-        //     console.log(compiledFile)
-        //   } catch(err) {}
-        // }
-
         case 'change': {
           let filePath = path.join(location, filename)
 
-          // if(filePath == constants.gamestagePath)
-          //   handleGamestages(filePath)
-          // else
-            compile(filePath)
+          compile(filePath)
         }
       }
     }

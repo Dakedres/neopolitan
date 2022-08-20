@@ -3,7 +3,7 @@ require('dotenv').config()
 const path = require('path'),
       getPlugins = require('./getPlugins')
 
-const pathArg = process.argv.filter(item => item.startsWith('--') )[2] || process.env.DEV_INSTANCE_ROOT
+const pathArg = process.argv.filter(item => item.startsWith('--') )[2] || process.env.DEV_INSTANCE_ROOT,
       targetDir = pathArg ?
         (pathArg[0] == '/' ? pathArg : path.join(process.cwd(), pathArg) ) :
         path.join(__dirname, '../../pack'),
@@ -53,8 +53,6 @@ const pathArg = process.argv.filter(item => item.startsWith('--') )[2] || proces
           }
         ],
       ])
-
-console.log(plugins)
 
 module.exports = {
   targetDir,

@@ -1,3 +1,9 @@
+// Bun workarounds until
+//  - process.stderr is implemented
+//  - execArgv is implemented/polyfilled/whatever
+process.stderr = Bun.stderr
+process.execArgv = []
+
 const createScript = require('./createScript')
 
 const babel = require('@babel/core'),
