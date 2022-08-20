@@ -1,0 +1,7 @@
+VanillaTweaks config:
+  https://vanillatweaks.net/share#JjwgE9
+
+I don't like having to disable the KubeJS class filter to access Apoli stuff
+
+Thing to add uses for
+  - Immersive weathering hummus
