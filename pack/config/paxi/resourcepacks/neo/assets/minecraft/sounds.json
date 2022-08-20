@@ -1,11 +1,7 @@
 {
   "music.menu": {
     "sounds": [
-      {
-        "name": "neo:music/game/end/alle_umfotzen",
-        "volume": 0.5,
-        "stream": true
-      }
+
     ]
   },
   "music.game": {
@@ -89,12 +85,6 @@
         "volume": 0.4,
         "stream": true,
         "weight": 4
-      },
-      {
-        "name": "neo:music/game/mittagsruhe",
-        "stream": true,
-        "volume": 0.4,
-        "weight": 2
       }
     ]
   },
