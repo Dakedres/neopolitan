@@ -12,3 +12,8 @@ mode = "metadata:curseforge"
 file-id = 3909860
 project-id = 433068
 release-channel = "beta"
+
+[option]
+optional = true
+default = true
+description = "Immersive footstep sounds"

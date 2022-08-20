@@ -11,3 +11,8 @@ hash = "bff3c78d53698756f7afb3df79583f871c619b9e"
 [update.modrinth]
 mod-id = "1bZhdhsH"
 version = "iwzUwLGb"
+
+[option]
+optional = true
+default = true
+description = "Proximity voice chat."
