@@ -1,13 +1,13 @@
 name = "Rubidium Extra"
-filename = "RubidiumExtra-0.4.8+mc1.18.2.jar"
+filename = "RubidiumExtra-1.18.2-0.4.9.26.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "ea37f9ee1900eb8d45814fca6e5a782943e4aa16"
+hash = "4ceba74f8af13cc04c4eefc56bba73dc1d047f49"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3917984
+file-id = 3947064
 project-id = 654373

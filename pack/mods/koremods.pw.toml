@@ -1,13 +1,13 @@
 name = "Koremods"
-filename = "koremods-modlauncher-0.4.8.jar"
+filename = "koremods-modlauncher-0.4.10.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "4e76ef9deb31f8011955a888de838994cb0ff4fd"
+hash = "8d269a71c87a6052b625f16cf9fafaea7d466574"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3873714
+file-id = 3954511
 project-id = 544251

@@ -1,14 +1,14 @@
 name = "Out Of Sight"
-filename = "out_of_sight-1.18.1-1.0.1.jar"
+filename = "out_of_sight-1.18.2-1.0.2.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "974ecccdee217307c41d085745e72851adf2a4d2"
+hash = "9ed04fc6c209c8437fd205077389cc610828ccd3"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3576874
+file-id = 3929018
 project-id = 428199
 release-channel = "beta"
