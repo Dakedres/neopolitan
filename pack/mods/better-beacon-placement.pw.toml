@@ -1,13 +1,13 @@
-name = "Better Beacon Placement (Forge)"
-filename = "betterbeaconplacement_1.18.2-1.5.jar"
+name = "Better Beacon Placement"
+filename = "betterbeaconplacement-1.18.2-3.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "cbab8393566f82784708622f48876b952a43e592"
+hash = "877f9d6dfc7c576e0d31f675b957fc9edccafd4b"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3669287
+file-id = 4331420
 project-id = 350018

@@ -11,3 +11,4 @@ babelHelpers.js
 .env
 *.old
 temp/
+.code-workspace

@@ -1,7 +1,0 @@
-{
-  "retroGen": false,
-  "swapper": {
-    "darkerdepths:glowshroom_block": "enhanced_mushrooms:glowshroom_hyphae",
-    "darkerdepths:glowshroom_stem": "enhanced_mushrooms:glowshroom_stem"
-  }
-}

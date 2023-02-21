@@ -100,7 +100,7 @@ for name in modStages {
  
   compile: {
     targetExt: [ '.es', '.es6' ],
-    suffix: filename => `${filename}.compiled.js`,
+    suffix: name => `${name}.compiled.js`,
     fileOptions: { encoding: 'utf-8' },
     priorityRegex: /^\/\/\s*priority:\s*(\d+)$/,
     babelOptions: filename => ({

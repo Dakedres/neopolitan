@@ -1,14 +1,14 @@
 name = "SwingThroughGrass"
-filename = "swingthroughgrass-1.18.2-1.9.0.jar"
+filename = "swingthroughgrass-1.18.2-1.9.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "d100d14cc3d3ddd8228e85b64fa9bb5354e62a51"
+hash = "0d2430f6018cff2905e3c832bc078772b6965268"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3881216
+file-id = 4030494
 project-id = 264353
 release-channel = "beta"

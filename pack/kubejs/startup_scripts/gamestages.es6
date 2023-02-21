@@ -525,7 +525,7 @@ const ensureArray = i =>
   }
 
   for(let name in gamestages) {
-    let stage = gamestages[name]
+    let stage = gamestages[name],
         out = stage
 
     out.name = name

@@ -1,14 +1,14 @@
 name = "Paxi (Forge)"
-filename = "Paxi-1.18.2-Forge-2.0.jar"
+filename = "Paxi-1.18.2-Forge-2.1.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "97fe5c9a9101f8690bacf2cb961a7c9d1ea31280"
+hash = "77640b6d98b227bddfd7d143bca15fdf255d2b40"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3706641
+file-id = 4326917
 project-id = 515708
 release-channel = "beta"

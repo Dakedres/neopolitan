@@ -1,13 +1,13 @@
 name = "TellMe"
-filename = "tellme-forge-1.18.1-0.10.0.jar"
+filename = "tellme-forge-1.18.2-0.10.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "c3cf2faf132f1b0a6e5c5c5abd40a61511daadaf"
+hash = "efa378e95e04d318349b2049ff522324cddc1907"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3586247
+file-id = 4121405
 project-id = 225781

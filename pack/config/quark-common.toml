@@ -222,7 +222,7 @@
 		"Ignore Anti Overlap" = false
 
 	[building.industrial_palette]
-		"Enable Iron Plates" = true
+		"Enable Iron Plates" = false
 		"Enable Iron Ladder" = true
 
 	[building.glass_item_frame]
@@ -951,8 +951,8 @@
 
 	[world.new_stone_types]
 		"Enable Limestone" = false
-		"Enable Jasper" = false
-		"Enable Myalite" = false
+		"Enable Jasper" = true
+		"Enable Myalite" = true
 		"Enable Shale" = true
 
 		[world.new_stone_types.limestone]

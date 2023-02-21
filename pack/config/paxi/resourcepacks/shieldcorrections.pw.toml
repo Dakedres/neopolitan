@@ -1,13 +1,13 @@
 name = "Shield Corrections"
-filename = "Shield Corrections §c[Colored].zip"
+filename = "ShieldCorrections [Colored].zip"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "bc154a4b9ab9c3acfe5b90bab8132e738fc69ae1"
+hash = "ed1bdf0607ab465a8281be069c2a9f9040226428"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3851441
+file-id = 4219462
 project-id = 308471

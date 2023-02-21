@@ -1,7 +1,7 @@
 // Bun workarounds until
 //  - process.stderr is implemented
 //  - execArgv is implemented/polyfilled/whatever
-process.stderr = Bun.stderr
+// process.stderr = Bun.stderr
 process.execArgv = []
 
 const createScript = require('./createScript')
@@ -18,7 +18,6 @@ const formatError = str =>
     str.replace(/\x1b\[\d+m/g, '') + '\n'
   )
     
-
 const compile = async (location) => {
   let at = path.parse(location),
       writeTo = path.join(at.dir, constants.suffix(at.name) ),
@@ -45,7 +44,7 @@ const compile = async (location) => {
   if(error) {
     console.error(`Could not compile "${at.base}":\n `, error)
   
-    await fs.writeFile(writeTo, `throw new Error(${formatError(error.toString() )})`)
+    await fs.writeFile(writeTo, `console.error(${formatError(error.toString() )})`)
     console.warn('Wrote error to file')
   } else {
     const sections = [

@@ -144,11 +144,24 @@ let toRemove = [
 		'andesite',
 		'granite',
 		'deepslate',
+		'dripstone',
 		'scorcia',
 		'copper_tile',
 		// 'scoria',
+
 		'layered',
-		'creative'
+		'creative',
+		'veridium',
+
+		'cut_ochrum',
+		'small_ochrum_brick',
+
+		'cut_asurine',
+		'small_asurine_brick',
+
+		'cut_crimsite',
+		'small_crimsite_brick',
+		
 	]),
 	/create:fancy_.*?_bricks/,
 
@@ -170,12 +183,42 @@ let toRemove = [
 
 	'oreganized:music_disc_pillaged',
 	'oreganized:electrum_nugget', // Bloaty
-	'oreganized:netherite_nugget'
+	'oreganized:netherite_nugget',
+
+	...materialFrom('immersive_weathering', 'iron'),
+
+	...materialFrom('architects_palette', [
+		'withered_bone',
+		'osseous',
+		'gilded_sandstone'
+	]),
+
+	...forMods([
+		'galosphere',
+		'supplementaries',
+		'oreganized',
+		'create'
+	], materialFrom, 'silver')
 ]
 
 global.toHide = [
 	/^\w*:spawn_egg_.*?$/, // Spawn eggs can spoil some mobs
 	/^\w*:.*?_spawn_egg$/,
+
+	...materialFrom('quark', [
+		'limestone',
+		'myalite',
+		'stone_lamp', // you can still craft them, whatever
+		'stone_brick_lamp',
+	  'cobblestone_bricks', // WHY SO MANY BRICKS
+		'blackstone_bricks',
+		'dirt_bricks',
+		'sandy_bricks',
+		'netherrack_bricks',
+		'blue_nether_bricks',
+		'iron_palte', // Obselete, architect's palette
+		'iron_pillar'
+	]),
 
 	// ...materialFrom('quark', [
 	// 	'stained_planks',

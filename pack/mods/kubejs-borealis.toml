@@ -1,14 +1,14 @@
 name = "KubeJS Borealis"
-filename = "KubeJSBorealis-2.0.3.jar"
+filename = "KubeJSBorealis-2.0.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "8c4c679c1b7abf0007f4f2dff045f1ba8caf667a"
+hash = "7b36a5095d6b908a1c2ce98e83822a7faaff98ce"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3787689
+file-id = 4048938
 project-id = 445077
 release-channel = "beta"

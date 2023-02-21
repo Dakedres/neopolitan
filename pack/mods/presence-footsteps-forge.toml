@@ -1,19 +1,19 @@
-name = "Presence Footsteps (Forge)"
-filename = "PresenceFootsteps-1.18.2-1.5.0-beta2-forge.jar"
+name = "Presence Footsteps [Forge]"
+filename = "PresenceFootsteps-1.18.2-1.5.1-forge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "394df7bcf3b1ea802f148ffdf5b5e3d5b144c7ea"
+hash = "713e50a6b94c0ffec200ea54a8a353ca70e14d01"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 3909860
+file-id = 4328018
 project-id = 433068
 release-channel = "beta"
 
 [option]
 optional = true
-default = true
 description = "Immersive footstep sounds"
+default = true

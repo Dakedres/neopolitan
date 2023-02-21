@@ -171,6 +171,16 @@ onEvent('recipes', recipe => {
 	], {
 		I: 'architects_palette:nether_brass_ingot'
 	})
+
+	recipe.shaped('galosphere:silver_bomb', [
+		' LS',
+		'LGL',
+		' L '
+	], {
+		L: '#forge:ingots/lead',
+		G: '#forge:gunpowder',
+		S: '#forge:string'
+	})
 })
 
 onEvent('recipes.compostables', event => {
@@ -184,13 +194,15 @@ onEvent('recipes.compostables', event => {
 })
 
 onEvent('item.tags', tags => {
-	let equalMetal = (left, right) => [
-		[ `forge:nuggets/${left}`, `#forge:nuggets/${right}` ],
-		[ `forge:ingots/${left}`, `#forge:ingots/${right}` ],
-		[ `forge:plates/${left}`, `#forge:plates/${right}` ]
-	].map(a => tags.add(...a))
+	let equalMaterial = (left, right) => {
+		let rightTags = materialTags(right)
 
-	equalMetal('zinc', 'lead')
+		console.log(rightTags)
+
+		return materialTags(left).map((tag, i) => tags.add(tag, '#' + rightTags[i]))
+	}
+
+	equalMaterial('zinc', 'lead')
 
 	;[
 		'forge:ash',

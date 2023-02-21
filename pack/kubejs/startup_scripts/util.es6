@@ -87,3 +87,10 @@ const mapObject = (object, callback) =>
     accumulator[callbackResult[0] ] = callbackResult[1]
     return accumulator
   }, {})
+
+let materialTags = mat => [
+  `forge:nuggets/${mat}`,
+  `forge:ingots/${mat}`,
+  `forge:storage_blocks/${mat}`,
+  `forge:plates/${mat}`
+]
