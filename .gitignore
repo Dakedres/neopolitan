@@ -12,3 +12,6 @@ babelHelpers.js
 *.old
 temp/
 .code-workspace
+
+# Platform
+__MACOSX

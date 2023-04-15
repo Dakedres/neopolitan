@@ -1,0 +1,13 @@
+name = "Unearthed"
+filename = "Unearthed-forge-1.18.2-2.3.3-slim.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b132665a740400be37fa0ee7791213b0bf7f0387"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3999558
+project-id = 406825
