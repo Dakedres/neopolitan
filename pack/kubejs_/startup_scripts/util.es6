@@ -15,6 +15,14 @@ const dynArray = items => typeof items[0] == 'object' ? items[0] : items
 const materialFrom = (mod, ...names) =>
 	dynArray(names).map(name => new RegExp(`${mod}:(.*[\/_]|)${name}.*?$`) )
 
+const metalOf = (name) => [
+  '#forge:ores/' + name,
+  '#forge:ingots/' + name,
+  '#forge:nuggets/' + name,
+  '#forge:plates/' + name,
+  '#forge:dusts/' + name
+]
+
 const materialStage = (mod, ...names) =>
   dynArray(names).reduce((out, name) => {
     out[name] = {

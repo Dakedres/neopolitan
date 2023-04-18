@@ -100,9 +100,10 @@ let toRemove = [
 	// /^supplementaries:candelabra_/,
 	'supplementaries:planter',
 	'supplementaries:gold_gate',
-	'supplementaries:flute', // Idk about it when Pitch Perfect already has one
+	// 'supplementaries:flute', // Idk about it when Pitch Perfect already has one
 	'supplementaries:pedestal',
 	'supplementaries:brass_lantern',
+	'supplementaries:lead_lantern',
 	'supplementaries:cog_block',
 	'supplementaries:candy',
 	...materialFrom('supplementaries', [
@@ -190,7 +191,12 @@ let toRemove = [
 	...materialFrom('architects_palette', [
 		'withered_bone',
 		'osseous',
-		'gilded_sandstone'
+		'gilded_sandstone',
+		'coal_ore',
+		'iron_ore',
+		'gold_ore',
+		'diamond_ore',
+		'emerald_ore'
 	]),
 
 	...forMods([
@@ -217,7 +223,8 @@ global.toHide = [
 		'netherrack_bricks',
 		'blue_nether_bricks',
 		'iron_palte', // Obselete, architect's palette
-		'iron_pillar'
+		'iron_pillar',
+		'leaf_pile'
 	]),
 
 	// ...materialFrom('quark', [
