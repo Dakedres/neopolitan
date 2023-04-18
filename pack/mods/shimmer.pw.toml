@@ -1,0 +1,13 @@
+name = "Shimmer"
+filename = "Shimmer-fabric-1.18.2-0.1.14.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "210d5970a3a5085b9d8c6a329807461a0a63b992"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4082061
+project-id = 627824
