@@ -1,0 +1,13 @@
+name = "Step It Up"
+filename = "stepitup-1.0-1.18-forge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "661dc02cc2a24897230f86bba8f4a375a5972fdd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4429373
+project-id = 835626
