@@ -101,7 +101,7 @@ const categories = [
 
   console.log(entries)
 
-  onEvent('jei.information', info => {
+  onEvent('rei.information', info => {
     for(let { item, data } of entries) {
       console.log(item)
       console.log(data)

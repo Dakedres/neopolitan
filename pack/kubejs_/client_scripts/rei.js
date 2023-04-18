@@ -10,6 +10,7 @@ onEvent('rei.hide.items', event => {
 	// 	event.hide(item)
 	// }
 	// event.hide(getItemIds('#kubejs:disabled') )
+	console.log('Hiding:' + global.toHide)
 	event.hide(getItemIds(global.toHide) )
 	console.log('HID ITEMS')
 })
