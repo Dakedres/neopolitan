@@ -21,7 +21,8 @@ const woodTypeHolders = [
   'quark',
   'everycomp',
   'immersive_weathering',
-  'supplementaries'
+  'supplementaries',
+  'enhanced_mushrooms'
 ]
 
 const gamestages =  {
@@ -163,7 +164,8 @@ const gamestages =  {
 
   glowstone_canyon: {
     reveal: [
-      '#infernalexp:glowstone_canyon_blocks'
+      '#infernalexp:glowstone_canyon_blocks',
+      ...materialFrom('infernalexp', 'luminous', 'glowdust_stone')
     ]
   },
   snake_skin: {
@@ -286,20 +288,23 @@ const gamestages =  {
       'azalea'
     ].map(type => singleTrade(3)(`32x quark:vertical_${type}_planks`) )
   },
-  azalea: {
-    reveal: forMods(woodTypeHolders, materialFrom, 'azalea')
-  },
-  blossom: {
-    reveal: forMods(woodTypeHolders, materialFrom, 'blossom')
-  },
+
+  ...[
+    'azalea',
+    'blossom',
+    'red_mushroom',
+    'brown_mushroom'
+  ].reduce((acc, type) => {
+    acc[type] = {
+      reveal: forMods(woodTypeHolders, materialFrom, type)
+    }
+
+    return acc
+  }, {}),
 
   copper: {
     ...extraUnhidden([
-      '#forge:ores/copper',
-      '#forge:ingots/copper',
-      '#forge:nuggets/copper',
-      '#forge:plates/copper',
-      '#forge:dusts/copper',
+      ...metalOf('copper'),
       'create:crushed_copper_ore',
       ...materialFrom('create', 'copper'),
       'chimes:copper_chimes',
@@ -311,15 +316,44 @@ const gamestages =  {
 
   brass: {
     reveal: [
-      '#forge:ores/brass',
-      '#forge:ingots/brass',
-      '#forge:nuggets/brass',
-      '#forge:plates/brass',
-      '#forge:dusts/brass',
+      ...metalOf('brass'),
       ...materialFrom('create', 'brass')
     ],
     trades: [
       singleTrade(3, 2, 2)('3x create:brass_ingot')
+    ]
+  },
+
+  lead: {
+    reveal: [
+      ...metalOf('lead'),
+      'create:crushed_lead_ore',
+      'create:rose_quartz_lamp',
+      '#oreganized:lead_source',
+      'oreganized:shrapnel_bomb',
+      ...materialFrom('oreganized', 'crystal_glass'),
+      'quark:pipe'
+    ]
+  },
+
+  electrum: {
+    reveal: [
+      ...metalOf('electrum')
+    ],
+    trades: [
+      singleTrade(2, 2, 1)('oreganized:electrum_nugget')
+    ]
+  },
+
+  moonmetal: {
+    reveal: [
+      ...materialFrom('architects_palette', 'nether_brass')
+    ]
+  },
+
+  sunmetal: {
+    reveal: [
+      ...materialFrom('architects_palette', 'sunmetal')
     ]
   },
 
@@ -334,6 +368,7 @@ const gamestages =  {
     'stone_pillar',
     'brazier'
   ]),
+
   ...[
     'supports',
     'palisades',
@@ -390,10 +425,83 @@ const gamestages =  {
   // ...materialStage('darkerdepths', 'grimestone', 'limestone'),
   // ...materialStage('cavesandcliffs', 'deepslate'),
   ...materialStage('infernalexp', 'soul_stone'),
+  ...materialStage('oreganized', 'glance'),
+  
+  frost: {
+    reveal: [
+      ...materialFrom('immersive_weathering', 'frosty'),
+      'immersive_weathering:frost'
+    ]
+  },
+  ...materialStage('immersive_weathering', [
+    'mulch',
+    'bricks',
+    'ivy'
+  ]),
+  moss: {
+    reveal: materialFrom('immersive_weathering', 'moss', 'mossy')
+  },
+  bark: {
+    reveal: [
+      '#immersive_weathering:scales',
+      '#immersive_weathering:bark'
+    ]
+  },
+  ash: {
+    reveal: [
+      ...materialFrom('immersive_weathering', 'ash'),
+      '#forge:ash'
+    ]
+  },
+  leaf_pile: {
+    reveal: [
+      ...materialFrom('immersive_weathering', 'leaf_pile'),
+      'immersive_weathering:azalea_flower_pile'
+    ]
+  },
+  soil: {
+    reveal: itemFrom('immersive_weathering', [
+      'humus',
+      'fluvisol',
+      'silt',
+      'vertisol',
+      'cracked_mud',
+      'cryosol',
+      'permafrost'
+    ])
+  },
+  silty_soil: {
+    reveal: itemFrom('immersive_weathering', [
+      'fluvisol',
+      'silt'
+    ])
+  },
+  muddy_soil: {
+    reveal: itemFrom('immersive_weathering', [
+      'vertisol',
+      'cracked_mud'
+    ])
+  },
+  frozen_soil: {
+    reveal: itemFrom('immersive_weathering', [
+      'cryosol',
+      'permafrost'
+    ])
+  },
+  icicle: {
+    reveal: itemFrom('immersive_weathering', [
+      'icicle',
+      'ice_sickle'
+    ])
+  },
+  azalea_flowers: {
+    reveal: [
+      'immersive_weathering:azalea_flower_pile',
+      'immersive_weathering:azalea_flowers',
+      'immersive_weathering:flower_crown'
+    ]
+  },
 
-  // Planks
-  ...materialStage('enhanced_mushrooms', 'red_mushroom', 'brown_mushroom', 'glowshroom'),
-  // ...materialStage('endergetic', 'poise'),
 
   // honey_pot: {
   //   of: [
