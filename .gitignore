@@ -10,6 +10,7 @@ babelHelpers.js
 # Development
 .env
 *.old
+*.local
 temp/
 .code-workspace
 
