@@ -1,13 +1,13 @@
 name = "Snowballs Freeze Mobs"
-filename = "snowballsfreezemobs-1.18.2-3.0.jar"
+filename = "snowballsfreezemobs-1.18.2-3.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "80702fbec5b3f22314be217a1017acff1c07fb4f"
+hash = "84d8edabd815114a1d31104acb46c599030e64ac"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 4310573
+file-id = 4397436
 project-id = 344436
