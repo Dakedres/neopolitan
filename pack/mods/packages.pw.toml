@@ -1,0 +1,13 @@
+name = "Packages"
+filename = "packages-forge-1.18.2-3.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0f9e066c835419d4aa0969b508e9a42a9115a1b0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4127065
+project-id = 383733
