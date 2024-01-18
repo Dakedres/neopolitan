@@ -1,0 +1,13 @@
+name = "Better Days"
+filename = "betterdays-1.19.2-3.1.0.3-FORGE.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/tPLE214j/versions/CEKbQT8h/betterdays-1.19.2-3.1.0.3-FORGE.jar"
+hash-format = "sha1"
+hash = "00e46fa6ed0bf12dddca583a9178281becd1d1a6"
+
+[update]
+[update.modrinth]
+mod-id = "tPLE214j"
+version = "CEKbQT8h"

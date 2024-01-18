@@ -1,0 +1,13 @@
+name = "Enchant & Repair"
+filename = "enchantrepair-1.19.2-1.1.6-forge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7fce557ecec3aa1716e89576b4dd88e6fceaf735"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4828643
+project-id = 915542

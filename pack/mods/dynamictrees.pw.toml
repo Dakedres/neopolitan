@@ -1,0 +1,13 @@
+name = "Dynamic Trees"
+filename = "DynamicTrees-1.19.2-1.2.0-BETA1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/vdjF5PL5/versions/pTPEE0Dv/DynamicTrees-1.19.2-1.2.0-BETA1.jar"
+hash-format = "sha1"
+hash = "823884ae8458bbb4f6da258e8c6967fa9abeeb5e"
+
+[update]
+[update.modrinth]
+mod-id = "vdjF5PL5"
+version = "pTPEE0Dv"

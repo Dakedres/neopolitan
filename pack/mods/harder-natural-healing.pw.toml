@@ -1,0 +1,13 @@
+name = "Harder Natural Healing"
+filename = "HarderNaturalHealing-1.19-41.1.13.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bdfd61091ec956526ce81102760dbc9df17023c3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4011213
+project-id = 420735

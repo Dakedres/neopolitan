@@ -1,13 +1,13 @@
 name = "Kotlin for Forge"
-filename = "kotlinforforge-3.9.1-all.jar"
+filename = "kotlinforforge-3.12.0-all.jar"
 side = "both"
 
 [download]
+url = "https://cdn.modrinth.com/data/ordsPcFz/versions/NBn3sEQk/kotlinforforge-3.12.0-all.jar"
 hash-format = "sha1"
-hash = "3da1f99a3dc4d2e67e5f0eac7979800fbc0b6ef8"
-mode = "metadata:curseforge"
+hash = "cf09c1be6d8950e3f7551f02f141818aee5a3ec0"
 
 [update]
-[update.curseforge]
-file-id = 4311661
-project-id = 351264
+[update.modrinth]
+mod-id = "ordsPcFz"
+version = "NBn3sEQk"

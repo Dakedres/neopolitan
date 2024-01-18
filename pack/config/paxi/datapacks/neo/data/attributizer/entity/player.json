@@ -1,0 +1,16 @@
+{
+  "minecraft:player": [
+    {
+      "attribute": "minecraft:generic.movement_speed",
+      "modify": 10.0,
+      "operation": "MULTIPLY"
+    }
+  ],
+  "minecraft:allay": [
+    {
+      "attribute": "minecraft:generic.movement_speed",
+      "modify": 30.0,
+      "operation": "SET_BASE"
+    }
+  ]
+}

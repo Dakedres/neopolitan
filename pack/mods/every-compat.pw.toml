@@ -1,13 +1,13 @@
 name = "Every Compat (Wood Good)"
-filename = "everycomp-1.18.2-1.5.15.jar"
+filename = "everycomp-1.19.2-2.5.16.jar"
 side = "both"
 
 [download]
+url = "https://cdn.modrinth.com/data/eiktJyw1/versions/nWOyVEvK/everycomp-1.19.2-2.5.16.jar"
 hash-format = "sha1"
-hash = "510aac94f1935b06776ae88c31c1c38916a4f83a"
-mode = "metadata:curseforge"
+hash = "4a96c3e5e41e230a3d94d0dec96e2ceb6877d9c8"
 
 [update]
-[update.curseforge]
-file-id = 4240631
-project-id = 628539
+[update.modrinth]
+mod-id = "eiktJyw1"
+version = "nWOyVEvK"

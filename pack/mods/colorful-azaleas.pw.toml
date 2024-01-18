@@ -1,0 +1,13 @@
+name = "Colorful Azaleas"
+filename = "ColorfulAzaleas-forge-1.19.2-2.3.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/HDZ49j5G/versions/nQM7JVHm/ColorfulAzaleas-forge-1.19.2-2.3.1.jar"
+hash-format = "sha1"
+hash = "4b6b413aa679d66d24e79e70814290775deeb4d3"
+
+[update]
+[update.modrinth]
+mod-id = "HDZ49j5G"
+version = "nQM7JVHm"
